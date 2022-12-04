@@ -7,7 +7,9 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Breadcrumb-->
-                     @yield('breadcrumb')
+                    <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                        @yield('breadcrumb')
+                    </ul>
                     <!--end::Breadcrumb-->
                 </div>
                 <!--end::Page title-->
