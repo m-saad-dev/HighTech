@@ -1,5 +1,11 @@
 <!DOCTYPE html>
+{{--@dd(app()->getLocale(), session()->get('locale'));--}}
+
+@if(checkLocale('en'))
 <html lang="en">
+@elseif(checkLocale('ar'))
+<html direction="rtl" dir="rtl" style="direction: rtl">
+@endif
 	<!--begin::Head-->
     @include('admin.layouts.head')
 	<!--end::Head-->
@@ -40,6 +46,7 @@
                     <!--end::Sidebar-->
 					<!--begin::Main-->
 					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+                        @yield('actions')
 						<!--begin::Content wrapper-->
 						<div class="d-flex flex-column flex-column-fluid">
 							<!--begin::Content-->

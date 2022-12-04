@@ -7,7 +7,7 @@
         <div class="menu-item pt-5">
             <!--begin:Menu content-->
             <div class="menu-content">
-                <span class="menu-heading fw-bold text-uppercase fs-7">@lang('menu.users')</span>
+                <span class="menu-heading fw-bold text-uppercase fs-7" style="color: whitesmoke !important; font-size: medium !important;">@lang('menu.users')</span>
             </div>
             <!--end:Menu content-->
         </div>
@@ -35,11 +35,11 @@
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="../../demo1/dist/pages/user-profile/overview.html">
+                    <a class="menu-link" href="{{route('admin.users.index')}}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
-                        <span class="menu-title">Overview</span>
+                        <span class="menu-title">index</span>
                     </a>
                     <!--end:Menu link-->
                 </div>

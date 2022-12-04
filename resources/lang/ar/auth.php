@@ -1,19 +1,24 @@
 <?php
 
 return [
+    'Amsak - Signin' => 'لوحة التحكم - أمساك',
+    'sign in' => 'تسجيل الدخول الى لوحة التحكم',
+    'name' => 'الاسم',
+    'Email' => 'البريد الالكترونى',
+    'password' => 'كلمة المرور',
+    'change_profile_picture' => 'تحديث الصورة الشخصية',
+    'Choose file' => 'إختر صورة',
+    'Choose pdf' => 'إختر ملف PDF',
+    'Choose video' => 'إختر فيديو',
+    'remember me' => 'تذكرنى',
+    'Login' => 'تسجيل الدخول',
+    'Logout' => 'تسجيل الخروج',
+    'save' => 'حفظ',
+    'update' => 'تحديث',
+    'Settings' => 'الاعدادات',
+    'Profile' => 'اعدادات الحساب',
+    'Lock Screen' => 'شاشة القفل',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
-
-    'failed' => 'بيانات الدخول لا تتوافق مع البيانات المسجلة لدينا.',
-    'password' => 'كلمة المرور غير صحيحة.',
-    'throttle' => 'محاولات تسجيل دخول كثيرة جدًا. يرجى المحاولة مرة أخرى في: ثواني.',
+    'failed'   => 'بيانات الاعتماد هذه غير متطابقة مع البيانات المسجلة لدينا.',
+    'throttle' => 'عدد كبير جدا من محاولات الدخول. يرجى المحاولة مرة أخرى بعد :seconds ثانية.',
 ];
