@@ -12,6 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +21,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone_number',
+        'address',
         'password',
     ];
 
@@ -40,5 +43,30 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    /**
+     * The rules of create users fields.
+     *
+     * @var array<string, string>
+     */
+    static public $createRules = [
+        'name' => 'required',
+        'email' => 'required|email',
+        'address' => 'required|string',
+        'phone_number' => 'required|numeric|digits_between:5,15|unique:users,phone_number',
+        'password' => 'min:8',
+    ];
+    /**
+     * The rules of edit users fields.
+     *
+     * @var array<string, string>
+     */
+    static public $editRules = [
+        'name' => 'required',
+        'email' => 'required|email',
+        'address' => 'required|string',
+        'phone_number' => 'required|numeric|digits_between:5,15|unique:users,phone_number',
+        'password' => 'min:8',
     ];
 }

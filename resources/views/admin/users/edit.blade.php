@@ -15,11 +15,16 @@
     <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>
 @stop
 @section('content')
-<div class="card mb-5 mb-xl-10">
-<!--begin::Form-->
-    <form id="kt_account_profile_details_form" class="form" action="{{route('admin.users.store')}}" method="POST">
-        @include('admin.users.fields')
-    </form>
-<!--end::Form-->
-</div>
+    <div class="card mb-5 mb-xl-10">
+        @if (session()->has('issue_message'))
+            <div class="alert alert-danger">{{ session()->get('issue_message') }}</div>
+        @endif
+        <!--begin::Form-->
+        <form class="form" action="{{route('admin.users.update', ['user' => $user->id])}}" method="POST">
+            @method('PATCH')
+            @csrf
+            @include('admin.users.fields', $user)
+        </form>
+        <!--end::Form-->
+    </div>
 @endsection

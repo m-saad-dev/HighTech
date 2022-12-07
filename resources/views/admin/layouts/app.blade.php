@@ -61,7 +61,7 @@
                                 <div class="d-flex align-items-center gap-2 gap-lg-3">
                                     @yield('actions_routes')
                                     <!--begin::Primary button-->
-                                    <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>
+                                    <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" >@lang('common.back')</a>
                                     <!--end::Primary button-->
                                 </div>
                                 <!--end::Actions-->

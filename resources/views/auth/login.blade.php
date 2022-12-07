@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {{--{{dd(app()->getLocale(), checkSessionLocale('ar'), app()->getLocale())}}--}}
 {{--{{dd(app()->getLocale())}}--}}
+
 @if(app()->getLocale() == 'en')
 <html lang="en">
 @elseif(app()->getLocale() == 'ar')
