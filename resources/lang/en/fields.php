@@ -1,17 +1,16 @@
-<?php 
+<?php
 
 return [
-	'Registration' 	=> 'Registration',
-	'First Name' 	=> 'First Name',
-	'Last Name'		=> 'Last Name',
-	'Gender' 		=> 'Gender',
-	'Male' 			=> 'Male',
-	'Female' 		=> 'Female',
-	'Mobile' 		=> 'Mobile',
-	'Email' 		=> 'Email',
-	'Password' 		=> 'Password',
-	'City' 			=> 'City',
-	'address' 		=> 'address',
-	'select' 		=> 'select',
-	'Register' 		=> 'Register',
+	'registration' 	=> 'Registration',
+	'name'		    => 'Name',
+	'gender' 		=> 'Gender',
+	'male' 			=> 'Male',
+	'female' 		=> 'Female',
+	'phone_number' 	=> 'Phone Number',
+	'email' 		=> 'Email',
+	'password' 		=> 'Password',
+	'city' 			=> 'City',
+	'address' 		=> 'Address',
+	'select' 		=> 'Select',
+	'register' 		=> 'Register',
 ];

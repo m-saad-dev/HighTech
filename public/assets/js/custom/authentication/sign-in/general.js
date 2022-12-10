@@ -11,6 +11,7 @@ var KTSigninGeneral = function() {
     // Handle form
     var handleValidation = function(e) {
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+        console.log(locale)
         validator = FormValidation.formValidation(
 			form,
 			{
@@ -181,6 +182,7 @@ var KTSigninGeneral = function() {
         init: function() {
             form = document.querySelector('#kt_sign_in_form');
             submitButton = document.querySelector('#kt_sign_in_submit');
+            locale = submitButton.getAttribute('locale');
 
             handleValidation();
             handleSubmitDemo(); // used for demo purposes only, if you use the below ajax version you can uncomment this one

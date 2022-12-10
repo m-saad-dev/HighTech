@@ -16,6 +16,8 @@ return [
     'myProfile' => 'My Profile',
     'chooseCountry' => 'Choose Country',
     'addNewRecord' => 'New Record',
+    'save' => 'Save',
+    'cancel' => 'Cancel',
     'add' => 'Add',
     'new' => 'New',
     'edit' => 'Edit',
@@ -57,4 +59,5 @@ return [
         'ar' => 'Arabic',
         'en' => 'English',
     ],
+    'issue_message' => 'Sorry But there were an error in saving :item',
 ];

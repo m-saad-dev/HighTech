@@ -1,17 +1,16 @@
-<?php 
+<?php
 
 return [
-	'Registration' 	=> 'التسجيل',
-	'First Name' 	=> 'الإسم الأول',
-	'Last Name'		=> 'الإسم الأخير',
-	'Gender' 		=> 'النوع',
-	'Male' 			=> 'ذكر',
-	'Female' 		=> 'أنثى',
-	'Mobile' 		=> 'رقم الجوال',
-	'Email' 		=> 'البريد الإلكترونى',
-	'Password' 		=> 'كلمة المرور',
-	'City' 			=> 'المدينة',
+	'registration' 	=> 'التسجيل',
+	'name' 	        => 'الإسم',
+	'gender' 		=> 'النوع',
+	'male' 			=> 'ذكر',
+	'female' 		=> 'أنثى',
+	'mobile' 		=> 'رقم الجوال',
+	'email' 		=> 'البريد الإلكترونى',
+	'password' 		=> 'كلمة المرور',
+	'city' 			=> 'المدينة',
 	'address' 		=> 'العنوان',
 	'select' 		=> 'إختر',
-	'Register' 		=> 'تسجيل',
+	'register' 		=> 'تسجيل',
 ];
