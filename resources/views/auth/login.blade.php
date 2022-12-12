@@ -17,28 +17,25 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express Node.js & Flask Admin Dashboard Theme" />
-    <meta property="og:url" content="https://keenthemes.com/metronic" />
-    <meta property="og:site_name" content="Keenthemes | Metronic" />
-    <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{asset('assets/admin/media/logos/favicon.ico')}}" />
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
     @if(checkLocale('en'))
         <!--begin::Page Vendor Stylesheets(used by this page)-->
-        <link href="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
         <!--end::Page Vendor Stylesheets-->
         <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-        <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
         <!--end::Global Stylesheets Bundle-->
     @elseif(checkLocale('ar'))
         <!--begin::Page Vendor Stylesheets(used by this page)-->
-        <link href="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         <!--end::Page Vendor Stylesheets-->
         <!--begin::Global Stylesheets Bundle(used by all pages)-->
-        <link href="{{asset('assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/admin/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         <!--end::Global Stylesheets Bundle-->
 
     @endif
@@ -52,7 +49,7 @@
 <!--begin::Root-->
 <div class="d-flex flex-column flex-root" id="kt_app_root">
     <!--begin::Page bg image-->
-    <style>body { background-image: url('assets/media/auth/bg4.jpg'); } [data-theme="dark"] body { background-image: url('assets/media/auth/bg4-dark.jpg'); }</style>
+    <style>body { background-image: url('assets/admin/media/auth/bg4.jpg'); } [data-theme="dark"] body { background-image: url('assets/admin/media/auth/bg4-dark.jpg'); }</style>
     <!--end::Page bg image-->
     <!--begin::Authentication - Sign-in -->
     <div class="d-flex flex-column flex-column-fluid flex-lg-row">
@@ -62,7 +59,7 @@
             <div class="d-flex flex-center flex-lg-start flex-column">
                 <!--begin::Logo-->
                 <a href="../../demo1/dist/index.html" class="mb-7">
-                    <img alt="Logo" src="{{asset('assets/media/logos/custom-3.svg')}}" />
+                    <img alt="Logo" src="{{asset('assets/admin/media/logos/custom-3.svg')}}" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Title-->
@@ -93,7 +90,7 @@
                             <div class="float-start m-0">
                                 <!--begin::Toggle-->
                                 <button class="btn btn-flex btn-link rotate" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
-                                    <img data-kt-element="current-lang-flag" class="w-25px h-25px rounded-circle me-3" src="{{session()->has('locale') ? (app()->getLocale() == 'en' ? asset('assets/media/flags/united-states.svg') : asset('assets/media/flags/saudi-arabia.svg')) : asset('assets/media/flags/united-states.svg')}}" alt="" />
+                                    <img data-kt-element="current-lang-flag" class="w-25px h-25px rounded-circle me-3" src="{{session()->has('locale') ? (app()->getLocale() == 'en' ? asset('assets/admin/media/flags/united-states.svg') : asset('assets/admin/media/flags/saudi-arabia.svg')) : asset('assets/admin/media/flags/united-states.svg')}}" alt="" />
                                     <span data-kt-element="current-lang-name" class="me-2">{{session()->has('locale') ? trans('common.lang.' . app()->getLocale()) : trans('common.lang.en')}}</span>
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
                                     <span class="svg-icon svg-icon-3 svg-icon-muted rotate-180 m-0">
@@ -110,7 +107,7 @@
                                     <div class="menu-item px-3">
                                         <a href="{{route('website.language', ['en'])}}" class="menu-link d-flex px-5" >
 										<span class="symbol symbol-20px me-4">
-											<img data-kt-element="lang-flag" class="rounded-1" src="{{asset('assets/media/flags/united-states.svg')}}" alt="" />
+											<img data-kt-element="lang-flag" class="rounded-1" src="{{asset('assets/admin/media/flags/united-states.svg')}}" alt="" />
 										</span>
                                             <span >@lang('common.lang.en')</span>
                                         </a>
@@ -120,7 +117,7 @@
                                     <div class="menu-item px-3">
                                         <a href="{{route('website.language', ['ar'])}}" class="menu-link d-flex px-5" data-kt-lang="">
 										<span class="symbol symbol-20px me-4">
-											<img data-kt-element="lang-flag" class="rounded-1" src="{{asset('assets/media/flags/saudi-arabia.svg')}}" alt="" />
+											<img data-kt-element="lang-flag" class="rounded-1" src="{{asset('assets/admin/media/flags/saudi-arabia.svg')}}" alt="" />
 										</span>
                                             <span data-kt-element="lang-name">@lang('common.lang.ar')</span>
                                         </a>
@@ -188,13 +185,13 @@
 </div>
 <!--end::Root-->
 <!--begin::Javascript-->
-<script>var hostUrl = "{{asset('assets/')}}" ;</script>
+<script>var hostUrl = "{{asset('assets/admin/')}}" ;</script>
 <!--begin::Global Javascript Bundle(mandatory for all pages)-->
-<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
-<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+<script src="{{asset('assets/admin/plugins/global/plugins.bundle.js')}}"></script>
+<script src="{{asset('assets/admin/js/scripts.bundle.js')}}"></script>
 <!--end::Global Javascript Bundle-->
 <!--begin::Custom Javascript(used for this page only)-->
-<script src="{{asset('assets/js/custom/authentication/sign-in/general.js')}}"></script>
+<script src="{{asset('assets/admin/js/custom/authentication/sign-in/general.js')}}"></script>
 <!--end::Custom Javascript-->
 <!--end::Javascript-->
 </body>

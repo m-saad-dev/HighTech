@@ -92,6 +92,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
+
         try {
             $user = $this->model->where('id', $id);
             $user->update($request->validated());
