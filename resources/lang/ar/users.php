@@ -14,6 +14,7 @@ return [
     'allUsers' => 'كافة المستخدمين',
     'createUser' => 'مستخدم جديد',
     'editUser' => 'تعديل مستخدم',
+    'deleteUser' => 'حذف مستخدم',
     'showUser' => 'عرض مستخدم',
     'Deactivate' => 'إلغاء التفعيل',
     'Activate' => 'تفعيل',

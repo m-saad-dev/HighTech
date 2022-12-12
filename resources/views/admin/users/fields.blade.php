@@ -38,6 +38,25 @@
     </div>
     <!--end::Input group-->
     <!--begin::Input group-->
+        <div class="row mb-6">
+            <!--begin::Label-->
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"> @lang('forms.role') </label>
+            <!--end::Label-->
+            <!--begin::Col-->
+            <div class="col-lg-8">
+                @if($errors->first('role'))
+                    <small class="text-danger">{{$errors->first('role')}}</small>
+                @endif
+                <select name="role" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="Select a country..." class="form-select form-select-solid form-select-lg fw-semibold">
+                    @foreach((app()->getLocale() == 'en' ? $allRoles->pluck('name', 'name')->toArray() : $allRoles->pluck('name_ar', 'name')->toArray()) as $id => $role)
+                        <option value="{{$id}}">{{$role}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <!--end::Col-->
+        </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
         <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name')</label>
@@ -61,7 +80,7 @@
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
-            <input type="tel" name="phone_number" class="form-control form-control-lg form-control-solid {{app()->getLocale() == 'ar' ? 'align-content-end' : 'align-content-start'}}" style='direction:{{app()->getLocale() == 'ar'? 'rtl' : 'ltr'}} !important;' placeholder="@lang('fields.phone_number')" value="{{isset($user) ? $user->phone_number : (old('phone_number') ?? '')}}" />
+            <input type="tel" name="phone_number" class="form-control form-control-lg form-control-solid text-start" placeholder="@lang('fields.phone_number')" value="{{isset($user) ? $user->phone_number : (old('phone_number') ?? '')}}" />
             @error('phone_number')
                 <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
@@ -92,7 +111,7 @@
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
-            <input type="email" name="email" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.email')" value="{{isset($user) ? $user->email : (old('email') ?? '')}}" />
+            <input type="email" name="email" class="form-control form-control-lg form-control-solid text-start" placeholder="@lang('fields.email')" value="{{isset($user) ? $user->email : (old('email') ?? '')}}" />
             @error('email')
                 <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
@@ -107,7 +126,7 @@
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
-            <input type="password" name="password" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.password')" value="{{isset($user) ? $user->password : (old('password') ?? '')}}" />
+            <input type="password" name="password" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.password')" value="{{(old('password') ?? '')}}" />
             @error('password')
                 <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror

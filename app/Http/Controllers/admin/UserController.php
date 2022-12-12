@@ -51,6 +51,7 @@ class UserController extends Controller
     {
         try {
             $user = $this->model->create($request->validated());
+            $user->syncRoles([$request->role]);
             return redirect()->route('admin.users.index')->with('created', __('messages.New User Created'));
         } catch (\Exception $e) {
             return redirect()->route('admin.users.create')->with('issue_message', trans('common.issue_message', ['item' => "User"]));

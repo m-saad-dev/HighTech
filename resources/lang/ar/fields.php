@@ -13,4 +13,5 @@ return [
 	'address' 		=> 'العنوان',
 	'select' 		=> 'إختر',
 	'register' 		=> 'تسجيل',
+	'role' 		    => 'الصلاحية',
 ];

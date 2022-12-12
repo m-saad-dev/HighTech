@@ -60,9 +60,11 @@
                                 <!--begin::Actions-->
                                 <div class="d-flex align-items-center gap-2 gap-lg-3">
                                     @yield('actions_routes')
-                                    <!--begin::Primary button-->
-                                    <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" >@lang('common.back')</a>
-                                    <!--end::Primary button-->
+                                    @if(request()->route()->getName() != 'admin.dashboard')
+                                        <!--begin::Primary button-->
+                                        <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" >@lang('common.back')</a>
+                                        <!--end::Primary button-->
+                                    @endif
                                 </div>
                                 <!--end::Actions-->
                             </div>
