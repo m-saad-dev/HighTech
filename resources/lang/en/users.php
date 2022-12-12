@@ -14,6 +14,7 @@ return [
     'allUsers' => 'All Users',
     'createUser' => 'New User',
     'editUser' => 'Edit User',
+    'deleteUser' => 'Delete User',
     'showUser' => 'Show User',
     'Deactivate' => 'Deactivate',
     'Activate' => 'Activate',

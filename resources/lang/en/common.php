@@ -41,6 +41,7 @@ return [
     'message' => 'Message',
     'myAccount' => 'My Account',
     'inEn' => '(In English)',
+    'inAr' => '(In Arabic)',
     'started' => 'Started',
     'ended' => 'Ended',
     'Close' => 'Close',

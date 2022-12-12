@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +42,5 @@ Route::prefix('admin')->get('language/{locale}', function ($locale) {
 Route::middleware(['auth', 'web'])->prefix('admin')->as('admin.')->group(function (){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::resource('/users', UserController::class);
+        Route::resource('/roles', RoleController::class);
 });

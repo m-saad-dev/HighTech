@@ -13,4 +13,5 @@ return [
 	'address' 		=> 'Address',
 	'select' 		=> 'Select',
 	'register' 		=> 'Register',
+	'role' 		=> 'Role',
 ];
