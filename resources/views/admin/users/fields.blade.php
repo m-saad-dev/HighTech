@@ -40,7 +40,7 @@
     <!--begin::Input group-->
         <div class="row mb-6">
             <!--begin::Label-->
-            <label class="col-lg-4 col-form-label required fw-bold fs-6"> @lang('forms.role') </label>
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"> @lang('fields.role') </label>
             <!--end::Label-->
             <!--begin::Col-->
             <div class="col-lg-8">
@@ -49,7 +49,7 @@
                 @endif
                 <select name="role" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="Select a country..." class="form-select form-select-solid form-select-lg fw-semibold">
                     @foreach((app()->getLocale() == 'en' ? $allRoles->pluck('name', 'name')->toArray() : $allRoles->pluck('name_ar', 'name')->toArray()) as $id => $role)
-                        <option value="{{$id}}">{{$role}}</option>
+                        <option value="{{$id}}" @if($user->hasRole($role)) selected @endif>{{$role}}</option>
                     @endforeach
                 </select>
             </div>
@@ -126,7 +126,7 @@
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8 fv-row">
-            <input type="password" name="password" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.password')" value="{{(old('password') ?? '')}}" />
+            <input type="password" name="password" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.password')" value="" />
             @error('password')
                 <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror

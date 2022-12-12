@@ -21,7 +21,11 @@ class UpdateUserRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        $this->merge(['password' => Hash::make($this->password)]);
+        if ($this->password){
+            $this->merge(['password' => Hash::make($this->password)]);
+        } else {
+            $this->replace($this->except('password'));
+        }
     }
 
     /**

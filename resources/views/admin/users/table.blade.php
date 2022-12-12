@@ -39,11 +39,11 @@
                         <!--end::Svg Icon-->
                     </a>
 
-                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4 align-center" data-kt-menu="true">
                         <!--begin::Menu item-->
                         @can('edit-user')
                             <div class="menu-item px-3">
-                                <a href="{{route('admin.users.edit', $user->id)}}" class="menu-link px-3">@lang('users.editUser')</a>
+                                <a href="{{route('admin.users.edit', $user->id)}}" class="menu-link px-3">@lang('common.edit')</a>
                             </div>
                         @endcan
                         <!--end::Menu item-->
@@ -52,7 +52,7 @@
                             @if( $user->id != 1 )
                                 <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.users.destroy', $user->id)}}">
                                     @csrf @method('Delete')
-                                <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('users.deleteUser')</a>
+                                <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                 </form>
                             @endif
                         @endcan

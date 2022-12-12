@@ -92,12 +92,11 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
-
         try {
-            $user = $this->model->where('id', $id);
+            $user = $this->model->where('id', $id)->first();
             $user->update($request->validated());
-            $user->first()->syncRoles([$request->role]);
-            return redirect()->route('admin.users.index')->with('created', __('messages.New User Created'));
+            $user->syncRoles([$request->role]);
+            return redirect()->route('admin.users.index')->with('success', __('messages.User Updated'));
         } catch (\Exception $e) {
             return redirect()->route('admin.users.edit')->with('issue_message', trans('common.issue_message', ['item' => "User"]));
         }
