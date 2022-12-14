@@ -1,20 +1,22 @@
+<div class="table-responsive">
 <!--begin::Table-->
-<table class="table table-flush align-middle table-row-bordered table-row-solid gy-4 gs-9">
+<table class="table table-flush align-middle table-row-bordered table-row-solid gy-4 gs-9" style="max-width: inherit !important;">
     <!--begin::Thead-->
     <thead class="border-gray-200 fs-5 fw-semibold bg-lighten">
     <tr>
-        <th class="min-w-250px">#</th>
+        <th class="min-w-50% max-w-100%">#</th>
         <th class="min-w-100px">@lang('fields.name')</th>
         <th class="min-w-150px">@lang('fields.email')</th>
         <th class="min-w-150px">@lang('fields.role')</th>
+        <th class="min-w-150px">@lang('common.actions')</th>
     </tr>
     </thead>
     <!--end::Thead-->
     <!--begin::Tbody-->
-    <tbody class="fw-6 fw-semibold text-gray-600">
+    <tbody class="fw-6 fw-semibold text-gray-600" style="max-width: inherit !important;">
     @foreach($users as $user)
         <tr>
-            <td class="col-1">
+            <td class="min-w-50% max-w-100%" st>
                 <span class="badge badge-light-success">{{$loop->iteration}}</span>
             </td>
             <td>
@@ -67,3 +69,4 @@
     <!--end::Tbody-->
 </table>
 <!--end::Table-->
+</div>

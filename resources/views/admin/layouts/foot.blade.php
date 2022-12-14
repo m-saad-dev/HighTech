@@ -3,7 +3,7 @@
 <!--begin::Global Javascript Bundle(mandatory for all pages)-->
 <script src="{{asset('assets/admin/plugins/global/plugins.bundle.js')}}"></script>
 <script src="{{asset('assets/admin/js/scripts.bundle.js')}}"></script>
-<script src="{{asset('assets/jquery-3.5.1.js')}}"></script>
+<script src="{{asset('assets/jquery-3.6.2.js')}}"></script>
 
 <script>
     toastr.options = {
@@ -11,7 +11,7 @@
   "debug": false,
   "newestOnTop": false,
   "progressBar": false,
-  "positionClass": "toastr-bottom-right",
+  "positionClass": @if(checkLocale('en')) "toastr-bottom-right" @else "toastr-bottom-left" @endif,
   "preventDuplicates": false,
   "onclick": null,
   "showDuration": "300",

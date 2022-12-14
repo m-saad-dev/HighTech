@@ -1,19 +1,20 @@
-<!--begin: Datatable-->
-<table class="table table-separate table-head-custom" id="kt_datatable">
-    <thead>
-    <tr>
-        <th>@lang('fields.name') @lang('common.inEn')</th>
-        <th>@lang('fields.name') @lang('common.inAr')</th>
-        <th>{{trans("common.actions")}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach($roles as $role)
+<div class="table-responsive">
+    <!--begin: Datatable-->
+    <table class="table table-separate table-head-custom" id="kt_datatable">
+        <thead>
         <tr>
-            <td>{{ $role->name }}</td>
-            <td>{{ $role->name_ar }}</td>
-            @if(auth()->id() == 1 || (auth()->id() != 1 && $role->id != 1))
-                <td class="text-start">
+            <th>@lang('fields.name') @lang('common.inEn')</th>
+            <th>@lang('fields.name') @lang('common.inAr')</th>
+            <th>{{trans("common.actions")}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($roles as $role)
+            <tr>
+                <td>{{ $role->name }}</td>
+                <td>{{ $role->name_ar }}</td>
+                @if(auth()->id() == 1 || (auth()->id() != 1 && $role->id != 1))
+                    <td class="text-start">
                         <!--begin::Actions-->
                         <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">@lang('common.actions')
                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
@@ -36,15 +37,16 @@
                             @if( $role->id != 1 )
                                 <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.roles.destroy', $role->id)}}">
                                     @csrf @method('Delete')
-                                <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
+                                    <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                 </form>
                             @endif
                             <!--end::Menu item-->
                         </div>
                         <!--end::Actions-->
-                </td>
-            @endif
-        </tr>
-    @endforeach
-    </tbody>
-</table>
+                    </td>
+                @endif
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</div>
