@@ -2,12 +2,12 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
+use App\Models\Role;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class UpdateUserRequest extends FormRequest
+class UpdateServiceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,11 +21,7 @@ class UpdateUserRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        if ($this->password){
-            $this->merge(['password' => Hash::make($this->password)]);
-        } else {
-            $this->replace($this->except('password'));
-        }
+        $this->merge(['password' => Hash::make($this->password)]);
     }
 
     /**
@@ -35,7 +31,9 @@ class UpdateUserRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = array_merge(User::$editRules, ['phone_number' => User::$editRules['phone_number'].','.$this->route('user')]);
-        return $rules;
+        return [
+            'name' => 'required|max:255|unique:roles,name,' . $this->route(service) . ',id',
+            'name_ar' => 'required|max:255|unique:roles,name_ar,' . $this->route(service) . ',id'
+        ];
     }
 }

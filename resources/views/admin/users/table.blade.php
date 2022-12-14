@@ -14,7 +14,7 @@
     <tbody class="fw-6 fw-semibold text-gray-600">
     @foreach($users as $user)
         <tr>
-            <td class="w-20px">
+            <td class="col-1">
                 <span class="badge badge-light-success">{{$loop->iteration}}</span>
             </td>
             <td>

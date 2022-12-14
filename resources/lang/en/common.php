@@ -56,9 +56,10 @@ return [
     'back' => 'Back',
     'Your Are Not Authorized' => 'Your Are Not Authorized.',
     'pleaseWait' => 'Please wait....',
+    'language' => 'Language',
     'lang' => [
         'ar' => 'Arabic',
         'en' => 'English',
     ],
-    'issue_message' => 'Sorry But there were an error in saving :item',
+    'issue_message' => 'Sorry But there were an error in completing process on :item',
 ];

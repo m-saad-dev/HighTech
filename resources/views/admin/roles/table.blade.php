@@ -29,14 +29,14 @@
 
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
-                                <a href="{{route('admin.roles.edit', $role->id)}}" class="menu-link px-3">@lang('roles.editRole')</a>
+                                <a href="{{route('admin.roles.edit', $role->id)}}" class="menu-link px-3">@lang('common.edit')</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             @if( $role->id != 1 )
                                 <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.roles.destroy', $role->id)}}">
                                     @csrf @method('Delete')
-                                <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('roles.deleteRole')</a>
+                                <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                 </form>
                             @endif
                             <!--end::Menu item-->

@@ -26,6 +26,9 @@
 @if(session('success'))
 toastr.success("{{trans(session('success'))}}");
 @endif
+@if(session('failed'))
+toastr.success("{{trans(session('failed'))}}");
+@endif
 @if(session('issue_message'))
 toastr.error("{{trans(session('issue_message'))}}");
 @endif

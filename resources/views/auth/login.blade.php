@@ -140,13 +140,13 @@
                         <!--begin::Input group=-->
                         <div class="fv-row mb-8">
                             <!--begin::Email-->
-                            <input type="text" placeholder="@lang('forms.emailAddress')" name="email" autocomplete="off" class="form-control bg-transparent" value="{{old('email')??''}}"/>
+                            <input type="text" placeholder="@lang('fields.email')" name="email" autocomplete="off" class="form-control bg-transparent" value="{{old('email')??''}}"/>
                             <!--end::Email-->
                         </div>
                         <!--end::Input group=-->
                         <div class="fv-row mb-3">
                             <!--begin::Password-->
-                            <input type="password" placeholder="@lang('forms.password')" name="password" autocomplete="off" class="form-control bg-transparent" />
+                            <input type="password" placeholder="@lang('fields.password')" name="password" autocomplete="off" class="form-control bg-transparent" />
                             <!--end::Password-->
                         </div>
                         <!--end::Input group=-->

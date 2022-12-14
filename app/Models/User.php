@@ -52,7 +52,8 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     static public $createRules = [
-        'name' => 'required',
+        'role' => 'required|string',
+        'name' => 'required|string',
         'email' => 'required|email',
         'address' => 'required|string',
         'phone_number' => 'required|numeric|digits_between:5,15|unique:users,phone_number',
@@ -64,10 +65,12 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     static public $editRules = [
-        'name' => 'required',
-        'email' => 'required|email',
-        'address' => 'required|string',
-        'phone_number' => 'required|numeric|digits_between:5,15|unique:users,phone_number',
+
+        'role' => 'sometimes|string',
+        'name' => 'sometimes|string',
+        'email' => 'sometimes|email',
+        'address' => 'sometimes|string',
+        'phone_number' => 'sometimes|numeric|digits_between:5,15|unique:users,phone_number',
         'password' => 'sometimes|min:8',
     ];
 }

@@ -12,7 +12,7 @@ function serverName()
 
 function checkLocale($lang)
 {
-    return app()->getLocale() == $lang ?? 'ar';
+    return app()->getLocale() == $lang;
 }
 
 function setSessionAppLocale($locale){

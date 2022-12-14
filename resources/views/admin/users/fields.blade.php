@@ -3,14 +3,14 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
+        <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.avatar')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
             <!--begin::Image input-->
-            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
+            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}')">
                 <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px" style="background-image: url(assets/media/avatars/300-1.jpg)"></div>
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
                 <!--end::Preview existing avatar-->
                 <!--begin::Label-->
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -40,18 +40,22 @@
     <!--begin::Input group-->
         <div class="row mb-6">
             <!--begin::Label-->
-            <label class="col-lg-4 col-form-label required fw-bold fs-6"> @lang('fields.role') </label>
+            <label class="col-lg-4 col-form-label required fw-semibold fs-6"> @lang('fields.role') </label>
             <!--end::Label-->
             <!--begin::Col-->
             <div class="col-lg-8">
                 @if($errors->first('role'))
                     <small class="text-danger">{{$errors->first('role')}}</small>
                 @endif
-                <select name="role" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="Select a country..." class="form-select form-select-solid form-select-lg fw-semibold">
+                @if(isset($user) && $user->hasRole('Super Admin'))
+                    <p class="form-control form-control-lg form-control-solid"> {{app()->getLocale() == 'en' ? $allRoles->where('name', 'Super Admin')->first()->name : $allRoles->where('name', 'Super Admin')->first()->name_ar}}</p>
+                @else
+                <select name="role" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="{{trans('common.select')}}" class="form-select form-select-solid form-select-lg fw-semibold">
                     @foreach((app()->getLocale() == 'en' ? $allRoles->pluck('name', 'name')->toArray() : $allRoles->pluck('name_ar', 'name')->toArray()) as $id => $role)
-                        <option value="{{$id}}" @if($user->hasRole($role)) selected @endif>{{$role}}</option>
+                        <option value="{{$id}}" @if(isset($user) && $user->hasRole($role)) selected @endif>{{$role}}</option>
                     @endforeach
                 </select>
+                @endif
             </div>
             <!--end::Col-->
         </div>
@@ -74,8 +78,9 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label fw-semibold fs-6">
-            <span class="required">@lang('fields.phone_number')</span>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">
+            <span>@lang('fields.phone_number')</span>
+            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="@lang('users.PhoneNumberMustBeActive')"></i>
         </label>
         <!--end::Label-->
         <!--begin::Col-->
