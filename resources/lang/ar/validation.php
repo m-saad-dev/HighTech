@@ -166,10 +166,9 @@ return [
         'phone_number'          => 'الهاتف',
         'password_confirmation' => 'تأكيد كلمة المرور',
         'old_password'          => 'كلمة المرور القديمة',
-        'shift_id'              => 'الدوام',
+        'address'               => 'العنوان',
 
         // Rate Student
-        'created_at' => 'تاريخ التقييم',
         'time' => 'وقت',
         'start' => 'البداية',
         'end' => 'النهاية',
@@ -178,10 +177,6 @@ return [
         'start_date' => 'تاريخ البداية',
         'end_date' => 'تاريخ النهاية',
         'notes' => 'ملاحظات',
-        'ordinary_days_in_year' => 'الأجازات الإعتيادية في السنة',
-        'ordinary_days_in_month' => 'الأجازات الإعتيادية في الشهر',
-        'casual_days_in_year' => 'الأجازات العارضة في السنة',
-        'casual_days_in_month' => 'الأجازات العارضة في الشهر',
         'policy_agree' => 'أوافق على شروط الاستخدام',
     ],
 ];

@@ -2,7 +2,7 @@
     <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
         <!--begin::Menu wrapper-->
         <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-            <img src="assets/media/avatars/300-1.jpg" alt="user" />
+            <img src="{{asset('assets/admin/media/avatars/300-1.jpg')}}" alt="user" />
         </div>
         <!--begin::User account menu-->
         <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
@@ -11,14 +11,14 @@
                 <div class="menu-content d-flex align-items-center px-3">
                     <!--begin::Avatar-->
                     <div class="symbol symbol-50px me-5">
-                        <img alt="Logo" src="assets/media/avatars/300-1.jpg" />
+                        <img alt="Logo" src="{{asset('assets/admin/media/avatars/300-1.jpg')}}" />
                     </div>
                     <!--end::Avatar-->
                     <!--begin::Username-->
                     <div class="d-flex flex-column">
-                        <div class="fw-bold d-flex align-items-center fs-5">Max Smith
-                            <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
-                        <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
+                        <div class="fw-bold d-flex align-items-center fs-5">{{auth()->user()->name}}</div>
+                        <span class="badge badge-light-primary fw-bold fs-8 px-2 py-1 ms-2 justify-content-center">{{auth()->user()->roles->first()->name}}</span>
+                        <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{\auth()->user()->email}}</a>
                     </div>
                     <!--end::Username-->
                 </div>
@@ -29,7 +29,12 @@
             <!--end::Menu separator-->
             <!--begin::Menu item-->
             <div class="menu-item px-5">
-                <a href="../../demo1/dist/account/overview.html" class="menu-link px-5">My Profile</a>
+                <a href="{{route('admin.myProfile')}}" class="menu-link px-5">@lang('users.myProfile')</a>
+            </div>
+            <!--end::Menu item-->
+            <!--begin::Menu item-->
+            <div class="menu-item px-5 my-1">
+                <a href="{{route('admin.users.edit', auth()->id())}}" class="menu-link px-5">@lang('users.editMyProfile')</a>
             </div>
             <!--end::Menu item-->
             <!--begin::Menu separator-->
@@ -38,9 +43,9 @@
             <!--begin::Menu item-->
             <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                 <a href="#" class="menu-link px-5">
-                <span class="menu-title position-relative">Language
-                <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-                <img class="w-15px h-15px rounded-1 ms-2" src="{{checkLocale('en') ? asset('assets/media/flags/united-states.svg') : asset('assets/media/flags/saudi-arabia.svg')}}" alt="" /></span></span>
+                <span class="menu-title position-relative">@lang('common.language')
+                <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">@lang('common.lang.en')
+                <img class="w-15px h-15px rounded-1 ms-2" src="{{checkLocale('en') ? asset('assets/admin/media/flags/united-states.svg') : asset('assets/admin/media/flags/saudi-arabia.svg')}}" alt="" /></span></span>
                 </a>
                 <!--begin::Menu sub-->
                 <div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -48,25 +53,20 @@
                     <div class="menu-item px-3">
                         <a href="{{route('admin.language', ['en'])}}" class="menu-link d-flex px-5 active">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{asset('assets/media/flags/united-states.svg')}}" alt="" />
-                    </span>English</a>
+                        <img class="rounded-1" src="{{asset('assets/admin/media/flags/united-states.svg')}}" alt="" />
+                    </span>@lang('common.lang.en')</a>
                     </div>
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     <div class="menu-item px-3">
                         <a href="{{route('admin.language', ['ar'])}}" class="menu-link d-flex px-5 active">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{asset('assets/media/flags/saudi-arabia.svg')}}" alt="" />
-                    </span>Arabic</a>
+                        <img class="rounded-1" src="{{asset('assets/admin/media/flags/saudi-arabia.svg')}}" alt="" />
+                    </span>@lang('common.lang.ar')</a>
                     </div>
                     <!--end::Menu item-->
                 </div>
                 <!--end::Menu sub-->
-            </div>
-            <!--end::Menu item-->
-            <!--begin::Menu item-->
-            <div class="menu-item px-5 my-1">
-                <a href="../../demo1/dist/account/settings.html" class="menu-link px-5">Account Settings</a>
             </div>
             <!--end::Menu item-->
             <!--begin::Menu item-->

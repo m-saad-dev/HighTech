@@ -22,7 +22,7 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('allPermissions', $allPermissions);
         });
         View::composer(['admin.users.fields'], function ($view) {
-            $allRoles = Role::whereNotIn('name',['Super Admin'])->get();
+            $allRoles = Role::all();
             $view->with('allRoles', $allRoles);
         });
     }

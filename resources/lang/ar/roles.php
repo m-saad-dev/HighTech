@@ -7,7 +7,7 @@ return [
     | Pages Language Lines
     |--------------------------------------------------------------------------
     |
-    | for pages names
+    | for pages roles
     |
     */
 

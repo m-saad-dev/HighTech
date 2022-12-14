@@ -16,9 +16,10 @@ return [
     'editUser' => 'تعديل مستخدم',
     'deleteUser' => 'حذف مستخدم',
     'showUser' => 'عرض مستخدم',
+    'PhoneNumberMustBeActive' => 'رقم الهاتف لابد أن يكون مُفعَّل',
     'Deactivate' => 'إلغاء التفعيل',
     'Activate' => 'تفعيل',
-    'deleteUserAlert' => 'هل أنت متأكد أنك تريد حذف هذا المستخدم؟',
-    'DeactivateUser' => 'هل أنت متأكد أنك تريد الغاء تفعيل هذا المستخدم؟',
-    'activateUser' => 'هل أنت متأكد أنك تريد تفعيل هذا المستخدم؟',
+    'myProfile' => 'الملف الشخصي',
+    'editMyProfile' => 'تعديل الملف الشخصي',
+
 ];

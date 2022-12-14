@@ -49,12 +49,13 @@ class UserController extends Controller
      */
     public function store(CreateUserRequest $request)
     {
+        $item = checkLocale('ar') ? "المستخدم" : "The User";
         try {
             $user = $this->model->create($request->validated());
-            $user->syncRoles([$request->role]);
-            return redirect()->route('admin.users.index')->with('created', __('messages.New User Created'));
+            $user->assignRole([$request->role]);
+            return redirect()->route('admin.users.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.users.create')->with('issue_message', trans('common.issue_message', ['item' => "User"]));
+            return redirect()->route('admin.users.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
@@ -92,13 +93,14 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
+        $item = checkLocale('ar') ? "المستخدم" : "The User";
         try {
             $user = $this->model->where('id', $id)->first();
             $user->update($request->validated());
-            $user->syncRoles([$request->role]);
-            return redirect()->route('admin.users.index')->with('success', __('messages.User Updated'));
+            $user->syncRoles([$request->role ?? $user->roles]);
+            return redirect()->route('admin.users.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.users.edit')->with('issue_message', trans('common.issue_message', ['item' => "User"]));
+            return redirect()->route('admin.users.edit', $user->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
@@ -108,8 +110,18 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $item = checkLocale('ar') ? "المستخدم" : "The User";
+        try {
+            $user->delete();
+            return redirect()->route('admin.users.index')->with('success', __('messages.deleted', ['item' => $item]));
+        } catch (\Exception $e) {
+            return redirect()->route('admin.users.index')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
+    }
+
+    public function myProfile(){
+        return view('admin.users.my_profile')->with(['data' => auth()->user()]);
     }
 }

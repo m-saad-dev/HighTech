@@ -39,8 +39,12 @@ Route::prefix('admin')->get('language/{locale}', function ($locale) {
     }
     return redirect(url()->previous());
 })->name('admin.language');
+
 Route::middleware(['auth', 'web'])->prefix('admin')->as('admin.')->group(function (){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
         Route::resource('/users', UserController::class);
+        Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
+
         Route::resource('/roles', RoleController::class);
 });

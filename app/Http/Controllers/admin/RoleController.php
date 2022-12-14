@@ -50,12 +50,13 @@ class RoleController extends Controller
      */
     public function store(CreateRoleRequest $request)
     {
+        $item = checkLocale('ar') ? "الصلاحية" : "The Role";
         try {
             $role = $this->model->create($request->validated());
             $role->syncPermissions($request->selected);
-            return redirect()->route('admin.roles.index')->with('created', __('messages.New role Created'));
+            return redirect()->route('admin.roles.index')->with('success', __('messages.created',['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.roles.create')->with('issue_message', trans('common.issue_message', ['item' => "role"]));
+            return redirect()->route('admin.roles.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
@@ -93,13 +94,14 @@ class RoleController extends Controller
      */
     public function update(UpdateroleRequest $request, $id)
     {
+        $item = checkLocale('ar') ? "الصلاحية" : "The Role";
         try {
             $role = $this->model->where('id', $id);
             $role->update($request->validated());
             $role->first()->syncPermissions($request->selected);
-            return redirect()->route('admin.roles.index')->with('created', __('roles.New role Created'));
+            return redirect()->route('admin.roles.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.roles.edit', $role->first()->id)->with('issue_message', trans('common.issue_message', ['item' => "role"]));
+            return redirect()->route('admin.roles.edit', $role->first()->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
@@ -111,15 +113,12 @@ class RoleController extends Controller
      */
     public function destroy(role $role)
     {
+        $item = checkLocale('ar') ? "الصلاحية" : "The Role";
         try {
-            $deleted = $role->delete();
-            if ($deleted){
-                return redirect()->route('admin.roles.index')->with('deleted', __('roles.roleDeleted'));
-            } else {
-                return redirect()->route('admin.roles.index')->withErrors('deleted', __('roles.roleNotDeleted'));
-            }
+            $role->delete();
+            return redirect()->route('admin.roles.index')->with('success', __('messages.deleted', ['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.roles.edit')->with('issue_message', trans('common.issue_message', ['item' => "role"]));
+            return redirect()->route('admin.roles.index')->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 }
