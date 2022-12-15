@@ -11,11 +11,11 @@ return [
     |
     */
 
-    'dashboard' => 'Dashboard',
-    'home' => 'Home',
-    'users' => 'Users',
-    'roles' => 'Roles',
-    'news' => 'News',
-    'myProfile' => 'My Profile',
-    'settings' => 'Website Settings',
+    'logo' => 'Logo',
+    'favIcon' => 'Tab-Icon',
+    'aboutUs' => 'About Us',
+    'appLinks' => 'App Links',
+    'contactUs' => 'Contact Us',
+    'title' => 'Title',
+    'content' => 'Content',
 ];

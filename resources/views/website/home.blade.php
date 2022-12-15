@@ -501,7 +501,7 @@
 							<!--begin::Item-->
 							<div class="text-center">
 								<!--begin::Photo-->
-								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/avatars/300-1.jpg')"></div>
+								<div class="octagon mx-auto mb-5 d-flex w-200px h-200px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('asset('assets/admin/media/avatars/300-1.jpg')"></div>
 								<!--end::Photo-->
 								<!--begin::Person-->
 								<div class="mb-0">

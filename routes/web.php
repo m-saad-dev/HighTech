@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -40,11 +41,12 @@ Route::prefix('admin')->get('language/{locale}', function ($locale) {
     return redirect(url()->previous());
 })->name('admin.language');
 
-Route::middleware(['auth', 'web'])->prefix('admin')->as('admin.')->group(function (){
+Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(function (){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
         Route::resource('/users', UserController::class);
         Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
-
         Route::resource('/roles', RoleController::class);
+        Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
+        Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
 });
