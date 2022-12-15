@@ -30,9 +30,9 @@ class UserController extends Controller
     public function index(Request $request)
     {
         if (auth()->user()->can('force-list-users')){
-            $users = $this->model->paginate(15);
+            $users = $this->model->with(['creator', 'updater'])->paginate(15);
         } else if (auth()->user()->can('list-users')){
-            $users = auth()->user()->children()->paginate(15);
+            $users = auth()->user()->children()->with(['creator', 'updater'])->paginate(15);
         }
         return view('admin.users.index')->with(
             [
@@ -79,9 +79,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.users.show')->with('user', $user);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\SettingController;
+use App\Http\Controllers\admin\StaffController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/users', UserController::class);
         Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
         Route::resource('/roles', RoleController::class);
+        Route::resource('/staff', StaffController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
 });
