@@ -8,6 +8,7 @@ return [
 	'female' 		=> 'أنثى',
 	'phone_number' 		=> 'رقم الجوال',
 	'email' 		=> 'البريد الإلكترونى',
+	'parent_id' 	=> 'المدير',
 	'password' 		=> 'كلمة المرور',
 	'city' 			=> 'المدينة',
 	'address' 		=> 'العنوان',

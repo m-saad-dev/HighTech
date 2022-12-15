@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{{--@dd(app()->getLocale(), session()->get('locale'));--}}
 
 @if(checkLocale('en'))
 <html lang="en">

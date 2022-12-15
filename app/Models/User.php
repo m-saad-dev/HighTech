@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Attribute;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,6 +28,7 @@ class User extends Authenticatable implements HasMedia
         'phone_number',
         'address',
         'password',
+        'parent_id',
     ];
 
     /**
@@ -55,6 +57,7 @@ class User extends Authenticatable implements HasMedia
      */
     static public $createRules = [
         'role' => 'required|string',
+        'parent_id' => 'required|int',
         'name' => 'required|string',
         'email' => 'required|email',
         'address' => 'required|string',
@@ -69,6 +72,7 @@ class User extends Authenticatable implements HasMedia
     static public $editRules = [
 
         'role' => 'sometimes|string',
+        'parent_id' => 'sometimes|int',
         'name' => 'sometimes|string',
         'email' => 'sometimes|email',
         'address' => 'sometimes|string',
@@ -79,5 +83,15 @@ class User extends Authenticatable implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('avatars');
-}
+    }
+
+    public function children()
+    {
+        return $this->hasMany(User::class, 'parent_id');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(User::class, 'parent_id');
+    }
 }

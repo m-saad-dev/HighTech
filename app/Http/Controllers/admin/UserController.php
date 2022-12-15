@@ -9,12 +9,17 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use function PHPUnit\Framework\throwException;
 
 class UserController extends Controller
 {
     private $userRepository;
     public function __construct(User $model)
     {
+        $this->middleware("permission:list-users|force-list-users", ['only' => ['index']]);
+        $this->middleware("permission:create-user", ['only' => ['create', 'store']]);
+        $this->middleware("permission:edit-user", ['only' => ['edit', 'update']]);
+        $this->middleware("permission:delete-user", ['only' => ['destroy']]);
         $this->model = $model;
     }
     /**
@@ -24,7 +29,11 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = $this->model->paginate(15);
+        if (auth()->user()->can('force-list-users')){
+            $users = $this->model->paginate(15);
+        } else if (auth()->user()->can('list-users')){
+            $users = auth()->user()->children()->paginate(15);
+        }
         return view('admin.users.index')->with(
             [
                 'users' => $users,
@@ -83,6 +92,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        $item = checkLocale('ar') ? "المستخدم" : "User";
+        if (!auth()->user()->can('Super Admin') && $user->can('Super Admin')) {
+            return redirect()->route('admin.users.index')->with('issue_message', trans('common.issue_message_editUser', ['item' => $item]));
+        }
         return view('admin.users.edit')->with([
             'user' => $user,
         ]);
@@ -101,6 +114,9 @@ class UserController extends Controller
         $item = checkLocale('ar') ? "المستخدم" : "The User";
         try {
             $user = $this->model->where('id', $id)->first();
+            if (!auth()->user()->can('Super Admin') && $user->can('Super Admin')) {
+                throwException(trans('common.issue_message_editUser', ['item' => $item]));
+            }
             $user->update($request->validated());
             $user->syncRoles([$request->role ?? $user->roles]);
 

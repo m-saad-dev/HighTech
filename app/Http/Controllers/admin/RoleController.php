@@ -15,6 +15,10 @@ class RoleController extends Controller
     private $roleRepository;
     public function __construct(Role $model)
     {
+        $this->middleware("permission:list-roles|force-list-roles", ['only' => ['index']]);
+        $this->middleware("permission:create-role", ['only' => ['create', 'store']]);
+        $this->middleware("permission:edit-role", ['only' => ['edit', 'update']]);
+        $this->middleware("permission:delete-role", ['only' => ['destroy']]);
         $this->model = $model;
     }
     /**
@@ -24,7 +28,13 @@ class RoleController extends Controller
      */
     public function index(Request $request)
     {
-        $roles = $this->model->paginate(15);
+        if (auth()->user()->can('force-list-roles')){
+            $roles = $this->model->paginate(15);
+        } else if (auth()->user()->can('list-roles')){
+            $roles = $this->model->whereHas('users', function ($query){
+                $query->where('id', auth()->id());
+            })->paginate(15);
+        }
         return view('admin.roles.index')->with(
             [
                 'roles' => $roles,
