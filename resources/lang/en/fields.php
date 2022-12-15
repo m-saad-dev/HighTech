@@ -16,4 +16,5 @@ return [
 	'register' 		=> 'Register',
 	'role' 		    => 'Role',
 	'avatar' 		=> 'Avatar',
+	'position' 		=> 'Position',
 ];

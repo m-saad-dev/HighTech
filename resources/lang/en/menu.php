@@ -16,6 +16,7 @@ return [
     'users' => 'Users',
     'roles' => 'Roles',
     'news' => 'News',
+    'staff' => 'Staff',
     'myProfile' => 'My Profile',
     'settings' => 'Website Settings',
 ];

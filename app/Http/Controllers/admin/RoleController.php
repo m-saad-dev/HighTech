@@ -27,9 +27,9 @@ class RoleController extends Controller
     public function index(Request $request)
     {
         if (auth()->user()->can('force-list-roles')){
-            $roles = $this->model->paginate(15);
+            $roles = $this->model->with(['creator', 'updater'])->paginate(15);
         } else if (auth()->user()->can('list-roles')){
-            $roles = $this->model->whereHas('users', function ($query){
+            $roles = $this->model->with(['creator', 'updater'])->whereHas('users', function ($query){
                 $query->where('id', auth()->id());
             })->paginate(15);
         }

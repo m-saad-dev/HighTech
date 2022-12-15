@@ -65,5 +65,5 @@ return [
     'issue_message' => 'نأسف ولكن يوجد مشكلة في إتمام العملية على :item',
     'issue_message_editUser' => 'نأسف، لا يمكنك التعديل على هذا :item',
     'creator' => 'إنشاء بواسطة',
-    'creator' => 'تعديل بواسطة'
+    'updater' => 'تعديل بواسطة'
 ];
