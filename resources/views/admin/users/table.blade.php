@@ -9,6 +9,8 @@
             <th class="min-w-150px">@lang('fields.email')</th>
             <th class="min-w-150px">@lang('fields.role')</th>
             <th class="min-w-150px">@lang('fields.parent_id')</th>
+            <th class="min-w-150px">@lang('common.creator')</th>
+            <th class="min-w-150px">@lang('common.updater')</th>
             @canany(['edit-user', 'delete-user'])
                 <th class="min-w-150px">@lang('common.actions')</th>
             @endcanany
@@ -32,7 +34,13 @@
                     <span class="text-gray-600">{{$user->roles?->first()?->name . ' - ' . $user->roles?->first()?->name_ar}}</span>
                 </td>
                 <td>
-                    <span class="text-gray-600">{{$user->parent ? $user->parent->name : ""}}</span>
+                    <span class="text-gray-600">{{$user->parent ? $user->parent->name : "--"}}</span>
+                </td>
+                <td>
+                    <span class="text-gray-600">{{$user->creator ? $user->creator->name : "--"}}</span>
+                </td>
+                <td>
+                    <span class="text-gray-600">{{$user->updater ? $user->updater->name : "--"}}</span>
                 </td>
                 @canany(['edit-user', 'delete-user'])
                     @if(auth()->id() == 1 || (auth()->id() != 1 && $user->id != 1))

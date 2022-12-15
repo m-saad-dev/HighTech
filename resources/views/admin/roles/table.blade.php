@@ -5,6 +5,8 @@
         <tr>
             <th>@lang('fields.name') @lang('common.inEn')</th>
             <th>@lang('fields.name') @lang('common.inAr')</th>
+            <th class="min-w-150px">@lang('common.creator')</th>
+            <th class="min-w-150px">@lang('common.updater')</th>
             @canany(['edit-role', 'delete-role'])
                 <th>{{trans("common.actions")}}</th>
             @endcanany
@@ -15,6 +17,8 @@
             <tr>
                 <td>{{ $role->name }}</td>
                 <td>{{ $role->name_ar }}</td>
+                <td>{{ $role->creator ?  $role->creator->name : "--"}}</td>
+                <td>{{ $role->updater ?  $role->updater->name : "--"}}</td>
                 @canany(['edit-role', 'delete-role'])
                     @if(auth()->id() == 1 || (auth()->id() != 1 && $role->id != 1))
                         <td class="text-start">

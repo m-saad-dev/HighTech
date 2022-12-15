@@ -26,6 +26,7 @@ class UpdateUserRequest extends FormRequest
         } else {
             $this->replace($this->except('password'));
         }
+        $this->merge(['updated_by' => auth()->id()]);
         $this->replace(array_filter($this->all()));
     }
 

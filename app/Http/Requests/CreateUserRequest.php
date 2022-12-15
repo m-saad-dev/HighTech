@@ -21,7 +21,12 @@ class CreateUserRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        $this->merge(['password' => Hash::make($this->password)]);
+        if ($this->password){
+            $this->merge(['password' => Hash::make($this->password)]);
+        } else {
+            $this->replace($this->except('password'));
+        }
+        $this->merge(['created_by' => auth()->id()]);
     }
 
     /**

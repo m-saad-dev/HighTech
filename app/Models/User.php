@@ -29,6 +29,8 @@ class User extends Authenticatable implements HasMedia
         'address',
         'password',
         'parent_id',
+        'created_by',
+        'updated_by',
     ];
 
     /**
@@ -63,6 +65,7 @@ class User extends Authenticatable implements HasMedia
         'address' => 'required|string',
         'phone_number' => 'required|numeric|digits_between:5,15|unique:users,phone_number',
         'password' => 'min:8',
+        'created_by' => 'required|int',
     ];
     /**
      * The rules of edit users fields.
@@ -78,6 +81,8 @@ class User extends Authenticatable implements HasMedia
         'address' => 'sometimes|string',
         'phone_number' => 'sometimes|numeric|digits_between:5,15|unique:users,phone_number',
         'password' => 'sometimes|min:8',
+        'created_by' => 'required|int',
+        'updated_by' => 'required|int',
     ];
 
     public function registerMediaCollections(): void
@@ -93,5 +98,15 @@ class User extends Authenticatable implements HasMedia
     public function parent()
     {
         return $this->belongsTo(User::class, 'parent_id');
+    }
+
+    public function creator()
+    {
+        return $this->hasOne(User::class, 'created_by');
+    }
+
+    public function updater()
+    {
+        return $this->hasOne(User::class, 'updated_by');
     }
 }
