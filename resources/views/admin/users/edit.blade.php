@@ -20,7 +20,7 @@
             <div class="alert alert-danger">{{ session()->get('issue_message') }}</div>
         @endif
         <!--begin::Form-->
-        <form class="form" action="{{route('admin.users.update', ['user' => $user->id])}}" method="POST">
+        <form class="form" action="{{route('admin.users.update', ['user' => $user->id])}}" method="POST" enctype="multipart/form-data">
             @method('PATCH')
             @csrf
             @include('admin.users.fields', $user)

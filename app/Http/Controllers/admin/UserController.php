@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Facades\MediaHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
@@ -53,6 +54,10 @@ class UserController extends Controller
         try {
             $user = $this->model->create($request->validated());
             $user->assignRole([$request->role]);
+            if ($request->has('avatar')){
+                $user->clearMediaCollection('avatars');
+                MediaHelper::uploadMedia($request, $user);
+            }
             return redirect()->route('admin.users.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.users.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
@@ -98,6 +103,11 @@ class UserController extends Controller
             $user = $this->model->where('id', $id)->first();
             $user->update($request->validated());
             $user->syncRoles([$request->role ?? $user->roles]);
+
+            if ($request->has('avatar')){
+                $user->clearMediaCollection('avatars');
+                $dd = MediaHelper::uploadMedia($request, $user);
+            }
             return redirect()->route('admin.users.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.users.edit', $user->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
