@@ -30,7 +30,7 @@
             <span class="menu-link">
                 <span class="menu-icon">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-<i class="fa-solid fa-address-book  fs-4"></i>
+                    <i class="fa-solid fa-address-book  fs-4"></i>
                     <!--end::Svg Icon-->
                 </span>
                 <span class="menu-title">@lang('menu.users')</span>

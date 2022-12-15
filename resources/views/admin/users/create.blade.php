@@ -17,7 +17,7 @@
             <div class="alert alert-danger">{{ session()->get('issue_message') }}</div>
         @endif
         <!--begin::Form-->
-        <form class="form" action="{{route('admin.users.store')}}" method="POST">
+        <form class="form" action="{{route('admin.users.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             @include('admin.users.fields')
         </form>

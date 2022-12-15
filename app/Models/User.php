@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\MediaLibrary\HasMedia;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, InteractsWithMedia;
 
     protected $table = 'users';
     /**
@@ -73,4 +75,9 @@ class User extends Authenticatable
         'phone_number' => 'sometimes|numeric|digits_between:5,15|unique:users,phone_number',
         'password' => 'sometimes|min:8',
     ];
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('avatars');
+}
 }

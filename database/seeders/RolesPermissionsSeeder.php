@@ -18,7 +18,7 @@ class RolesPermissionsSeeder extends Seeder
             [
                 "name" => "list-roles",
                 "display_name" => "List Roles",
-                "ar_display_name" => "عرض المستخدمين",
+                "ar_display_name" => "عرض الصلاحيات",
                 "permission_group" => "roles",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
@@ -26,7 +26,7 @@ class RolesPermissionsSeeder extends Seeder
             [
                 "name" => "force-list-roles",
                 "display_name" => "Force List Roles",
-                "ar_display_name" => "عرض كافة المستخدمين بالنظام",
+                "ar_display_name" => "عرض كافة الصلاحيات بالنظام",
                 "permission_group" => "roles",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
@@ -35,7 +35,7 @@ class RolesPermissionsSeeder extends Seeder
             [
                 "name" => "create-role",
                 "display_name" => "Create Role",
-                "ar_display_name" => "انشاء مستخدم جديدة",
+                "ar_display_name" => "انشاء صلاحية جديدة",
                 "permission_group" => "roles",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
@@ -44,7 +44,7 @@ class RolesPermissionsSeeder extends Seeder
             [
                 "name" => "edit-role",
                 "display_name" => "Edit Role",
-                "ar_display_name" => "تعديل مستخدم",
+                "ar_display_name" => "تعديل صلاحية",
                 "permission_group" => "roles",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
@@ -53,7 +53,7 @@ class RolesPermissionsSeeder extends Seeder
             [
                 "name" => "delete-role",
                 "display_name" => "Delete Role",
-                "ar_display_name" => "حذف مستخدم",
+                "ar_display_name" => "حذف صلاحية",
                 "permission_group" => "roles",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
