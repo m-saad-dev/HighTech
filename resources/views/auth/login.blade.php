@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-{{--{{dd(app()->getLocale(), checkSessionLocale('ar'), app()->getLocale())}}--}}
-{{--{{dd(app()->getLocale())}}--}}
 
 @if(app()->getLocale() == 'en')
 <html lang="en">
@@ -75,7 +73,6 @@
             <div class="card rounded-3 w-md-750px h-md-650px">
                 <!--begin::Card body-->
                 <div class="card-body p-10 p-lg-20">
-{{--                    {{dd($errors, app()->getLocale(),$errors->first())}}--}}
                     @if ($errors->first())
                         <div class="d-flex flex-center w-md-550px p-5">
                             <div class="alert alert-danger">{{ $errors->first() }}</div>

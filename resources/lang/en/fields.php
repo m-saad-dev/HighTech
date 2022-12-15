@@ -8,6 +8,7 @@ return [
 	'female' 		=> 'Female',
 	'phone_number' 	=> 'Phone Number',
 	'email' 		=> 'Email',
+	'parent_id' 	=> 'Manager',
 	'password' 		=> 'Password',
 	'city' 			=> 'City',
 	'address' 		=> 'Address',

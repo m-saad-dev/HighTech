@@ -25,9 +25,10 @@
         <!--end:Menu item-->
 
         <!--begin:Menu item-->
-        <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
-            <!--begin:Menu link-->
-            <span class="menu-link">
+        @canany(['force-list-users', 'list-users', 'create-user'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+                <!--begin:Menu link-->
+                <span class="menu-link">
                 <span class="menu-icon">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                     <i class="fa-solid fa-address-book  fs-4"></i>
@@ -36,46 +37,52 @@
                 <span class="menu-title">@lang('menu.users')</span>
                 <span class="menu-arrow"></span>
             </span>
-            <!--end:Menu link-->
-            <!--begin:Menu sub-->
-            <div class="menu-sub menu-sub-accordion">
-                <!--begin:Menu item-->
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link" href="{{route('admin.users.index')}}">
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['force-list-users', 'list-users'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.users.index')}}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
-                        <span class="menu-title">@lang('users.allUsers')</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
-                <!--end:Menu item-->
-            </div>
-            <!--end:Menu sub-->
-            <!--begin:Menu sub-->
-            <div class="menu-sub menu-sub-accordion">
-                <!--begin:Menu item-->
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link" href="{{route('admin.users.create')}}">
+                                <span class="menu-title">@lang('users.allUsers')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-user')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.users.create')}}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>
-                        <span class="menu-title">@lang('users.createUser')</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
+                                <span class="menu-title">@lang('users.createUser')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
                 <!--end:Menu item-->
             </div>
-            <!--end:Menu item-->
-        </div>
+        @endcanany
         <!--end:Menu item-->
 
         <!--begin:Menu item-->
-        <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
-            <!--begin:Menu link-->
-            <span class="menu-link">
+        @canany(['force-list-roles', 'list-roles', 'create-role'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+                <!--begin:Menu link-->
+                <span class="menu-link">
                 <span class="menu-icon">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                     <i class="fa-solid fa-fingerprint fs-4"></i>
@@ -84,42 +91,46 @@
                 <span class="menu-title">@lang('menu.roles')</span>
                 <span class="menu-arrow"></span>
             </span>
-            <!--end:Menu link-->
-            <!--begin:Menu sub-->
-            <div class="menu-sub menu-sub-accordion">
-                <!--begin:Menu item-->
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link" href="{{route('admin.roles.index')}}">
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['force-list-roles', 'list-roles'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.roles.index')}}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
-                        <span class="menu-title">@lang('roles.allRoles')</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
-                <!--end:Menu item-->
-            </div>
-            <!--end:Menu sub-->
-            <!--begin:Menu sub-->
-            <div class="menu-sub menu-sub-accordion">
-                <!--begin:Menu item-->
-                <div class="menu-item">
-                    <!--begin:Menu link-->
-                    <a class="menu-link" href="{{route('admin.roles.create')}}">
+                                <span class="menu-title">@lang('roles.allRoles')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-role')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.roles.create')}}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>
-                        <span class="menu-title">@lang('roles.createRole')</span>
-                    </a>
-                    <!--end:Menu link-->
-                </div>
+                                <span class="menu-title">@lang('roles.createRole')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
                 <!--end:Menu item-->
             </div>
-            <!--end:Menu item-->
-        </div>
+        @endcanany
         <!--end:Menu item-->
-
     </div>
     <!--end::Menu-->
 </div>

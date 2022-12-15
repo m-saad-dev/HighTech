@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\View;
@@ -23,7 +24,12 @@ class ViewServiceProvider extends ServiceProvider
         });
         View::composer(['admin.users.fields'], function ($view) {
             $allRoles = Role::all();
-            $view->with('allRoles', $allRoles);
+            //get auth user children and send them as parents for the new user create view
+            $parents = auth()->user()->hasRole('Super Admin') ? User::all() : auth()->user()->children->add(auth()->user())->sort();
+            $view->with([
+                'allRoles' => $allRoles,
+                'parents' => $parents,
+            ]);
         });
     }
 }
