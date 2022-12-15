@@ -8,9 +8,9 @@
         <!--begin::Col-->
         <div class="col-lg-8">
             <!--begin::Image input-->
-            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/media/svg/files/upload.svg')}}')">
+            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}')">
                 <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/media/svg/files/upload.svg')}})"></div>
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
                 <!--end::Preview existing avatar-->
                 <!--begin::Label-->
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -134,7 +134,6 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
-
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
@@ -167,9 +166,3 @@
     <!--end::Input group-->
 </div>
 <!--end::Card body-->
-<!--begin::Actions-->
-<div class="card-footer d-flex justify-content-end py-6 px-9">
-    <button type="reset" class="btn btn-light btn-active-light-primary me-2">@lang('common.cancel')</button>
-    <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">@lang('common.save')</button>
-</div>
-<!--end::Actions-->
