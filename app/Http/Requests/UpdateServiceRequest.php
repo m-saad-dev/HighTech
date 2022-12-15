@@ -21,7 +21,6 @@ class UpdateServiceRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        $this->merge(['password' => Hash::make($this->password)]);
     }
 
     /**

@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@admin.com',
             'phone_number' => '010123456789',
             'address' => '',
+            'created_by' => 1,
             'password' => Hash::make('admin@admin.com'),
         ]);
     }

@@ -63,4 +63,6 @@ return [
     ],
     'issue_message' => 'Sorry But there were an error in completing process on :item',
     'issue_message_editUser' => 'Sorry, You can\'t edit on this :item',
+    'creator' => 'Created By',
+    'updater' => 'Updated By',
 ];

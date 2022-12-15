@@ -21,7 +21,7 @@ class UpdateRoleRequest extends FormRequest
 
     protected function prepareForValidation()
     {
-        $this->merge(['password' => Hash::make($this->password)]);
+        $this->merge(['updated_by' => auth()->id()]);
     }
 
     /**
@@ -33,7 +33,8 @@ class UpdateRoleRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255|unique:roles,name,' . $this->route('role') . ',id',
-            'name_ar' => 'required|max:255|unique:roles,name_ar,' . $this->route('role') . ',id'
+            'name_ar' => 'required|max:255|unique:roles,name_ar,' . $this->route('role') . ',id',
+            'updated_by' => 'required|int',
         ];
     }
 }

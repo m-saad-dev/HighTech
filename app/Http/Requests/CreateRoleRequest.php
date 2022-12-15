@@ -19,6 +19,11 @@ class CreateRoleRequest extends FormRequest
         return Auth::user() ? true : false;
     }
 
+    protected function prepareForValidation()
+    {
+        $this->merge(['created_by' => auth()->id(), 'guard_name' => auth()->guard()->check('web') ? 'web' : '']);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -26,9 +31,6 @@ class CreateRoleRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|max:255|unique:roles,name',
-            'name_ar' => 'required|max:255|unique:roles,name_ar',
-            ];
+        return Role::$createRules;
     }
 }

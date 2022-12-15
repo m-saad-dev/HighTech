@@ -20,7 +20,7 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         //Admin Role
-        $role = Role::create(['name' => 'Super Admin','name_ar' => 'مدير النظام','guard_name'=>'web']);
+        $role = Role::create(['name' => 'Super Admin','name_ar' => 'مدير النظام','guard_name'=>'web', 'created_by' => 1]);
         $role->givePermissionTo([Permission::all()]);
         $admin= User::findOrFail(1);
         $admin->assignRole('Super Admin');

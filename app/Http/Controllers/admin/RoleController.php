@@ -5,10 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateRoleRequest;
 use App\Http\Requests\UpdateRoleRequest;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use App\Models\Role;
 
 class RoleController extends Controller
 {
@@ -61,13 +59,14 @@ class RoleController extends Controller
     public function store(CreateRoleRequest $request)
     {
         $item = checkLocale('ar') ? "الصلاحية" : "The Role";
-        try {
+//        try {
+
             $role = $this->model->create($request->validated());
             $role->syncPermissions($request->selected);
             return redirect()->route('admin.roles.index')->with('success', __('messages.created',['item' => $item]));
-        } catch (\Exception $e) {
-            return redirect()->route('admin.roles.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-        }
+//        } catch (\Exception $e) {
+//            return redirect()->route('admin.roles.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+//        }
     }
 
     /**

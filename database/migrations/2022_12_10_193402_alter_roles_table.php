@@ -15,6 +15,8 @@ class AlterRolesTable extends Migration
     {
         Schema::table('roles', function (Blueprint $table) {
             $table->string('name_ar', 256)->after('name');
+            $table->bigInteger('created_by');
+            $table->bigInteger('updated_by')->nullable();
         });
     }
 
@@ -27,6 +29,8 @@ class AlterRolesTable extends Migration
     {
         Schema::table('roles', function (Blueprint $table) {
             $table->dropColumn(['name_ar']);
+            $table->dropColumn(['created_by']);
+            $table->dropColumn(['updated_by']);
         });
     }
 }

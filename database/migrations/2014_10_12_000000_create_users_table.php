@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->bigInteger('parent_id')->nullable();
+            $table->bigInteger('created_by');
+            $table->bigInteger('updated_by')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
