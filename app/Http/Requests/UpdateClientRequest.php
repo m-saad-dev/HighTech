@@ -2,12 +2,11 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Staff;
-use Astrotomic\Translatable\Validation\RuleFactory;
+use App\Models\Client;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class UpdateStaffRequest extends FormRequest
+class UpdateClientRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -31,10 +30,7 @@ class UpdateStaffRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = RuleFactory::make([
-                'translations.%name%' => 'required|string',
-                'translations.%position%' => 'required|string',
-            ]) + Staff::$editRules;
-        return  $rules;
+        $staff = Client::$editRules;
+        return $staff;
     }
 }

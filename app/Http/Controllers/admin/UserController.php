@@ -123,9 +123,11 @@ class UserController extends Controller
             if ($request->has('avatar')){
                 $user->clearMediaCollection('avatars');
                 $dd = MediaHelper::uploadMedia($request, $user);
+            } else if ($request->avatar_remove) {
+                $user->clearMediaCollection('avatars');
             }
             return redirect()->route('admin.users.index')->with('success', __('messages.updated',['item' => $item]));
-        } catch (\Exception $e) {
+                    } catch (\Exception $e) {
             return redirect()->route('admin.users.edit', $user->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }

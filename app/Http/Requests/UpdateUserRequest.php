@@ -21,13 +21,15 @@ class UpdateUserRequest extends FormRequest
 
     protected function prepareForValidation()
     {
+//        if ($this->avatar_remove){
+//            $this->replace($this->except('avatar'));
+//        }
         if ($this->password){
             $this->merge(['password' => Hash::make($this->password)]);
         } else {
             $this->replace($this->except('password'));
         }
         $this->merge(['updated_by' => auth()->id()]);
-        $this->replace(array_filter($this->all()));
     }
 
     /**

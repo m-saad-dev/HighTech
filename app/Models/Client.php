@@ -2,25 +2,22 @@
 
 namespace App\Models;
 
-use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Astrotomic\Translatable\Translatable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 
-class Staff extends Model implements HasMedia, TranslatableContract
+class Client extends Authenticatable implements HasMedia, TranslatableContract
 {
     use Translatable, InteractsWithMedia;
 
-    protected $table = 'staff';
-
-    public $translatedAttributes = ['name', 'position'];
+    protected $table = 'clients';
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
         'created_by',
         'updated_by',
     ];
@@ -31,7 +28,8 @@ class Staff extends Model implements HasMedia, TranslatableContract
      *
      * @var array<string, string>
      */
-    static public $createRules =[
+    static public $createRules = [
+        'name' => 'required|string',
         'created_by' => 'required|int',
     ];
     /**
@@ -40,6 +38,7 @@ class Staff extends Model implements HasMedia, TranslatableContract
      * @var array<string, string>
      */
     static public $editRules = [
+        'name' => 'sometimes|string',
         'updated_by' => 'required|int',
     ];
 

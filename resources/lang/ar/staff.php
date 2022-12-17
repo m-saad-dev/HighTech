@@ -16,5 +16,4 @@ return [
     'editStaff' => 'تعديل فرد طاقم عمل',
     'deleteStaff' => 'حذف فرد من طاقم عمل',
     'AddStaff' => 'انشاء فرد من طاقم عمل',
-    'StaffNameEn' => 'Staff Name',
 ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\StaffController;
@@ -49,6 +50,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
         Route::resource('/roles', RoleController::class);
         Route::resource('/staff', StaffController::class);
+        Route::resource('/clients', ClientController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
 });

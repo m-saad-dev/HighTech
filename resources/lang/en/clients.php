@@ -11,8 +11,8 @@ return [
     |
     */
 
-    'allStaff' => 'All Staff',
-    'createStaff' => 'New Staff Member',
-    'editStaff' => 'Edit Staff Member',
-    'deleteStaff' => 'Delete Staff Member',
+    'allClients' => 'All Clients',
+    'createClient' => 'New Client',
+    'editClient' => 'Edit Client',
+    'deleteClient' => 'Delete Client',
 ];

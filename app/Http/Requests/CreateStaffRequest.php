@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\Staff;
+use Astrotomic\Translatable\Validation\RuleFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,6 +31,10 @@ class CreateStaffRequest extends FormRequest
      */
     public function rules()
     {
-        return Staff::$createRules;
+        $rules = RuleFactory::make([
+                'translations.%name%' => 'required|string',
+                'translations.%position%' => 'required|string',
+            ]) + Staff::$createRules;
+        return  $rules;
     }
 }

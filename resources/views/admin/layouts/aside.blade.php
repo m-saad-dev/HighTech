@@ -185,6 +185,59 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
+        @canany(['list-clients', 'create-client'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                        <i class="fa-solid fa-fingerprint fs-4"></i>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">@lang('menu.clients')</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['list-clients'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.clients.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('clients.allClient')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-client')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.clients.create')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('clients.createClient')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
+                <!--end:Menu item-->
+            </div>
+        @endcanany
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
 {{--        @canany(['force-list-roles', 'list-roles', 'create-role'])--}}
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
                 <!--begin:Menu link-->

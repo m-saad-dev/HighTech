@@ -11,8 +11,8 @@ return [
     |
     */
 
-    'allStaff' => 'All Staff',
-    'createStaff' => 'New Staff Member',
-    'editStaff' => 'Edit Staff Member',
-    'deleteStaff' => 'Delete Staff Member',
+    'allClients' => 'كافة العملاء',
+    'createClient' => 'عميل جديد',
+    'editClient' => 'تعديل عميل',
+    'deleteClient' => 'حذف عميل',
 ];

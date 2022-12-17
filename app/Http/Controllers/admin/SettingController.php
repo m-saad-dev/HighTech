@@ -12,7 +12,6 @@ class SettingController extends Controller
     public function edit($key, Request $request)
     {
         $setting = Setting::where('key' , $key)->first();
-//dd($setting);
         return view("admin.settings.$key")
             ->with('setting', $setting);
     }

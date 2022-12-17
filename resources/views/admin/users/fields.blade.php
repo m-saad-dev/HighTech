@@ -8,9 +8,9 @@
         <!--begin::Col-->
         <div class="col-lg-8">
             <!--begin::Image input-->
-            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}')">
+            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
                 <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($user) && $user->getFirstMedia('avatars') ? $user->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
                 <!--end::Preview existing avatar-->
                 <!--begin::Label-->
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">

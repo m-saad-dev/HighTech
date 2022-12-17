@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Setting extends Model implements HasMedia
 {
-    use InteractsWithMedia;
+    use InteractsWithMedia, HasFactory;
     protected $with = [
         'media',
     ];
@@ -36,7 +37,7 @@ class Setting extends Model implements HasMedia
      */
     protected $casts = [
         'key' => 'string',
-        'value' => 'string',
+        'value' => 'object',
     ];
 
     /**
@@ -50,10 +51,10 @@ class Setting extends Model implements HasMedia
 
     public function getTitle($locale)
     {
-        return json_decode($this->value, true)['title'][$locale];
+        return $this->value->title->{$locale}/*json_decode($this->value, true)['title'][$locale]*/;
     }
     public function getContent($locale)
     {
-        return json_decode($this->value, true)['content'][$locale];
+        return $this->value->content->{$locale}/*json_decode($this->value, true)['content'][$locale]*/;
     }
 }

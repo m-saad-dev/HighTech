@@ -19,4 +19,5 @@ return [
     'staff' => 'Staff',
     'myProfile' => 'My Profile',
     'settings' => 'Website Settings',
+    'clients' => 'Clients',
 ];

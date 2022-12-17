@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateStaffRequest;
 use App\Http\Requests\UpdateStaffRequest;
 use App\Models\Staff;
+use App\Models\StaffTranslation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -15,13 +16,15 @@ use function PHPUnit\Framework\throwException;
 class StaffController extends Controller
 {
     private $staffRepository;
-    public function __construct(Staff $model)
+    private $translationModel;
+    public function __construct(Staff $model, StaffTranslation $translationModel)
     {
         $this->middleware("permission:list-staff", ['only' => ['index']]);
         $this->middleware("permission:create-staff", ['only' => ['create', 'store']]);
         $this->middleware("permission:edit-staff", ['only' => ['edit', 'update']]);
         $this->middleware("permission:delete-staff", ['only' => ['destroy']]);
         $this->model = $model;
+        $this->translationModel = $translationModel;
     }
     /**
      * Display a listing of the resource.
@@ -58,7 +61,9 @@ class StaffController extends Controller
     {
         $item = checkLocale('ar') ? "المستخدم" : "The Staff";
         try {
-            $staff = $this->model->create($request->validated());
+            if($request->has('translations'))
+                $request->replace($request->except('translations') + $request->translations);
+            $staff = $this->model->create($request->all());
             if ($request->has('avatar')){
                 $staff->clearMediaCollection('avatars');
                 MediaHelper::uploadMedia($request, $staff);
@@ -106,16 +111,20 @@ class StaffController extends Controller
     public function update(UpdateStaffRequest $request, Staff $staff)
     {
         $item = checkLocale('ar') ? "المستخدم" : "The Staff";
-        try {
-            $staff->update($request->validated());
+//        try {
+            if($request->has('translations'))
+                $request->replace($request->except('translations') + $request->translations);
+            $staff->update($request->all());
             if ($request->has('avatar')){
                 $staff->clearMediaCollection('avatars');
                 MediaHelper::uploadMedia($request, $staff);
+            } else if ($request->avatar_remove) {
+                $staff->clearMediaCollection('avatars');
             }
             return redirect()->route('admin.staff.index')->with('success', __('messages.updated',['item' => $item]));
-        } catch (\Exception $e) {
-            return redirect()->route('admin.staff.edit', $staff->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
-        }
+//        } catch (\Exception $e) {
+//            return redirect()->route('admin.staff.edit', $staff->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
+//        }
     }
 
     /**
