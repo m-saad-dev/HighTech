@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 
-class Client extends Authenticatable implements HasMedia, TranslatableContract
+class Client extends Model implements HasMedia
 {
-    use Translatable, InteractsWithMedia;
+    use InteractsWithMedia;
 
     protected $table = 'clients';
     /**

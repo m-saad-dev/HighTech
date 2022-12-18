@@ -159,7 +159,12 @@ return [
     */
 
     'attributes' => [
-        'address' => 'Address'
+        'translations.en.name' => 'Name' . trans('common.inEn'),
+        'translations.en.position' => 'Position' . trans('common.inEn'),
+        'translations.en.review' => 'Review' . trans('common.inEn'),
+        'translations.ar.name' => 'Name' . trans('common.inAr'),
+        'translations.ar.position' => 'Position' . trans('common.inAr'),
+        'translations.ar.review' => 'Review' . trans('common.inAr'),
     ],
 
 ];

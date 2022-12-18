@@ -20,4 +20,6 @@ return [
     'myProfile' => 'My Profile',
     'settings' => 'Website Settings',
     'clients' => 'Clients',
+    'customerReviews' => 'Customer Reviews',
+    'services' => 'services',
 ];

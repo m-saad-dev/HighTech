@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Role;
+use App\Models\Service;
+use Astrotomic\Translatable\Validation\RuleFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class UpdateServiceRequest extends FormRequest
 {
@@ -21,6 +21,7 @@ class UpdateServiceRequest extends FormRequest
 
     protected function prepareForValidation()
     {
+        $this->merge(['updated_by' => auth()->id()]);
     }
 
     /**
@@ -30,9 +31,11 @@ class UpdateServiceRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|max:255|unique:roles,name,' . $this->route(service) . ',id',
-            'name_ar' => 'required|max:255|unique:roles,name_ar,' . $this->route(service) . ',id'
-        ];
+        $rules = RuleFactory::make([
+                'translations.%title%' => 'required|string',
+                'translations.%sub_title%' => 'required|string',
+                'translations.%description%' => 'required|string',
+            ]) + Service::$editRules;
+        return $rules;
     }
 }

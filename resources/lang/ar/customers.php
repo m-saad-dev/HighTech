@@ -11,9 +11,9 @@ return [
     |
     */
 
-    'allStaff' => 'أفراد طاقم العمل',
-    'createStaff' => 'فرد طاقم عمل جديد',
-    'editStaff' => 'تعديل فرد طاقم عمل',
-    'deleteStaff' => 'حذف فرد من طاقم عمل',
-    'AddStaff' => 'انشاء فرد من طاقم عمل',
+    'allCustomerReviews' => 'كافة آراء العملاء',
+    'createCustomerReview' => 'رأي عميل جديد',
+    'editCustomerReview' => 'تعديل رأي عميل',
+    'deleteCustomerReview' => 'حذف رأي عميل',
+    'AddCustomerReview' => 'انشاء رأي عميل',
 ];

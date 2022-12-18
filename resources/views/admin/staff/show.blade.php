@@ -50,7 +50,7 @@
             <!--begin::Input group-->
             <div class="row mb-7">
                 <!--begin::Label-->
-                <label class="col-lg-4 fw-semibold text-muted">@lang('fields.phone_number')</label>
+                <label class="col-lg-4 fw-semibold text-muted">@lang('fields.position')</label>
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8 d-flex align-items-center">

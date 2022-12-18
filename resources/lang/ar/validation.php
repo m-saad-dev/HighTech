@@ -160,23 +160,13 @@ return [
     */
 
     'attributes' => [
-        'username'              => 'اسم المُستخدم',
-        'email'                 => 'البريد الالكتروني',
-        'password'              => 'كلمة المرور',
-        'phone_number'          => 'الهاتف',
-        'password_confirmation' => 'تأكيد كلمة المرور',
-        'old_password'          => 'كلمة المرور القديمة',
-        'address'               => 'العنوان',
-
-        // Rate Student
-        'time' => 'وقت',
-        'start' => 'البداية',
-        'end' => 'النهاية',
-        'start_time' => 'وقت البداية',
-        'end_time' => 'وقت النهاية',
-        'start_date' => 'تاريخ البداية',
-        'end_date' => 'تاريخ النهاية',
-        'notes' => 'ملاحظات',
-        'policy_agree' => 'أوافق على شروط الاستخدام',
+        'translations.en.name' => trans('fields.name') . trans('common.inEn'),
+        'translations.en.position' => trans('fields.position') . trans('common.inEn'),
+        'translations.en.review' => trans('fields.review') . trans('common.inEn'),
+        'translations.en.company_name' => trans('fields.companyName') . trans('common.inEn'),
+        'translations.ar.name' => trans('fields.name') . trans('common.inAr'),
+        'translations.ar.position' => trans('fields.position') . trans('common.inAr'),
+        'translations.ar.review' => trans('fields.review') . trans('common.inAr'),
+        'translations.ar.company_name' => trans('fields.companyName') . trans('common.inAr'),
     ],
 ];

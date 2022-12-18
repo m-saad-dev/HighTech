@@ -3,7 +3,7 @@
 @section('breadcrumb')
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
-            trans('staff.allUsers') => route('admin.staff.index'),
+            trans('staff.allStaff') => route('admin.staff.index'),
             trans('staff.editStaff') => null,
         ],
     ])

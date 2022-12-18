@@ -11,8 +11,9 @@ return [
     |
     */
 
-    'allClients' => 'Our Clients',
-    'createClient' => 'New Client',
-    'editClient' => 'Edit Client',
-    'deleteClient' => 'Delete Client',
+    'allServices' => 'كافة الخدمات',
+    'createService' => 'خدمة جديد',
+    'editService' => 'تعديل خدمة',
+    'deleteService' => 'حذف خدمة',
+    'showService' => 'عرض الخدمة',
 ];

@@ -47,12 +47,12 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.lang.en')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.inEn')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[en][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.lang.en')" value="{{isset($staff) ? $staff->name : (old('en.name') ?? '')}}" />
-            @error('en.name')
+            <input type="text" name="translations[en][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.inEn')" value="{{isset($staff) ? $staff->name : (old('translations.en.name') ?? '')}}" />
+            @error('translations.en.name')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
@@ -60,27 +60,12 @@
     </div>
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.lang.ar')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.inAr')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[ar][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.lang.ar')" value="{{isset($staff) ? $staff->name : (old('ar.name') ?? '')}}" />
-            @error('ar.name')
-            <span class="alert-danger" role="alert"> {{ $message }} </span>
-            @enderror
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.lang.en')</label>
-        <!--end::Label-->
-        <!--begin::Col-->
-        <div class="col-lg-8">
-            <input type="text" name="translations[en][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.lang.en')" value="{{isset($staff) ? $staff->position : (old('en.position') ?? '')}}" />
-            @error('en.position')
+            <input type="text" name="translations[ar][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.inAr')" value="{{isset($staff) ? $staff->name : (old('translations.ar.name') ?? '')}}" />
+            @error('translations.ar.name')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
@@ -90,12 +75,26 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.lang.ar')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.inEn')</label>
+        <!--end::Label-->
+        <div class="col-lg-8">
+            <input type="text" name="translations[en][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.inEn')" value="{{isset($staff) ? $staff->position : (old('translations.en.position') ?? '')}}" />
+            @error('translations.en.position')
+            <span class="alert-danger" role="alert"> {{ $message }} </span>
+            @enderror
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.inAr')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[ar][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.lang.ar')" value="{{isset($staff) ? $staff->position : (old('ar.position') ?? '')}}" />
-            @error('ar.position')
+            <input type="text" name="translations[ar][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.inAr')" value="{{isset($staff) ? $staff->position : (old('translations.ar.position') ?? '')}}" />
+            @error('translations.ar.position')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>

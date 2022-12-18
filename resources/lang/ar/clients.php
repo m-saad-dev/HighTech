@@ -11,8 +11,8 @@ return [
     |
     */
 
-    'allClients' => 'كافة العملاء',
-    'createClient' => 'عميل جديد',
-    'editClient' => 'تعديل عميل',
-    'deleteClient' => 'حذف عميل',
+    'allClients' => 'كافة خدماتنا',
+    'createClient' => 'خدمة جديد',
+    'editClient' => 'تعديل خدمة',
+    'deleteClient' => 'حذف خدمة',
 ];

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCustomersTranslationTable extends Migration
+class CreateCustomersTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateCustomersTranslationTable extends Migration
      */
     public function up()
     {
-        Schema::create('customers_translation', function (Blueprint $table) {
+        Schema::create('customer_translations', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->bigInteger('customer_id')->unsigned();
+            $table->string('locale')->index();
+            $table->string('name');
+            $table->string('company_name');
+            $table->text('review');
+            $table->unique(['customer_id', 'locale']);
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
     }
 
@@ -26,6 +32,7 @@ class CreateCustomersTranslationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers_translation');
+        Schema::dropForeign(['customer_id']);
+        Schema::dropIfExists('customers_translations');
     }
 }

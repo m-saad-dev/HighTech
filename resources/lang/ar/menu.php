@@ -20,4 +20,6 @@ return [
     'myProfile' => 'ملفي الشخصي',
     'settings' => 'إعدادات الموقع',
     'clients' => 'عملائنا',
+    'services' => 'خدماتنا',
+    'customerReviews' => 'آراء العملاء',
 ];

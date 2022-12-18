@@ -132,6 +132,59 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
+        @canany(['list-services', 'create-service'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+                <span class="menu-icon">
+                    <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                    <i class="fa-solid fa-fingerprint fs-4"></i>
+                    <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">@lang('menu.services')</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['force-list-services', 'list-services'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.services.index')}}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                                <span class="menu-title">@lang('services.allServices')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-service')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.services.create')}}">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                                <span class="menu-title">@lang('services.createService')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
+                <!--end:Menu item-->
+            </div>
+        @endcanany
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
         @canany(['list-staff', 'create-staff'])
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
                 <!--begin:Menu link-->
@@ -152,9 +205,9 @@
                         <div class="menu-item">
                             <!--begin:Menu link-->
                             <a class="menu-link" href="{{route('admin.staff.index')}}">
-                        <span class="menu-bullet">
-                            <span class="bullet bullet-dot"></span>
-                        </span>
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
                                 <span class="menu-title">@lang('staff.allStaff')</span>
                             </a>
                             <!--end:Menu link-->
@@ -170,9 +223,9 @@
                         <div class="menu-item">
                             <!--begin:Menu link-->
                             <a class="menu-link" href="{{route('admin.staff.create')}}">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
                                 <span class="menu-title">@lang('staff.createStaff')</span>
                             </a>
                             <!--end:Menu link-->
@@ -208,7 +261,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">@lang('clients.allClient')</span>
+                                <span class="menu-title">@lang('clients.allClients')</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -227,6 +280,59 @@
                                     <span class="bullet bullet-dot"></span>
                                 </span>
                                 <span class="menu-title">@lang('clients.createClient')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
+                <!--end:Menu item-->
+            </div>
+        @endcanany
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
+        @canany(['list-customers', 'create-customer'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                        <i class="fa-solid fa-fingerprint fs-4"></i>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">@lang('menu.customerReviews')</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['list-customers'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.customers.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('customers.allCustomerReviews')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-customer')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.customers.create')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('customers.createCustomerReview')</span>
                             </a>
                             <!--end:Menu link-->
                         </div>

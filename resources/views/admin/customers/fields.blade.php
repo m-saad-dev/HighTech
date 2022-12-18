@@ -11,7 +11,7 @@
             <!--begin::Image input-->
             <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
                 <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($staff) && $staff->getFirstMedia('avatars') ? $staff->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($customer) && $customer->getFirstMedia('avatars') ? $customer->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
                 <!--end::Preview existing avatar-->
                 <!--begin::Label-->
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -47,12 +47,12 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.lang.en')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.inEn')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[en][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.lang.en')" value="{{isset($staff) ? $staff->name : (old('en.name') ?? '')}}" />
-            @error('en.name')
+            <input type="text" name="translations[en][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.inEn')" value="{{isset($customer) ? $customer->name : (old('en.name') ?? '')}}" />
+            @error('translations.en.name')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
@@ -60,27 +60,12 @@
     </div>
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.lang.ar')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name') @lang('common.inAr')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[ar][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.lang.ar')" value="{{isset($staff) ? $staff->name : (old('ar.name') ?? '')}}" />
-            @error('ar.name')
-            <span class="alert-danger" role="alert"> {{ $message }} </span>
-            @enderror
-        </div>
-        <!--end::Col-->
-    </div>
-    <!--end::Input group-->
-    <!--begin::Input group-->
-    <div class="row mb-6">
-        <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.lang.en')</label>
-        <!--end::Label-->
-        <!--begin::Col-->
-        <div class="col-lg-8">
-            <input type="text" name="translations[en][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.lang.en')" value="{{isset($staff) ? $staff->position : (old('en.position') ?? '')}}" />
-            @error('en.position')
+            <input type="text" name="translations[ar][name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.name') @lang('common.inAr')" value="{{isset($customer) ? $customer->name : (old('ar.name') ?? '')}}" />
+            @error('translations.ar.name')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
@@ -90,12 +75,55 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.position') @lang('common.lang.ar')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.companyName') @lang('common.inEn')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="translations[ar][position]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.position') @lang('common.lang.ar')" value="{{isset($staff) ? $staff->position : (old('ar.position') ?? '')}}" />
-            @error('ar.position')
+            <input type="text" name="translations[en][company_name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.companyName') @lang('common.inEn')" value="{{isset($customer) ? $customer->company_name : (old('translations.en.company_name') ?? '')}}" />
+            @error('translations.en.company_name')
+            <span class="alert-danger" role="alert"> {{ $message }} </span>
+            @enderror
+        </div>
+        <!--end::Col-->
+    </div>
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.companyName') @lang('common.inAr')</label>
+        <!--end::Label-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <input type="text" name="translations[ar][company_name]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.companyName') @lang('common.inAr')" value="{{isset($customer) ? $customer->company_name : (old('translations.ar.company_name') ?? '')}}" />
+            @error('translations.ar.company_name')
+            <span class="alert-danger" role="alert"> {{ $message }} </span>
+            @enderror
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.review') @lang('common.inEn')</label>
+        <!--end::Label-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <textarea type="text" name="translations[en][review]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.review') @lang('common.inEn')">{{isset($customer) ? $customer->review : (old('translations.en.review') ?? '')}}</textarea>
+            @error('translations.en.review')
+            <span class="alert-danger" role="alert"> {{ $message }} </span>
+            @enderror
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.review') @lang('common.inAr')</label>
+        <!--end::Label-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <textarea type="text" name="translations[ar][review]" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.review') @lang('common.inAr')">{{isset($customer) ? $customer->review : (old('translations.ar.review') ?? '')}}</textarea>
+            @error('translations.ar.review')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
