@@ -8,13 +8,13 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 
-class Staff extends Model implements HasMedia, TranslatableContract
+class Customer extends Model implements HasMedia, TranslatableContract
 {
     use Translatable, InteractsWithMedia;
 
-    protected $table = 'staff';
+    protected $table = 'customers';
 
-    public $translatedAttributes = ['name', 'position'];
+    public $translatedAttributes = ['name', 'review', 'company_name'];
     /**
      * The attributes that are mass assignable.
      *

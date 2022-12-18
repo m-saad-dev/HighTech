@@ -33,7 +33,7 @@ class StaffPermissionsSeeder extends Seeder
 //            ],
 
             [
-                "name" => "create-role",
+                "name" => "create-staff",
                 "display_name" => "Create Staff",
                 "ar_display_name" => "انشاء فرد جديد من طاقم العمل",
                 "permission_group" => "staff",
@@ -42,7 +42,7 @@ class StaffPermissionsSeeder extends Seeder
             ],
 
             [
-                "name" => "edit-role",
+                "name" => "edit-staff",
                 "display_name" => "Edit Staff",
                 "ar_display_name" => "تعديل فرد من طاقم العمل",
                 "permission_group" => "staff",
@@ -51,7 +51,7 @@ class StaffPermissionsSeeder extends Seeder
             ],
 
             [
-                "name" => "delete-role",
+                "name" => "delete-staff",
                 "display_name" => "Delete Staff",
                 "ar_display_name" => "حذف فرد من طاقم العمل",
                 "permission_group" => "staff",

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\admin\ClientController;
+use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\StaffController;
 use App\Http\Controllers\admin\UserController;
@@ -49,8 +51,10 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/users', UserController::class);
         Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
         Route::resource('/roles', RoleController::class);
+        Route::resource('/services', ServiceController::class);
         Route::resource('/staff', StaffController::class);
         Route::resource('/clients', ClientController::class);
+        Route::resource('/customers', CustomerController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
 });

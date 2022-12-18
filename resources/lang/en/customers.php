@@ -11,9 +11,9 @@ return [
     |
     */
 
-    'allCustomer' => 'كافة العملاء',
-    'createCustomer' => 'عميل جديد',
-    'editCustomer' => 'تعديل عميل',
-    'deleteCustomer' => 'حذف عميل',
-    'AddCustomer' => 'انشاء عميل',
+    'allCustomerReviews' => 'All Customers Reviews',
+    'createCustomerReview' => 'New Customer Review',
+    'editCustomerReview' => 'Edit Customer Review',
+    'deleteCustomerReview' => 'Delete Customer Review',
+    'AddCustomerReview' => 'Create Customer Review',
 ];

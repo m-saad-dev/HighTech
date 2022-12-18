@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
-class ClientsPermissionsSeeder extends Seeder
+class ٍServicesPermissionsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,45 +16,45 @@ class ClientsPermissionsSeeder extends Seeder
     {
         \DB::table('permissions')->insert([
             [
-                "name" => "list-clients",
-                "display_name" => "List Clients",
-                "ar_display_name" => "عرض العملاء",
-                "permission_group" => "clients",
+                "name" => "list-services",
+                "display_name" => "List Services",
+                "ar_display_name" => "عرض خدماتنا",
+                "permission_group" => "services",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 //            [
-//                "name" => "force-list-clientss",
-//                "display_name" => "Force List Client",
+//                "name" => "force-list-servicess",
+//                "display_name" => "Force List Service",
 //                "ar_display_name" => "عرض كافة طاقم العمل بالنظام",
-//                "permission_group" => "clientss",
+//                "permission_group" => "servicess",
 //                "guard_name" => "web",
 //                "created_at" => Carbon::now()->toDateTimeString(),
 //            ],
 
             [
-                "name" => "create-client",
-                "display_name" => "Create Client",
-                "ar_display_name" => "انشاء عميل جديد",
-                "permission_group" => "clients",
+                "name" => "create-service",
+                "display_name" => "Create Service",
+                "ar_display_name" => "انشاء خدمة جديد",
+                "permission_group" => "services",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 
             [
-                "name" => "edit-client",
-                "display_name" => "Edit Client",
-                "ar_display_name" => "تعديل عميل",
-                "permission_group" => "clients",
+                "name" => "edit-service",
+                "display_name" => "Edit Service",
+                "ar_display_name" => "تعديل خدمة",
+                "permission_group" => "services",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 
             [
-                "name" => "delete-client",
-                "display_name" => "Delete Client",
-                "ar_display_name" => "حذف عميل",
-                "permission_group" => "clients",
+                "name" => "delete-service",
+                "display_name" => "Delete Service",
+                "ar_display_name" => "حذف خدمة",
+                "permission_group" => "services",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],

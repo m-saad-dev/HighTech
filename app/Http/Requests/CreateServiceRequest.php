@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Service;
+use Astrotomic\Translatable\Validation\RuleFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Role;
-use Illuminate\Support\Facades\Hash;
 
 class CreateServiceRequest extends FormRequest
 {
@@ -19,6 +19,11 @@ class CreateServiceRequest extends FormRequest
         return Auth::user() ? true : false;
     }
 
+    protected function prepareForValidation()
+    {
+        $this->merge(['created_by' => auth()->id()]);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -26,9 +31,11 @@ class CreateServiceRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|max:255|unique:roles,name',
-            'name_ar' => 'required|max:255|unique:roles,name_ar',
-            ];
+        $rules = RuleFactory::make([
+                'translations.%title%' => 'required|string',
+                'translations.%sub_title%' => 'required|string',
+                'translations.%description%' => 'required|string',
+            ]) + Service::$createRules;
+        return $rules;
     }
 }

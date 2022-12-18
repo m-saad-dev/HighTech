@@ -17,4 +17,9 @@ return [
 	'role' 		    => 'Role',
 	'avatar' 		=> 'Avatar',
 	'position' 		=> 'Position',
+	'review' 		=> 'Review',
+	'companyName' 		=> 'company Name',
+	'title' 		=> 'Title',
+	'sub_title' 		=> 'Sub Title',
+	'description' 		=> 'Description',
 ];

@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CustomerTranslation extends Model
+class ServiceTranslation extends Model
 {
-    protected $table = 'customer_translations';
     public $timestamps = false;
     /**
      * The attributes that are mass assignable.
@@ -14,9 +13,9 @@ class CustomerTranslation extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'company_name',
-        'review',
+        'title',
+        'sub_title',
+        'description',
     ];
 
 

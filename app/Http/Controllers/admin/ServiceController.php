@@ -2,29 +2,32 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Facades\MediaHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Models\Service;
+use App\Models\Service;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class ServiceController extends Controller
 {
-    private $serviceRepository;
+    private $model;
     public function __construct(Service $model)
     {
+        $this->middleware("permission:list-services", ['only' => ['index']]);
+        $this->middleware("permission:create-service", ['only' => ['create', 'store']]);
+        $this->middleware("permission:edit-service", ['only' => ['edit', 'update']]);
+        $this->middleware("permission:delete-service", ['only' => ['destroy']]);
         $this->model = $model;
     }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index(Request $request)
     {
-        $services = $this->model->paginate(15);
+        $services = $this->model->with(['creator', 'updater'])->paginate(15);
         return view('admin.services.index')->with(
             [
                 'services' => $services,
@@ -35,7 +38,7 @@ class ServiceController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
@@ -50,14 +53,19 @@ class ServiceController extends Controller
      */
     public function store(CreateServiceRequest $request)
     {
-        $item = checkLocale('ar') ? "الصلاحية" : "The Service";
-        try {
-            $service = $this->model->create($request->validated());
-            $service->syncPermissions($request->selected);
-            return redirect()->route('admin.services.index')->with('success', __('messages.created',['item' => $item]));
-        } catch (\Exception $e) {
-            return redirect()->route('admin.services.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-        }
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
+//        try {
+            if($request->has('translations'))
+                $request->replace($request->except('translations') + $request->translations);
+            $service = $this->model->create($request->all());
+            if ($request->has('avatar')){
+                $service->clearMediaCollection('avatars');
+                MediaHelper::uploadMedia($request, $service);
+            }
+            return redirect()->route('admin.services.index')->with('success', __('messages.created', ['item' => $item]));
+//        } catch (\Exception $e) {
+//            return redirect()->route('admin.services.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+//        }
     }
 
     /**
@@ -68,7 +76,8 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('admin.services.show')->with(['role' => $service]);
+        return view('admin.services.show')->with('service', $service);
+        //
     }
 
     /**
@@ -79,8 +88,9 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
+        $item = checkLocale('ar') ? "المستخدم" : "Service";
         return view('admin.services.edit')->with([
-            'role' => $service,
+            'service' => $service,
         ]);
 
     }
@@ -92,16 +102,22 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateroleRequest $request, $id)
+    public function update(UpdateServiceRequest $request, Service $service)
     {
-        $item = checkLocale('ar') ? "الصلاحية" : "The Service";
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
         try {
-            $service = $this->model->where('id', $id);
-            $service->update($request->validated());
-            $service->first()->syncPermissions($request->selected);
+            if($request->has('translations'))
+                $request->replace($request->except('translations') + $request->translations);
+            $service->update($request->all());
+            if ($request->has('avatar')){
+                $service->clearMediaCollection('avatars');
+                MediaHelper::uploadMedia($request, $service);
+            } else if ($request->avatar_remove) {
+                $service->clearMediaCollection('avatars');
+            }
             return redirect()->route('admin.services.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.services.edit', $service->first()->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
+            return redirect()->route('admin.services.edit', $service->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
@@ -109,11 +125,11 @@ class ServiceController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(role $service)
+    public function destroy(Service $service)
     {
-        $item = checkLocale('ar') ? "الصلاحية" : "The Service";
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
         try {
             $service->delete();
             return redirect()->route('admin.services.index')->with('success', __('messages.deleted', ['item' => $item]));

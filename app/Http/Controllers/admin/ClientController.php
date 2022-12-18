@@ -12,7 +12,7 @@ use function PHPUnit\Framework\throwException;
 
 class ClientController extends Controller
 {
-    private $clientRepository;
+    private $model;
     public function __construct(Client $model)
     {
         $this->middleware("permission:list-clients", ['only' => ['index']]);
@@ -55,16 +55,16 @@ class ClientController extends Controller
     public function store(CreateClientRequest $request)
     {
         $item = checkLocale('ar') ? "المستخدم" : "The Client";
-//        try {
+        try {
             $client = $this->model->create($request->validated());
             if ($request->has('avatar')){
                 $client->clearMediaCollection('avatars');
                 MediaHelper::uploadMedia($request, $client);
             }
             return redirect()->route('admin.clients.index')->with('success', __('messages.created', ['item' => $item]));
-//        } catch (\Exception $e) {
-//            return redirect()->route('admin.clients.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-//        }
+        } catch (\Exception $e) {
+            return redirect()->route('admin.clients.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
     }
 
     /**

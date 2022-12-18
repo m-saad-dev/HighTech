@@ -7,7 +7,7 @@ use Astrotomic\Translatable\Validation\RuleFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class CreateStaffRequest extends FormRequest
+class CreateCustomerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,7 +33,8 @@ class CreateStaffRequest extends FormRequest
     {
         $rules = RuleFactory::make([
                 'translations.%name%' => 'required|string',
-                'translations.%position%' => 'required|string',
+                'translations.%company_name%' => 'required|string',
+                'translations.%review%' => 'required|string',
             ]) + Staff::$createRules;
         return  $rules;
     }

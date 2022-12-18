@@ -5,11 +5,11 @@
         <thead class="border-gray-200 fs-5 fw-semibold bg-lighten">
         <tr>
             <th class="min-w-50% max-w-100%">#</th>
-            <th class="min-w-100px">@lang('fields.name')</th>
-            <th class="min-w-150px">@lang('fields.review')</th>
+            <th class="min-w-100px">@lang('fields.title')</th>
+            <th class="min-w-150px">@lang('fields.sub_title')</th>
             <th class="min-w-150px">@lang('common.creator')</th>
             <th class="min-w-150px">@lang('common.updater')</th>
-            @canany(['edit-customer', 'delete-customer'])
+            @canany(['edit-service', 'delete-service'])
                 <th class="min-w-150px">@lang('common.actions')</th>
             @endcanany
         </tr>
@@ -17,24 +17,24 @@
         <!--end::Thead-->
         <!--begin::Tbody-->
         <tbody class="fw-6 fw-semibold text-gray-600" style="max-width: inherit !important;">
-        @foreach($customers as $customer)
+        @foreach($services as $service)
             <tr>
                 <td class="min-w-50% max-w-100%" st>
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.customers.show', $customer->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$customer->name}}</a>
+                    <a href="{{route('admin.services.show', $service->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$service->title}}</a>
                 </td>
                 <td>
-                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$customer->review}}</a>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$service->sub_title}}</a>
                 </td>
                 <td>
-                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$customer->creator?->name}}</a>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$service->creator?->name}}</a>
                 </td>
                 <td>
-                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$customer->updater?->name}}</a>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$service->updater?->name}}</a>
                 </td>
-                @canany(['edit-customer', 'delete-customer'])
+                @canany(['edit-service', 'delete-service'])
                         <td class="text-start">
                             <!--begin::Actions-->
                             <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">@lang('common.actions')
@@ -49,15 +49,15 @@
 
                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4 justify-content-center align-center" data-kt-menu="true">
                                 <!--begin::Menu item-->
-                                @can('edit-customer')
+                                @can('edit-service')
                                     <div class="menu-item px-3">
-                                        <a href="{{route('admin.customers.edit', $customer->id)}}" class="menu-link px-3">@lang('common.edit')</a>
+                                        <a href="{{route('admin.services.edit', $service->id)}}" class="menu-link px-3">@lang('common.edit')</a>
                                     </div>
                                 @endcan
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                @can('delete-customer')
-                                        <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.customers.destroy', $customer->id)}}">
+                                @can('delete-service')
+                                        <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.services.destroy', $service->id)}}">
                                             @csrf @method('Delete')
                                             <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                         </form>

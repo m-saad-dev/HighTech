@@ -17,4 +17,9 @@ return [
 	'role' 		    => 'الصلاحية',
 	'avatar' 		=> 'الصورة الشخصية',
 	'position' 		=> 'الوظيفة',
+	'review' 		=> 'الراي',
+	'companyName' 		=> 'اسم الشركة',
+	'title' 		=> 'العنوان',
+	'sub_title' 		=> 'العنوان الفرعي',
+	'description' 		=> 'الوصف',
 ];

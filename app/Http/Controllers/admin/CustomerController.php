@@ -7,24 +7,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Models\Customer;
-use App\Models\CustomerTranslation;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use function PHPUnit\Framework\throwException;
 
-class CustomersController extends Controller
+class CustomerController extends Controller
 {
-    private $customerRepository;
-    private $translationModel;
-    public function __construct(Customer $model, CustomerTranslation $translationModel)
+    private $model;
+    public function __construct(Customer $model)
     {
         $this->middleware("permission:list-customers", ['only' => ['index']]);
         $this->middleware("permission:create-customer", ['only' => ['create', 'store']]);
         $this->middleware("permission:edit-customer", ['only' => ['edit', 'update']]);
         $this->middleware("permission:delete-customer", ['only' => ['destroy']]);
         $this->model = $model;
-        $this->translationModel = $translationModel;
     }
     /**
      * Display a listing of the resource.
@@ -33,10 +27,10 @@ class CustomersController extends Controller
      */
     public function index(Request $request)
     {
-        $customer = $this->model->with(['creator', 'updater'])->paginate(15);
+        $customers = $this->model->with(['creator', 'updater'])->paginate(15);
         return view('admin.customers.index')->with(
             [
-                'customer' => $customer,
+                'customers' => $customers,
             ]
         );
     }
@@ -59,8 +53,8 @@ class CustomersController extends Controller
      */
     public function store(CreateCustomerRequest $request)
     {
-        $item = checkLocale('ar') ? "المستخدم" : "The Customer";
-        try {
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
+//        try {
             if($request->has('translations'))
                 $request->replace($request->except('translations') + $request->translations);
             $customer = $this->model->create($request->all());
@@ -69,9 +63,9 @@ class CustomersController extends Controller
                 MediaHelper::uploadMedia($request, $customer);
             }
             return redirect()->route('admin.customers.index')->with('success', __('messages.created', ['item' => $item]));
-        } catch (\Exception $e) {
-            return redirect()->route('admin.customers.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-        }
+//        } catch (\Exception $e) {
+//            return redirect()->route('admin.customers.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+//        }
     }
 
     /**
@@ -94,7 +88,7 @@ class CustomersController extends Controller
      */
     public function edit(Customer $customer)
     {
-        $item = checkLocale('ar') ? "المستخدم" : "Customer";
+        $item = checkLocale('ar') ? "رأي العميل" : "Customer";
         return view('admin.customers.edit')->with([
             'customer' => $customer,
         ]);
@@ -110,7 +104,7 @@ class CustomersController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        $item = checkLocale('ar') ? "المستخدم" : "The Customer";
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
         try {
             if($request->has('translations'))
                 $request->replace($request->except('translations') + $request->translations);
@@ -135,7 +129,7 @@ class CustomersController extends Controller
      */
     public function destroy(Customer $customer)
     {
-        $item = checkLocale('ar') ? "المستخدم" : "The Customer";
+        $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
         try {
             $customer->delete();
             return redirect()->route('admin.customers.index')->with('success', __('messages.deleted', ['item' => $item]));
