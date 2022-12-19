@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Permission\Models\Permission;
@@ -18,6 +19,15 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        View::composer(['admin.layouts.logo'], function ($view) {
+            $logo = Setting::where('key', 'logo')->first();
+            $logoTitle = json_decode($logo->value, true)['title'];
+            $logoLink = $logo->getFirstMedia('image')->getFullUrl();
+            $view->with([
+                'logoTitle' => $logoTitle,
+                'logoLink' => $logoLink,
+            ]);
+        });
         View::composer(['admin.roles.fields'], function ($view) {
             $allPermissions = Permission::all();
             $view->with('allPermissions', $allPermissions);

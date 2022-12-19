@@ -1,8 +1,7 @@
-<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+<div class="app-sidebar-logo px-6 justify-content-center" id="kt_app_sidebar_logo">
     <!--begin::Logo image-->
     <a href='javascript::void(0);'>
-        <img alt="Logo" src="{{asset('assets/admin/media/logos/default-dark.svg')}}" class="h-25px app-sidebar-logo-default" />
-        <img alt="Logo" src="{{asset('assets/admin/media/logos/default-small.svg')}}" class="h-20px app-sidebar-logo-minimize" />
+        <img alt="{{checkLocale('ar') ? $logoTitle['ar'] : $logoTitle['en']}}" src="{{$logoLink}}" class="h-100px w-100 app-sidebar-logo-default" />
     </a>
     <!--end::Logo image-->
     <!--begin::Sidebar toggle-->

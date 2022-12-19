@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Facades\MediaHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateSettingRequest;
 use Illuminate\Http\Request;
@@ -20,7 +21,14 @@ class SettingController extends Controller
     {
         $item = checkLocale('ar') ? "الإعدادات" : "The sitting";
         $setting = Setting::where('key' , $key)->first();
-        $setting = $setting->update(['value' => $request->value]);
+        $setting->update(['value' => $request->value]);
+        if ($request->has('image')){
+            $setting->clearMediaCollection($key);
+            $dd = MediaHelper::uploadMedia($request, $setting);
+        } else if ($request->avatar_remove) {
+            $setting->clearMediaCollection($key);
+        }
+
         if ($setting) {
             return redirect()->route('admin.settings', ['key'=>$key])->with('success', __('messages.updated', ['item' => $key]));
         } else {

@@ -37,7 +37,7 @@ class Setting extends Model implements HasMedia
      */
     protected $casts = [
         'key' => 'string',
-        'value' => 'object',
+        'value' => 'string',
     ];
 
     /**
@@ -49,12 +49,20 @@ class Setting extends Model implements HasMedia
 
     ];
 
-    public function getTitle($locale)
+    public function registerMediaCollections(): void
     {
-        return $this->value->title->{$locale}/*json_decode($this->value, true)['title'][$locale]*/;
+        $this->addMediaCollection('logo');
     }
-    public function getContent($locale)
+
+    public function getTitleAttribute(){
+        return json_decode($this->value, true)['title'][app()->getLocale()];
+    }
+    public function getTitleTranslations($locale)
     {
-        return $this->value->content->{$locale}/*json_decode($this->value, true)['content'][$locale]*/;
+        return json_decode($this->value, true)['title'][$locale];
+    }
+    public function getContentTranslations($locale)
+    {
+        return json_decode($this->value, true)['content'][$locale];
     }
 }

@@ -21,7 +21,11 @@ class UpdateSettingRequest extends FormRequest
     {
         $validator->after(function ($validator) {
             if ($this->route()->parameter('key') == 'about_us') {
-                $this->replace(['key' => 'about_us', 'value' => json_encode($this->about_us, true)]);
+                $this->replace(['key' => 'about_us', 'value' => json_encode($this->about_us)]);
+            } elseif ($this->route()->parameter('key') == 'logo'){
+                $this->replace(['key' => 'logo', 'value' => json_encode($this->logo)]);
+            } elseif ($this->route()->parameter('key') == 'links'){
+                $this->replace(['key' => 'links', 'value' => json_encode($this->links)]);
             }
         });
     }
@@ -33,14 +37,17 @@ class UpdateSettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'sometimes|required|max:255',
-            'content' => 'sometimes|required',
             'image' => 'sometimes|required|mimes:jpg,jpeg,png,svg,avi,mp4,mov,ogg',
             'document' => 'sometimes|required|mimes:pdf',
+            'about_us.title.ar' => 'sometimes|required|max:255',
+            'about_us.title.en' => 'sometimes|required|max:255',
+            'about_us.content.ar' => 'sometimes|required',
+            'about_us.content.en' => 'sometimes|required',
             'logo.title' => 'sometimes|required|max:255',
             'fav_icon.title' => 'sometimes|required|max:255',
-            'app_links.*.title' => 'sometimes|required|max:255',
-            'app_links.*.link' => 'sometimes|required|max:255',
+            'links.*.title.ar' => 'sometimes|required|max:255',
+            'links.*.title.en' => 'sometimes|required|max:255',
+            'links.*.link' => 'sometimes|required|max:255',
             'contact_us.*.country' => 'sometimes|required|max:255',
             'contact_us.*.address' => 'sometimes|required|max:255',
             'contact_us.*.emails.*' => 'sometimes|required|max:70',

@@ -374,6 +374,38 @@
                         <!--end:Menu item-->
                     </div>
 {{--                @endcanany--}}
+{{--                @canany(['force-list-roles', 'list-roles'])--}}
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.settings', ['key' => 'logo'])}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('settings.logo')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+{{--                @endcanany--}}
+{{--                @canany(['force-list-roles', 'list-roles'])--}}
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.settings', ['key' => 'links'])}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('settings.links')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+{{--                @endcanany--}}
                 <!--end:Menu sub-->
             </div>
 {{--        @endcanany--}}
