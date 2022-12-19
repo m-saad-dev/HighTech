@@ -28,6 +28,66 @@ class SettingsTableSeeder extends Seeder
                         ],
                     ]),
             ],
+            [
+                'key' => 'logo',
+                'value' => json_encode(
+                    [
+                        'title' => [
+                            'en' => 'Logo',
+                            'ar' => 'الشعار',
+                        ],
+                    ]
+                ),
+            ],
+            [
+                'key' => 'links',
+                'value' => json_encode(
+                    [
+                        [
+                            'title' => [
+                                'en' => 'Whatsapp',
+                                'ar' => 'واتساب',
+                            ],
+                            'link' => '',
+                        ],
+                        [
+                            'title' => [
+                                'en' => 'Gmail',
+                                'ar' => 'Gmail',
+                            ],
+                            'link' => '',
+                        ],
+                        [
+                            'title' => [
+                                'en' => 'Instagram',
+                                'ar' => 'إنستجرام',
+                            ],
+                            'link' => '',
+                        ],
+                        [
+                            'title' => [
+                                'en' => 'Tweeter',
+                                'ar' => 'تويتر',
+                            ],
+                            'link' => '',
+                        ],
+                        [
+                            'title' => [
+                                'en' => 'LinkedIn',
+                                'ar' => 'لينكد إن',
+                            ],
+                            'link' => '',
+                        ],
+                        [
+                            'title' => [
+                                'en' => 'Google Map',
+                                'ar' => 'خرائط جوجل',
+                            ],
+                            'link' => '',
+                        ],
+                    ]
+                ),
+            ],
         ];
         Setting::insert($data);
     }

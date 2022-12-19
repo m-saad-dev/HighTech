@@ -171,6 +171,7 @@ return [
         'translations.ar.description' => 'Description' . trans('common.inAr'),
         'translations.ar.title' => 'Title' . trans('common.inAr'),
         'translations.ar.subTitle' => 'Sub Title' . trans('common.inAr'),
+        'links.*.link' => "Link"
     ],
 
 ];

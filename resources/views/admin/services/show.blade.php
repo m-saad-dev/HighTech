@@ -42,7 +42,7 @@
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <input type="text" name="translations[en][title]" class="form-control form-control-lg form-control-solid disabled" placeholder="@lang('fields.name') @lang('common.inEn')" value="{{isset($service) ? $service->translate('en')->title : (old('translations.en.title') ?? '')}}" />
+                    <input type="text" name="translations[en][title]" class="form-control form-control-lg form-control-solid" disabled placeholder="@lang('fields.name') @lang('common.inEn')" value="{{isset($service) ? $service->translate('en')->title : (old('translations.en.title') ?? '')}}" />
                 </div>
                 <!--end::Col-->
             </div>
@@ -53,7 +53,7 @@
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.sub_title') @lang('common.inEn')</label>
                 <!--end::Label-->
                 <div class="col-lg-8">
-                    <input type="text" name="translations[en][sub_title]" class="form-control form-control-lg form-control-solid disabled" placeholder="@lang('fields.sub_title') @lang('common.inEn')" value="{{isset($service) ? $service->translate('en')->sub_title : (old('translations.en.sub_title') ?? '')}}" />
+                    <input type="text" name="translations[en][sub_title]" class="form-control form-control-lg form-control-solid" disabled placeholder="@lang('fields.sub_title') @lang('common.inEn')" value="{{isset($service) ? $service->translate('en')->sub_title : (old('translations.en.sub_title') ?? '')}}" />
                 </div>
                 <!--end::Col-->
             </div>
@@ -79,7 +79,7 @@
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <input type="text" name="translations[ar][title]" class="form-control form-control-lg form-control-solid disabled" placeholder="@lang('fields.title') @lang('common.inAr')" value="{{isset($service) ? $service->translate('ar')->title : (old('translations.ar.title') ?? '')}}" />
+                    <input type="text" name="translations[ar][title]" class="form-control form-control-lg form-control-solid" disabled placeholder="@lang('fields.title') @lang('common.inAr')" value="{{isset($service) ? $service->translate('ar')->title : (old('translations.ar.title') ?? '')}}" />
                 </div>
                 <!--end::Col-->
             </div>
@@ -91,7 +91,7 @@
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8">
-                    <input type="text" name="translations[ar][sub_title]" class="form-control form-control-lg form-control-solid disabled" placeholder="@lang('fields.sub_title') @lang('common.inAr')" value="{{isset($service) ? $service->translate('ar')->sub_title : (old('translations.ar.sub_title') ?? '')}}" />
+                    <input type="text" name="translations[ar][sub_title]" class="form-control form-control-lg form-control-solid" disabled placeholder="@lang('fields.sub_title') @lang('common.inAr')" value="{{isset($service) ? $service->translate('ar')->sub_title : (old('translations.ar.sub_title') ?? '')}}" />
                 </div>
                 <!--end::Col-->
             </div>

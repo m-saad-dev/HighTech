@@ -18,9 +18,10 @@ return [
 	'avatar' 		=> 'Avatar',
 	'position' 		=> 'Position',
 	'review' 		=> 'Review',
-	'companyName' 		=> 'company Name',
+	'companyName' 	=> 'company Name',
+    'link'   		=> 'Link',
 	'title' 		=> 'Title',
-	'sub_title' 		=> 'Sub Title',
-	'description' 		=> 'Description',
+	'sub_title' 	=> 'Sub Title',
+	'description' 	=> 'Description',
 	'content' 		=> 'المحتوى',
 ];

@@ -14,7 +14,7 @@ return [
     'logo' => 'Logo',
     'favIcon' => 'Tab-Icon',
     'aboutUs' =>  'About Us',
-    'appLinks' => 'App Links',
+    'links' => 'Links',
     'contactUs' => 'Contact Us',
     'title' => 'Title',
     'content' => 'Content',

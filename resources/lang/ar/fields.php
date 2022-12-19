@@ -18,9 +18,10 @@ return [
 	'avatar' 		=> 'الصورة الشخصية',
 	'position' 		=> 'الوظيفة',
 	'review' 		=> 'الراي',
-	'companyName' 		=> 'اسم الشركة',
+	'companyName' 	=> 'اسم الشركة',
+    'link'   		=> 'الرابط',
 	'title' 		=> 'العنوان',
-	'sub_title' 		=> 'العنوان الفرعي',
-	'description' 		=> 'الوصف',
+	'sub_title' 	=> 'العنوان الفرعي',
+	'description' 	=> 'الوصف',
 	'content' 		=> 'المحتوى',
 ];
