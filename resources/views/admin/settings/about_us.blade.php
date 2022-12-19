@@ -35,8 +35,8 @@
                     @endif
                     <!--begin::Col-->
                     <div class="col-lg-8 fv-row">
-                        <input type="text" name="about_us[title][ar]" max="256" min="3" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" style="margin-bottom: 10px !important;" placeholder="@lang('settings.about_us[title][ar]')" value="{{($setting->getTitle('ar') ? $setting->getTitle('ar'): (old('about_us[title][ar]'))) ?? ''}}" />
-                        <input type="text" name="about_us[title][en]" max="256" min="3" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="@lang('settings.about_us[title][en]')" value="{{($setting->getTitle('en') ? $setting->getTitle('en'): (old('about_us[title]'))) ?? ''}}" />
+                        <input type="text" name="about_us[title][ar]" max="256" min="3" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" style="margin-bottom: 10px !important;" placeholder="@lang('fields.title') @lang('common.inAr')" value="{{($setting->getTitle('ar') ? $setting->getTitle('ar'): (old('about_us[title][ar]'))) ?? ''}}" />
+                        <input type="text" name="about_us[title][en]" max="256" min="3" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="@lang('fields.title') @lang('common.inEn')" value="{{($setting->getTitle('en') ? $setting->getTitle('en'): (old('about_us[title]'))) ?? ''}}" />
                     </div>
                     <!--end::Col-->
                 </div>
@@ -49,8 +49,8 @@
                     @endif
                     <!--begin::Col-->
                     <div class="col-lg-8 fv-row">
-                        <input type="textArea" name="about_us[content][ar]"  min="3" aria-placeholder="trans('settings.content')" class="form-control form-control-lg form-control-solid  mb-3 mb-lg-0" style="margin-bottom: 10px !important;" placeholder="@lang('settings.about_us[content][ar]')" value="{{($setting->getContent('ar') ? $setting->getContent('ar'): (old('about_us[content][ar]'))) ?? ''}}" />
-                        <input type="textArea" name="about_us[content][en]"  min="3" enia-placeholder="trans('settings.content')" class="form-control form-control-lg form-control-solid  mb-3 mb-lg-0" placeholder="@lang('settings.about_us[content][en]')" value="{{($setting->getContent('en') ? $setting->getContent('en'): (old('about_us[title][en]'))) ?? ''}}" />
+                        <input type="textArea" name="about_us[content][ar]"  min="3" aria-placeholder="trans('settings.content')" class="form-control form-control-lg form-control-solid  mb-3 mb-lg-0" style="margin-bottom: 10px !important;" placeholder="@lang('fields.content') @lang('common.inAr')" value="{{($setting->getContent('ar') ? $setting->getContent('ar'): (old('about_us[content][ar]'))) ?? ''}}" />
+                        <input type="textArea" name="about_us[content][en]"  min="3" enia-placeholder="{{trans('fields.content')}}" class="form-control form-control-lg form-control-solid  mb-3 mb-lg-0" placeholder="@lang('fields.content') @lang('common.inEn')" value="{{($setting->getContent('en') ? $setting->getContent('en'): (old('about_us[title][en]'))) ?? ''}}" />
                     </div>
                     <div class="col-lg-8 fv-row">
                     </div>

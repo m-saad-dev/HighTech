@@ -22,4 +22,5 @@ return [
 	'title' 		=> 'العنوان',
 	'sub_title' 		=> 'العنوان الفرعي',
 	'description' 		=> 'الوصف',
+	'content' 		=> 'المحتوى',
 ];

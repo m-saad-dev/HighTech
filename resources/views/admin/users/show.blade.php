@@ -4,12 +4,12 @@
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
             trans('users.allUsers') => route('admin.users.index'),
-            trans('users.createUser') => null,
+            trans('users.showUser') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('users.createUser')
+    @lang('users.showUser')
 @stop
 @section('actions')
     <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>

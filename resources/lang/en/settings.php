@@ -13,7 +13,7 @@ return [
 
     'logo' => 'Logo',
     'favIcon' => 'Tab-Icon',
-    'aboutUs' => 'About Us',
+    'aboutUs' =>  'About Us',
     'appLinks' => 'App Links',
     'contactUs' => 'Contact Us',
     'title' => 'Title',

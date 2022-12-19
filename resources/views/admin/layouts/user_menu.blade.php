@@ -3,7 +3,7 @@
         <!--begin::Menu wrapper-->
         <div class="image-input image-input-outline" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" style="background-image: url('{{auth()->check() && auth()->user()->getFirstMedia('avatars') ? auth()->user()->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}')">
             <!--begin::Preview existing avatar-->
-            <div class="image-input-wrapper w-55px h-55px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" style="background-image: url({{auth()->check() && auth()->user()->getFirstMedia('avatars') ? auth()->user()->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
+            <div class="image-input-wrapper w-55px h-55px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" style="background-image: url({{auth()->check() && auth()->user()->getFirstMedia('avatars') ? auth()->user()->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
             <!--end::Preview existing avatar-->
         </div>
         <!--begin::User account menu-->
@@ -13,7 +13,7 @@
                 <div class="menu-content d-flex align-items-center px-3">
                     <!--begin::Avatar-->
                     <div class="symbol symbol-50px me-5">
-                        <img alt="Logo" src="{{auth()->check() && auth()->user()->getFirstMedia('avatars') ? auth()->user()->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}" />
+                        <img alt="Logo" src="{{auth()->check() && auth()->user()->getFirstMedia('avatars') ? auth()->user()->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}}" />
                     </div>
                     <!--end::Avatar-->
                     <!--begin::Username-->
