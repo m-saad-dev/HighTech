@@ -16,6 +16,14 @@ class UsersPermissionsSeeder extends Seeder
     {
         \DB::table('permissions')->insert([
             [
+                "name" => "dashboard",
+                "display_name" => "Show Dashboard",
+                "ar_display_name" => "عرض لوحة التحكم",
+                "permission_group" => "general",
+                "guard_name" => "web",
+                "created_at" => Carbon::now()->toDateTimeString(),
+            ],
+            [
                 "name" => "list-users",
                 "display_name" => "List Users",
                 "ar_display_name" => "عرض المستخدمين",

@@ -18,5 +18,8 @@
     </ul>
 @stop
 @section('content')
-In The Name Of Allah
+    <div class="card mb-5 mb-xl-10">
+        <div class="card-body border-top p-9">
+        </div>
+    </div>
 @endsection

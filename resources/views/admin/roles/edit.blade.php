@@ -4,12 +4,12 @@
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
             trans('roles.allRoles') => route('admin.roles.index'),
-            trans('roles.createRole') => null,
+            trans('roles.editRole') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('roles.createRole')
+    @lang('roles.editRole')
 @stop
 @section('actions')
     <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>

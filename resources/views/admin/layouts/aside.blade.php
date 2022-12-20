@@ -3,9 +3,10 @@
     <!--begin::Menu-->
     <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
         <!--begin:Menu item-->
-        <div class="menu-item here">
+        @can('dashboard')
+        <div class="menu-item">
             <!--begin:Menu link-->
-            <a class="menu-link active" href="{{route('admin.dashboard')}}">
+            <a class="menu-link  @if(checkActiveRouteName(['admin.dashboard'])) active @endif" href="{{route('admin.dashboard')}}">
                 <span class="menu-icon">
                     <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
                     <span class="svg-icon svg-icon-2">
@@ -22,11 +23,11 @@
             </a>
             <!--end:Menu link-->
         </div>
+        @endcan
         <!--end:Menu item-->
-
         <!--begin:Menu item-->
         @canany(['force-list-users', 'list-users', 'create-user'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion  @if(checkActiveRouteName(['admin.users.index', 'admin.users.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                 <span class="menu-icon">
@@ -44,7 +45,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.users.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.users.index'])) active @endif" href="{{route('admin.users.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -62,7 +63,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.users.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.users.create'])) active @endif" href="{{route('admin.users.create')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -80,7 +81,7 @@
 
         <!--begin:Menu item-->
         @canany(['force-list-roles', 'list-roles', 'create-role'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.roles.index', 'admin.roles.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                 <span class="menu-icon">
@@ -98,7 +99,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.roles.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.roles.index'])) active @endif" href="{{route('admin.roles.index')}}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
@@ -116,7 +117,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.roles.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.roles.create'])) active @endif" href="{{route('admin.roles.create')}}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>
@@ -133,7 +134,7 @@
         <!--end:Menu item-->
         <!--begin:Menu item-->
         @canany(['list-services', 'create-service'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.services.index', 'admin.services.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                 <span class="menu-icon">
@@ -151,7 +152,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.services.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.services.index'])) active @endif" href="{{route('admin.services.index')}}">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
                         </span>
@@ -169,7 +170,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.services.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.services.create'])) active @endif" href="{{route('admin.services.create')}}">
                     <span class="menu-bullet">
                         <span class="bullet bullet-dot"></span>
                     </span>
@@ -186,7 +187,7 @@
         <!--end:Menu item-->
         <!--begin:Menu item-->
         @canany(['list-staff', 'create-staff'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.staff.index', 'admin.staff.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                 <span class="menu-icon">
@@ -204,7 +205,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.staff.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.staff.index'])) active @endif" href="{{route('admin.staff.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -222,7 +223,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.staff.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.staff.create'])) active @endif" href="{{route('admin.staff.create')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -239,7 +240,7 @@
         <!--end:Menu item-->
         <!--begin:Menu item-->
         @canany(['list-clients', 'create-client'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.clients.index', 'admin.clients.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -257,7 +258,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.clients.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.clients.index'])) active @endif" href="{{route('admin.clients.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -275,7 +276,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.clients.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.clients.create'])) active @endif" href="{{route('admin.clients.create')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -292,7 +293,7 @@
         <!--end:Menu item-->
         <!--begin:Menu item-->
         @canany(['list-customers', 'create-customer'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.customers.index', 'admin.customers.create'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -310,7 +311,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.customers.index')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.customers.index'])) active @endif" href="{{route('admin.customers.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -328,7 +329,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.customers.create')}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.customers.create'])) active @endif" href="{{route('admin.customers.create')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -344,8 +345,8 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
-{{--        @canany(['force-list-roles', 'list-roles', 'create-role'])--}}
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion">
+        @canany(['about-us-setting', 'logo-setting', 'links-setting'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.settings', 'admin.settings'], 'key', request('key'))) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                 <span class="menu-icon">
@@ -358,12 +359,12 @@
                 </span>
                 <!--end:Menu link-->
                 <!--begin:Menu sub-->
-{{--                @canany(['force-list-roles', 'list-roles'])--}}
+                @can(['about-us-setting'])
                     <div class="menu-sub menu-sub-accordion">
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.settings', ['key' => 'about_us'])}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.settings'], 'key', 'about_us')) active @endif" href="{{route('admin.settings', ['key' => 'about_us'])}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -373,13 +374,13 @@
                         </div>
                         <!--end:Menu item-->
                     </div>
-{{--                @endcanany--}}
-{{--                @canany(['force-list-roles', 'list-roles'])--}}
+                @endcan
+                @can(['logo-setting'])
                     <div class="menu-sub menu-sub-accordion">
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.settings', ['key' => 'logo'])}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.settings'], 'key', 'logo')) active @endif" href="{{route('admin.settings', ['key' => 'logo'])}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -389,13 +390,13 @@
                         </div>
                         <!--end:Menu item-->
                     </div>
-{{--                @endcanany--}}
-{{--                @canany(['force-list-roles', 'list-roles'])--}}
+                @endcan
+                @can(['links-setting'])
                     <div class="menu-sub menu-sub-accordion">
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.settings', ['key' => 'links'])}}">
+                            <a class="menu-link @if(checkActiveRouteName(['admin.settings'], 'key', 'links')) active @endif" href="{{route('admin.settings', ['key' => 'links'])}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -405,12 +406,17 @@
                         </div>
                         <!--end:Menu item-->
                     </div>
-{{--                @endcanany--}}
+                @endcan
                 <!--end:Menu sub-->
             </div>
-{{--        @endcanany--}}
+        @endcanany
         <!--end:Menu item-->
     </div>
     <!--end::Menu-->
 </div>
 <!--end::Menu wrapper-->
+
+
+
+
+

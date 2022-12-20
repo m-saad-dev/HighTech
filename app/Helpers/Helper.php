@@ -54,3 +54,20 @@ function activeGuard($guard = null)
     }
     return 'web';
 }
+
+function checkActiveRouteName(array $routeNames, string $key = null, string $value = null)
+{
+    if (in_array(request()->route()->getName(), $routeNames)){
+        if (isset($key) && isset($value) && ((request()->has($key) && request()->{$key} == $value)|| (request()->route()->hasParameter($key) && request()->route()->parameter($key) == $value ))){
+        //the second if is for the settings route which active (has same routeName and same key but different value of the key
+            return true;
+        } elseif ( isset($key) && isset($value) && ( !(request()->has($key) && request()->{$key} == $value)|| !(request()->route()->hasParameter($key) && request()->route()->parameter($key) == $value ))){
+        //the elseif is for the settings route not active (has same routeName and same key but different value of the key
+            return false;
+        }
+
+        //else if for the different routes which active
+        return true;
+    }
+    return false;
+}
