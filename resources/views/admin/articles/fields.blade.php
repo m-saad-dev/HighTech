@@ -137,7 +137,10 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
-</div>
+
+
+
+
 
 
 
@@ -187,7 +190,7 @@
 
                         <!--begin::Toolbar-->
                         <div class="dropzone-toolbar">
-                            <span class="dropzone-start"><i class="bi bi-play-fill fs-3"></i></span>
+                            <input type="image" name="images" class="dropzone-start"><i class="bi bi-play-fill fs-3"></i></input>
                             <span class="dropzone-cancel" data-dz-remove style="display: none;"><i class="bi bi-x fs-3"></i></span>
                             <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
                         </div>
@@ -205,6 +208,7 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
+</div>
 
 @push('js')
     {{--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>--}}

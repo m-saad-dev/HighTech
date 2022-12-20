@@ -104,6 +104,7 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request, Article $article)
     {
+        dd($request->all());
         $item = checkLocale('ar') ? "المقال" : "The Article";
         try {
             if($request->has('translations'))
