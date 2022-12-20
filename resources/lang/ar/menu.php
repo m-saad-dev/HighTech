@@ -21,5 +21,6 @@ return [
     'settings' => 'إعدادات الموقع',
     'clients' => 'عملائنا',
     'services' => 'خدماتنا',
+    'articles' => 'مقالات المدونة',
     'customerReviews' => 'آراء العملاء',
 ];

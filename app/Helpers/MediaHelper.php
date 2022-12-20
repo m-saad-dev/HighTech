@@ -56,6 +56,9 @@ class MediaHelper
         if ($request->image && $request->image !== 'undefined') {
             $error = self::attachLogoAvatarAndOtherSame($request->image, $item, 'image');
         }
+        if ($request->icon && $request->icon !== 'undefined') {
+            $error = self::attachLogoAvatarAndOtherSame($request->icon, $item, 'icon');
+        }
         //for attach document to an item
         if ($request->document && $request->document !== 'undefined') {
             //add media function with set permissions
@@ -129,6 +132,7 @@ class MediaHelper
             'avatars' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'logo' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'image' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
+            'icon' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'gallery' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'videos' => ['WEBM', 'MPG', 'MP2', 'MPEG', 'MPE', 'MPV', 'OGG', 'MP4', 'M4P', 'M4V', 'AVI', 'WMV', 'MOV', 'QT'
                 , 'FLV', 'SWF', 'AVCHD', 'webm', 'mpg', 'mp2', 'mpeg', 'mpe', 'mpv', 'ogg', 'mp4', 'm4p', 'm4v', 'avi', 'wmv', 'mov', 'qt'

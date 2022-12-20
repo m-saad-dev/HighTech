@@ -58,8 +58,8 @@ class ServiceController extends Controller
             if($request->has('translations'))
                 $request->replace($request->except('translations') + $request->translations);
             $service = $this->model->create($request->all());
-            if ($request->has('avatar')){
-                $service->clearMediaCollection('avatars');
+            if ($request->has('icon')){
+                $service->clearMediaCollection('icon');
                 MediaHelper::uploadMedia($request, $service);
             }
             return redirect()->route('admin.services.index')->with('success', __('messages.created', ['item' => $item]));
@@ -109,11 +109,11 @@ class ServiceController extends Controller
             if($request->has('translations'))
                 $request->replace($request->except('translations') + $request->translations);
             $service->update($request->all());
-            if ($request->has('avatar')){
-                $service->clearMediaCollection('avatars');
+            if ($request->has('icon')){
+                $service->clearMediaCollection('icon');
                 MediaHelper::uploadMedia($request, $service);
-            } else if ($request->avatar_remove) {
-                $service->clearMediaCollection('avatars');
+            } else if ($request->icon_remove) {
+                $service->clearMediaCollection('icon');
             }
             return redirect()->route('admin.services.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {

@@ -23,5 +23,7 @@ return [
 	'title' 		=> 'Title',
 	'sub_title' 	=> 'Sub Title',
 	'description' 	=> 'Description',
-	'content' 		=> 'المحتوى',
+	'content' 		=> 'Content',
+	'icon' 		    => 'Icon',
+	'image' 		=> 'Image',
 ];

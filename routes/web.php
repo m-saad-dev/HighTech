@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\ArticleController;
 use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\DashboardController;
@@ -52,6 +53,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::get('/my-profile', [UserController::class, 'myProfile'])->name('myProfile');
         Route::resource('/roles', RoleController::class);
         Route::resource('/services', ServiceController::class);
+        Route::resource('/articles', ArticleController::class);
         Route::resource('/staff', StaffController::class);
         Route::resource('/clients', ClientController::class);
         Route::resource('/customers', CustomerController::class);

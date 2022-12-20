@@ -163,15 +163,17 @@ return [
         'translations.en.position' => 'Position' . trans('common.inEn'),
         'translations.en.review' => 'Review' . trans('common.inEn'),
         'translations.en.description' => 'Description' . trans('common.inEn'),
+        'translations.en.content' => 'Content' . trans('common.inEn'),
         'translations.en.title' => 'Title' . trans('common.inEn'),
         'translations.en.subTitle' => 'Sub Title' . trans('common.inEn'),
         'translations.ar.name' => 'Name' . trans('common.inAr'),
         'translations.ar.position' => 'Position' . trans('common.inAr'),
         'translations.ar.review' => 'Review' . trans('common.inAr'),
         'translations.ar.description' => 'Description' . trans('common.inAr'),
+        'translations.ar.content' => 'Content' . trans('common.inAr'),
         'translations.ar.title' => 'Title' . trans('common.inAr'),
         'translations.ar.subTitle' => 'Sub Title' . trans('common.inAr'),
-        'links.*.link' => "Link"
+        'links.*.link' => "Link",
     ],
 
 ];

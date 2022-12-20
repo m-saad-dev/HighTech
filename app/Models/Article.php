@@ -8,12 +8,12 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 
-class Service extends Model implements HasMedia, TranslatableContract
+class Article extends Model implements HasMedia, TranslatableContract
 {
     use Translatable, InteractsWithMedia;
-    protected $table = 'services';
+    protected $table = 'articles';
 
-    public $translatedAttributes = ['title', 'sub_title', 'description'];
+    public $translatedAttributes = ['title', 'sub_title', 'content'];
 
     /**
      * The attributes that are mass assignable.
@@ -44,7 +44,7 @@ class Service extends Model implements HasMedia, TranslatableContract
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('images');
+        $this->addMediaCollection('avatars');
     }
 
     public function creator()
