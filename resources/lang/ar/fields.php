@@ -24,4 +24,6 @@ return [
 	'sub_title' 	=> 'العنوان الفرعي',
 	'description' 	=> 'الوصف',
 	'content' 		=> 'المحتوى',
+	'icon' 		    => 'الأيقونة',
+	'image' 		=> 'الصورة',
 ];

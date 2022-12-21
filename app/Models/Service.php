@@ -44,7 +44,7 @@ class Service extends Model implements HasMedia, TranslatableContract
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('avatars');
+        $this->addMediaCollection('images');
     }
 
     public function creator()

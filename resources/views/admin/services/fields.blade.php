@@ -4,21 +4,21 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.avatar')</label>
+        <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.icon')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
             <!--begin::Image input-->
             <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
                 <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($service) && $service->getFirstMedia('avatars') ? $service->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($service) && $service->getFirstMedia('icon') ? $service->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
                 <!--end::Preview existing avatar-->
                 <!--begin::Label-->
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                     <i class="bi bi-pencil-fill fs-7"></i>
                     <!--begin::Inputs-->
-                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                    <input type="hidden" name="avatar_remove" />
+                    <input type="file" name="icon" accept=".png, .jpg, .jpeg" />
+                    <input type="hidden" name="icon_remove" />
                     <!--end::Inputs-->
                 </label>
                 <!--end::Label-->
@@ -44,6 +44,7 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
+    <span class="separator mb-6"></span>
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
@@ -89,7 +90,7 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
-    <span class="separator"></span>
+    <span class="separator mb-6"></span>
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
