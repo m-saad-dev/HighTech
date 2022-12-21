@@ -1,7 +1,5 @@
         editors = $('.summernote');
         for (editor of editors){
-            console.log(editor.value)
-
             let summerNote = $('#'+editor.id).summernote({
                 placeholder: '',
                 lang: 'en-US',

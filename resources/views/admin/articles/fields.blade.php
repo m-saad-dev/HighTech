@@ -1,4 +1,8 @@
 {{--@dd(session()->all())--}}
+@push('css')
+    <link href="{{asset('assets/admin/plugins/summernote-0.8.18-dist/summernote-lite.min.css')}}" rel="stylesheet">
+@endpush
+
 <!--begin::Card body-->
 <div class="card-body border-top p-9">
     <!--begin::Input group-->
@@ -141,79 +145,57 @@
 
 
 
+    <!--begin::Repeater-->
+    <div id="kt_docs_repeater_basic">
+        <!--begin::Form group-->
+        <div class="row">
+            <div class="col-4 mt-5">
+                {{--            <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.image')</label>--}}
+                <a href="javascript:;" data-repeater-create class="btn btn-sm btn-primary me-2">
+                    <i class="la la-plus"></i>Add
+                </a>
 
-
-
-
-    <!--begin::Input group-->
-    <div class="form-group row">
-        <!--begin::Label-->
-        <label class="col-lg-2 col-form-label text-lg-right">Upload Files:</label>
-        <!--end::Label-->
-
-        <!--begin::Col-->
-        <div class="col-lg-10">
-            <!--begin::Dropzone-->
-            <div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_2">
-                <!--begin::Controls-->
-                <div class="dropzone-panel mb-lg-0 mb-2">
-                    <a class="dropzone-select btn btn-sm btn-primary me-2">Attach files</a>
-                    <a class="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</a>
-                    <a class="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</a>
-                </div>
-                <!--end::Controls-->
-
-                <!--begin::Items-->
-                <div class="dropzone-items wm-200px">
-                    <div class="dropzone-item" style="display:none">
-                        <!--begin::File-->
-                        <div class="dropzone-file">
-                            <div class="dropzone-filename" title="some_image_file_name.jpg">
-                                <span data-dz-name>some_image_file_name.jpg</span>
-                                <strong>(<span data-dz-size>340kb</span>)</strong>
-                            </div>
-
-                            <div class="dropzone-error" data-dz-errormessage></div>
-                        </div>
-                        <!--end::File-->
-
-                        <!--begin::Progress-->
-                        <div class="dropzone-progress">
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-primary"
-                                    role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end::Progress-->
-
-                        <!--begin::Toolbar-->
-                        <div class="dropzone-toolbar">
-                            <input type="image" name="images" class="dropzone-start"><i class="bi bi-play-fill fs-3"></i></input>
-                            <span class="dropzone-cancel" data-dz-remove style="display: none;"><i class="bi bi-x fs-3"></i></span>
-                            <span class="dropzone-delete" data-dz-remove><i class="bi bi-x fs-1"></i></span>
-                        </div>
-                        <!--end::Toolbar-->
-                    </div>
-                </div>
-                <!--end::Items-->
             </div>
-            <!--end::Dropzone-->
+            <!--end::Form group-->
 
-            <!--begin::Hint-->
-            <span class="form-text text-muted">Max file size is 1MB and max number of files is 5.</span>
-            <!--end::Hint-->
+            <div data-repeater-list="mediafile" class="row col-8">
+                @if(isset($article) && ! $article->getMedia('images')->isEmpty())
+{{--                    @dd(' images')--}}
+                    @foreach($article->getMedia('images') as $image)
+                        @include('admin.articles.article_repeater', [
+                            'article' => $article,
+                             'image' => $image,
+                         ])
+                    @endforeach
+                @elseif(isset($article) && $article->getMedia('images')->isEmpty())
+{{--                    @dd('no images')--}}
+                    @include('admin.articles.article_repeater', $article)
+                @else
+                    @include('admin.articles.article_repeater')
+                @endif
+            </div>
         </div>
-        <!--end::Col-->
+        <!--end::Form group-->
+
     </div>
-    <!--end::Input group-->
+    <!--end::Repeater-->
+    <input type="hidden" name="removedIds" id="removedIds" value="">
 </div>
 
+
 @push('js')
-    {{--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>--}}
-    <script src="{{asset('assets/admin/dropzone.js')}}"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        let removedIds = [];
+        let removedIdsInput = $('#removedIds');
+        let appendToRemovedIds = function (id) {
+            removedIds.push(id);
+            removedIdsInput.attr('value', removedIds);
+        }
+    </script>
+
+    <script src="{{asset('assets/admin/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
+    <script src="{{asset('assets/admin/repeater.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/summernote-0.8.18-dist/summernote-lite.min.js')}}"></script>
     <script src="{{asset('assets/admin/summernote-editor.js')}}"></script>
+    {{--    <script src="{{asset('assets/admin/dropzone.js')}}"></script>--}}
 @endpush

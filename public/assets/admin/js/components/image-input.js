@@ -13,7 +13,7 @@ var KTImageInput = function(element, options) {
 
     // Default Options
     var defaultOptions = {
-        
+
     };
 
     ////////////////////////////
@@ -96,13 +96,13 @@ var KTImageInput = function(element, options) {
         the.element.classList.remove('image-input-changed');
         the.element.classList.remove('image-input-empty');
 
-        if (the.src === 'none') {   
+        if (the.src === 'none') {
             KTUtil.css(the.wrapperElement, 'background-image', '');
             the.element.classList.add('image-input-empty');
         } else {
             KTUtil.css(the.wrapperElement, 'background-image', the.src);
         }
-        
+
         the.inputElement.value = "";
 
         if ( the.hiddenElement !== null ) {
@@ -154,7 +154,7 @@ var KTImageInput = function(element, options) {
     the.getElement = function() {
         return the.element;
     }
-    
+
     the.destroy = function() {
         return _destroy();
     }

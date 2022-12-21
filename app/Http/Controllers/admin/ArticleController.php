@@ -62,6 +62,10 @@ class ArticleController extends Controller
                 $article->clearMediaCollection('icon');
                 MediaHelper::uploadMedia($request, $article);
             }
+            if ($request->has('mediafile')){
+                $article->clearMediaCollection('images');
+                $result = MediaHelper::uploadMedia($request, $article);
+            }
             return redirect()->route('admin.articles.index')->with('success', __('messages.created', ['item' => $item]));
 //        } catch (\Exception $e) {
 //            return redirect()->route('admin.articles.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
@@ -104,7 +108,6 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request, Article $article)
     {
-        dd($request->all());
         $item = checkLocale('ar') ? "المقال" : "The Article";
         try {
             if($request->has('translations'))
@@ -116,12 +119,26 @@ class ArticleController extends Controller
             } else if ($request->icon_remove) {
                 $article->clearMediaCollection('icon');
             }
+            if ($request->has('mediafile')){
+                $this->ifRemovedIdsRemoveImages($request, $article);
+                $result = MediaHelper::uploadMedia($request, $article);
+            } elseif(! $request->has('mediafile')){
+                $this->ifRemovedIdsRemoveImages($request, $article);
+            }
+
             return redirect()->route('admin.articles.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.articles.edit', $article->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 
+    public function ifRemovedIdsRemoveImages($request, $article)
+    {
+        if ($request->removedIds){
+            $removedIds = strpos($request->removedIds, ',') === 0 ? [$request->removedIds] : explode(',', $request->removedIds);
+            $article->media()->whereIn('id', $removedIds)->delete();
+        }
+    }
     /**
      * Remove the specified resource from storage.
      *

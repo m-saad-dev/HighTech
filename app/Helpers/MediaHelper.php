@@ -118,11 +118,12 @@ class MediaHelper
 
         foreach ($request->mediafile as $key => $files) {
             if (is_array($files) || is_object($files))
-                foreach ($files as $file) {
+                foreach ($files as $key => $file) {
                     $error += self::completeProccess($key, $file, $item, $error);
                 }
-            else
+            else{
                 $error += self::completeProccess($key, $files, $item, $error);
+            }
         }
     }
 
@@ -131,6 +132,7 @@ class MediaHelper
         $allTypes = [
             'avatars' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'logo' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
+            'images' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'image' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'icon' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'gallery' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
