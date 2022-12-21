@@ -1,4 +1,7 @@
-{{--@dd(session()->all())--}}
+@push('css')
+    <link href="{{asset('assets/admin/plugins/summernote-0.8.18-dist/summernote-lite.min.css')}}" rel="stylesheet">
+@endpush
+
 <!--begin::Card body-->
 <div class="card-body border-top p-9">
     <!--begin::Input group-->
@@ -128,7 +131,6 @@
         <!--end::Label-->
         <div class="col-lg-8 editor-container">
             <textarea id="second_editor" name="translations[ar][description]" class="form-control form-control-lg form-control-solid kt_docs_quill_basic summernote" kt-data="{{ isset($service) ? $service->translate('ar')->description : (old('translations.ar.sub_title') ?? '') }}">
-{{--                {!! isset($service) ? $service->translate('ar')->description : (old('translations.ar.sub_title') ?? '') !!}--}}
             </textarea>
             @error('translations.ar.description')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
@@ -137,33 +139,55 @@
         <!--end::Col-->
     </div>
     <!--end::Input group-->
-</div>
-@push('js')
-{{--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>--}}
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-    <script>
-        editors = $('.summernote');
-        for (editor of editors){
-            console.log(editor.value)
 
-       let summerNote = $('#'+editor.id).summernote({
-            placeholder: '',
-            lang: 'en-US',
-            tabsize: 2,
-            // height: 120,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-            ]
-        });
-        summerNote.summernote('code', editor.getAttribute('kt-data'));
+
+    <!--begin::Repeater-->
+    <div id="kt_docs_repeater_basic">
+        <!--begin::Form group-->
+        <div class="row">
+            <div class="col-4 mt-5">
+                <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.image')</label>
+                <a href="javascript:;" data-repeater-create class="btn btn-sm btn-primary me-2">
+                    <i class="la la-plus"></i>@lang('common.add')
+                </a>
+
+            </div>
+            <!--end::Form group-->
+
+            <div data-repeater-list="mediafile" class="row col-8">
+                @if(isset($service) && ! $service->getMedia('images')->isEmpty())
+                    @foreach($service->getMedia('images') as $image)
+                        @include('admin.includes.images_repeater', [
+                             'image' => $image,
+                         ])
+                    @endforeach
+                @elseif(isset($article) && $article->getMedia('images')->isEmpty())
+                    @include('admin.includes.images_repeater', $article)
+                @else
+                    @include('admin.includes.images_repeater')
+                @endif
+            </div>
+        </div>
+        <!--end::Form group-->
+    </div>
+    <!--end::Repeater-->
+    <input type="hidden" name="removedIds" id="removedIds" value="">
+</div>
+
+
+@push('js')
+    <script>
+        let removedIds = [];
+        let removedIdsInput = $('#removedIds');
+        let appendToRemovedIds = function (id) {
+            removedIds.push(id);
+            removedIdsInput.attr('value', removedIds);
         }
-      // });
     </script>
+
+    <script src="{{asset('assets/admin/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
+    <script src="{{asset('assets/admin/repeater.js')}}"></script>
+    <script src="{{asset('assets/admin/plugins/summernote-0.8.18-dist/summernote-lite.min.js')}}"></script>
+    <script src="{{asset('assets/admin/summernote-editor.js')}}"></script>
+    {{--    <script src="{{asset('assets/admin/dropzone.js')}}"></script>--}}
 @endpush

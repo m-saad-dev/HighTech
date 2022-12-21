@@ -2,9 +2,6 @@
     <div class="row">
         <!--begin::Input group-->
         <div class="col-8 mb-6">
-            <!--begin::Label-->
-            <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.image')</label>
-            <!--end::Label-->
             <!--begin::Col-->
             <div class="col-lg-8">
                 <!--begin::Image input-->

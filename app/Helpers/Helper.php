@@ -71,3 +71,11 @@ function checkActiveRouteName(array $routeNames, string $key = null, string $val
     }
     return false;
 }
+
+function ifRemovedIdsRemoveImages($request, $item)
+{
+    if ($request->removedIds){
+        $removedIds = strpos($request->removedIds, ',') === 0 ? [$request->removedIds] : explode(',', $request->removedIds);
+        $item->media()->whereIn('id', $removedIds)->delete();
+    }
+}

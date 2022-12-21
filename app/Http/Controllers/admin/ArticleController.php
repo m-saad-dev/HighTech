@@ -120,10 +120,10 @@ class ArticleController extends Controller
                 $article->clearMediaCollection('icon');
             }
             if ($request->has('mediafile')){
-                $this->ifRemovedIdsRemoveImages($request, $article);
+                ifRemovedIdsRemoveImages($request, $article);
                 $result = MediaHelper::uploadMedia($request, $article);
             } elseif(! $request->has('mediafile')){
-                $this->ifRemovedIdsRemoveImages($request, $article);
+                ifRemovedIdsRemoveImages($request, $article);
             }
 
             return redirect()->route('admin.articles.index')->with('success', __('messages.updated',['item' => $item]));
@@ -132,13 +132,6 @@ class ArticleController extends Controller
         }
     }
 
-    public function ifRemovedIdsRemoveImages($request, $article)
-    {
-        if ($request->removedIds){
-            $removedIds = strpos($request->removedIds, ',') === 0 ? [$request->removedIds] : explode(',', $request->removedIds);
-            $article->media()->whereIn('id', $removedIds)->delete();
-        }
-    }
     /**
      * Remove the specified resource from storage.
      *
