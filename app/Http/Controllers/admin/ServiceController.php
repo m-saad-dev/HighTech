@@ -62,6 +62,11 @@ class ServiceController extends Controller
                 $service->clearMediaCollection('icon');
                 MediaHelper::uploadMedia($request, $service);
             }
+            if ($request->has('mediafile')){
+                $service->clearMediaCollection('images');
+                $result = MediaHelper::uploadMedia($request, $service);
+            }
+
             return redirect()->route('admin.services.index')->with('success', __('messages.created', ['item' => $item]));
 //        } catch (\Exception $e) {
 //            return redirect()->route('admin.services.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
@@ -114,6 +119,12 @@ class ServiceController extends Controller
                 MediaHelper::uploadMedia($request, $service);
             } else if ($request->icon_remove) {
                 $service->clearMediaCollection('icon');
+            }
+            if ($request->has('mediafile')){
+                ifRemovedIdsRemoveImages($request, $service);
+                $result = MediaHelper::uploadMedia($request, $service);
+            } elseif(! $request->has('mediafile')){
+                ifRemovedIdsRemoveImages($request, $service);
             }
             return redirect()->route('admin.services.index')->with('success', __('messages.updated',['item' => $item]));
         } catch (\Exception $e) {
