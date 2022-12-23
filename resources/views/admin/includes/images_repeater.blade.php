@@ -13,7 +13,7 @@
                     <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                         <i class="bi bi-pencil-fill fs-7"></i>
                         <!--begin::Inputs-->
-                        <input type="file" name="mediafile[{{$index??''}}][images]" accept=".png, .jpg, .jpeg" {{--value="{{isset($image) && $image->getFullUrl() ? $image->getFullUrl() : null}}"--}} />
+                        <input type="file" name="mediafile[{{$index??''}}][images]" accept=".png, .jpg, .jpeg" />
 {{--                                    <input type="hidden" name="images_remove" />--}}
                         <!--end::Inputs-->
                     </label>

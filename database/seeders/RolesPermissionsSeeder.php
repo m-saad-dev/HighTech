@@ -23,14 +23,6 @@ class RolesPermissionsSeeder extends Seeder
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
-            [
-                "name" => "force-list-roles",
-                "display_name" => "Force List Roles",
-                "ar_display_name" => "عرض كافة الصلاحيات بالنظام",
-                "permission_group" => "roles",
-                "guard_name" => "web",
-                "created_at" => Carbon::now()->toDateTimeString(),
-            ],
 
             [
                 "name" => "create-role",

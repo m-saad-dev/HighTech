@@ -23,4 +23,5 @@ return [
     'customerReviews' => 'Customer Reviews',
     'services' => 'services',
     'articles' => 'Articles',
+    'orders' => 'Orders',
 ];

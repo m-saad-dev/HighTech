@@ -3,7 +3,7 @@
     @include('admin.layouts.meta')
     <link rel="shortcut icon" href="{{asset('assets/admin/media/logos/favicon.ico')}}" />
     <!--begin::Fonts(mandatory for all pages)-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link rel="stylesheet" href="{{asset('assets/admin/css/familyInterGoogleFont.css')}}" />
     <!--end::Fonts-->
     <!--begin::Vendor Stylesheets(used for this page only)-->
     <link href="{{asset('assets/admin/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />

@@ -1,15 +1,18 @@
 @extends('admin.layouts.app')
-@section("title", trans("menu.users"))
+@section("title", trans("menu.orders"))
 @section('breadcrumb')
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
-            trans('users.allUsers') => route('admin.users.index'),
-            trans('users.createUser') => null,
+            trans('menu.orders') => route('admin.orders.index'),
+            trans('orders.editOrder') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('users.createUser')
+    @lang('orders.editOrder')
+@stop
+@section('actions')
+    <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>
 @stop
 @section('content')
     <div class="card mb-5 mb-xl-10">
@@ -17,9 +20,10 @@
             <div class="alert alert-danger">{{ session()->get('issue_message') }}</div>
         @endif
         <!--begin::Form-->
-        <form class="form" action="{{route('admin.users.store')}}" method="POST" enctype="multipart/form-data">
+        <form class="form" action="{{route('admin.orders.update', ['order' => $order->id])}}" method="POST" enctype="multipart/form-data">
+            @method('PATCH')
             @csrf
-            @include('admin.users.fields')
+            @include('admin.orders.fields', $order)
             <!--begin::Actions-->
             <div class="card-footer d-flex justify-content-end py-6 px-9">
                 <button type="reset" class="btn btn-light btn-active-light-primary me-2">@lang('common.cancel')</button>

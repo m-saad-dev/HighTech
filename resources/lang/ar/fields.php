@@ -6,7 +6,7 @@ return [
 	'gender' 		=> 'النوع',
 	'male' 			=> 'ذكر',
 	'female' 		=> 'أنثى',
-	'phone_number' 		=> 'رقم الجوال',
+	'phone_number' 	=> 'رقم الجوال',
 	'email' 		=> 'البريد الإلكترونى',
 	'parent_id' 	=> 'المدير',
 	'password' 		=> 'كلمة المرور',
@@ -26,4 +26,7 @@ return [
 	'content' 		=> 'المحتوى',
 	'icon' 		    => 'الأيقونة',
 	'image' 		=> 'الصورة',
+	'images' 		=> 'الصور',
+	'service'	    => 'الخدمة',
+	'business_type'	=> 'نشاط العمل',
 ];

@@ -23,4 +23,5 @@ return [
     'services' => 'خدماتنا',
     'articles' => 'مقالات المدونة',
     'customerReviews' => 'آراء العملاء',
+    'orders' => 'طلبات الخدمة',
 ];

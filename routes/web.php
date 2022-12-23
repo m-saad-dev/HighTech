@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\ArticleController;
 use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\StaffController;
@@ -57,6 +58,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/staff', StaffController::class);
         Route::resource('/clients', ClientController::class);
         Route::resource('/customers', CustomerController::class);
+        Route::resource('/orders', OrderController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
 });

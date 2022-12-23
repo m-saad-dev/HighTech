@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section("title", trans("menu.service"))
+@section("title", trans("menu.services"))
 @section('breadcrumb')
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
@@ -20,7 +20,7 @@
             <!--begin::Input group-->
             <div class="row mb-6">
                 <!--begin::Label-->
-                <label class="col-lg-4 col-form-label fw-semibold fs-6 text-muted">@lang('common.avatar')</label>
+                <label class="col-lg-4 col-form-label fw-semibold fs-6 ">@lang('fields.icon')</label>
                 <!--end::Label-->
                 <!--begin::Col-->
                 <div class="col-lg-8">
@@ -108,8 +108,21 @@
                 </div>
                 <!--end::Col-->
             </div>
-            <!--end::Input group-->
-
+            @if(isset($service) && ! $service->getMedia('images')->isEmpty())
+                <div class="row mb-20 mt-20" >
+                    <label class="col-2 col-lg-4 d-block col-form-label fw-semibold fs-6">@lang('fields.images')</label>
+                    <div class="col-10 col-lg-8">
+                        @foreach($service->getMedia('images') as $image)
+                            <!--begin::Image input-->
+                            <div class="col-lg-2 m-lg-15 image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
+                                <!--begin::Preview existing avatar-->
+                                <div class="image-input-wrapper w-200px h-200px" style="background-image: url({{isset($image) && $image->getFullUrl() ? $image->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}})"></div>
+                                <!--end::Preview existing avatar-->
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
         </div>
         <!--end::Card body-->
     </div>
