@@ -6,13 +6,11 @@
         <tr>
             <th class="min-w-50% max-w-100%">#</th>
             <th class="min-w-100px">@lang('fields.name')</th>
-            <th class="min-w-150px">@lang('fields.email')</th>
             <th class="min-w-150px">@lang('fields.phone_number')</th>
-            <th class="min-w-150px">@lang('fields.role')</th>
-            <th class="min-w-150px">@lang('fields.parent_id')</th>
+            <th class="min-w-150px">@lang('fields.business_type')</th>
             <th class="min-w-150px">@lang('common.creator')</th>
             <th class="min-w-150px">@lang('common.updater')</th>
-            @canany(['edit-user', 'delete-user'])
+            @canany(['edit-order', 'delete-order'])
                 <th class="min-w-150px">@lang('common.actions')</th>
             @endcanany
         </tr>
@@ -20,34 +18,27 @@
         <!--end::Thead-->
         <!--begin::Tbody-->
         <tbody class="fw-6 fw-semibold text-gray-600" style="max-width: inherit !important;">
-        @foreach($users as $user)
+        @foreach($orders as $order)
             <tr>
                 <td class="min-w-50% max-w-100%" st>
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.users.show', $user->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$user->name}}</a>
+                    <a href="{{route('admin.orders.show', $order->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$order->name}}</a>
                 </td>
                 <td>
-                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$user->email}}</a>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$order->phone_number}}</a>
                 </td>
                 <td>
-                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$user->phone_number}}</a>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$order->business_type}}</a>
                 </td>
                 <td>
-                    <span class="text-gray-600">{{$user->roles?->first()?->name . ' - ' . $user->roles?->first()?->name_ar}}</span>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$order->creator?->name}}</a>
                 </td>
                 <td>
-                    <span class="text-gray-600">{{$user->parent ? $user->parent->name : "--"}}</span>
+                    <a href="javascript::void(0);" class="text-hover-primary text-gray-600">{{$order->updater?->name}}</a>
                 </td>
-                <td>
-                    <span class="text-gray-600">{{$user->creator ? $user->creator->name : "--"}}</span>
-                </td>
-                <td>
-                    <span class="text-gray-600">{{$user->updater ? $user->updater->name : "--"}}</span>
-                </td>
-                @canany(['edit-user', 'delete-user'])
-                    @if(auth()->id() == 1 || (auth()->id() != 1 && $user->id != 1))
+                @canany(['edit-order', 'delete-order'])
                         <td class="text-start">
                             <!--begin::Actions-->
                             <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">@lang('common.actions')
@@ -62,26 +53,23 @@
 
                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4 justify-content-center align-center" data-kt-menu="true">
                                 <!--begin::Menu item-->
-                                @can('edit-user')
+                                @can('edit-order')
                                     <div class="menu-item px-3">
-                                        <a href="{{route('admin.users.edit', $user->id)}}" class="menu-link px-3">@lang('common.edit')</a>
+                                        <a href="{{route('admin.orders.edit', $order->id)}}" class="menu-link px-3">@lang('common.edit')</a>
                                     </div>
                                 @endcan
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                @can('delete-user')
-                                    @if( $user->id != 1 )
-                                        <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.users.destroy', $user->id)}}">
+                                @can('delete-order')
+                                        <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.orders.destroy', $order->id)}}">
                                             @csrf @method('Delete')
                                             <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                         </form>
-                                    @endif
                                 @endcan
                                 <!--end::Menu item-->
                             </div>
                             <!--end::Actions-->
                         </td>
-                    @endif
                 @endcanany
             </tr>
         @endforeach

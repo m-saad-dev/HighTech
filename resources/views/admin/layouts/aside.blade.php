@@ -186,6 +186,59 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
+        @canany(['list-orders', 'create-order'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.orders.index', 'admin.orders.create'])) here hover show @endif">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+                <span class="menu-icon">
+                    <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                    <i class="fa-solid fa-fingerprint fs-4"></i>
+                    <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">@lang('menu.orders')</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['force-list-orders', 'list-orders'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link @if(checkActiveRouteName(['admin.orders.index'])) active @endif" href="{{route('admin.orders.index')}}">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                                <span class="menu-title">@lang('orders.allOrders')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+                <!--begin:Menu sub-->
+                @can('create-order')
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link @if(checkActiveRouteName(['admin.orders.create'])) active @endif" href="{{route('admin.orders.create')}}">
+                    <span class="menu-bullet">
+                        <span class="bullet bullet-dot"></span>
+                    </span>
+                                <span class="menu-title">@lang('orders.createOrder')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcan
+                <!--end:Menu item-->
+            </div>
+        @endcanany
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
         @canany(['list-staff', 'create-staff'])
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.staff.index', 'admin.staff.create'])) here hover show @endif">
                 <!--begin:Menu link-->

@@ -146,7 +146,7 @@
         <!--begin::Form group-->
         <div class="row">
             <div class="col-4 mt-5">
-                <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.image')</label>
+                <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.images')</label>
                 <a href="javascript:;" data-repeater-create class="btn btn-sm btn-primary me-2">
                     <i class="la la-plus"></i>@lang('common.add')
                 </a>

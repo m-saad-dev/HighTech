@@ -26,4 +26,7 @@ return [
 	'content' 		=> 'Content',
 	'icon' 		    => 'Icon',
 	'image' 		=> 'Image',
+	'images' 		=> 'Images',
+	'service'	    => 'Service',
+	'business_type'	=> 'Business Type',
 ];

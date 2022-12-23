@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section("title", trans("menu.users"))
+@section("title", trans("menu.orders"))
 @section('breadcrumb')
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
-            trans('users.allUsers') => route('admin.users.index'),
-            trans('users.createUser') => null,
+            trans('orders.orders') => route('admin.orders.index'),
+            trans('orders.createOrder') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('users.createUser')
+    @lang('orders.createOrder')
 @stop
 @section('content')
     <div class="card mb-5 mb-xl-10">
@@ -17,9 +17,9 @@
             <div class="alert alert-danger">{{ session()->get('issue_message') }}</div>
         @endif
         <!--begin::Form-->
-        <form class="form" action="{{route('admin.users.store')}}" method="POST" enctype="multipart/form-data">
+        <form class="form" action="{{route('admin.orders.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            @include('admin.users.fields')
+            @include('admin.orders.fields')
             <!--begin::Actions-->
             <div class="card-footer d-flex justify-content-end py-6 px-9">
                 <button type="reset" class="btn btn-light btn-active-light-primary me-2">@lang('common.cancel')</button>

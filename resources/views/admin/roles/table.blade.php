@@ -20,7 +20,7 @@
                 <td>{{ $role->creator ?  $role->creator->name : "--"}}</td>
                 <td>{{ $role->updater ?  $role->updater->name : "--"}}</td>
                 @canany(['edit-role', 'delete-role'])
-                    @if(auth()->id() == 1 || (auth()->id() != 1 && $role->id != 1))
+                    @if(($role->id != 1))
                         <td class="text-start">
                             <!--begin::Actions-->
                             <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">@lang('common.actions')
@@ -43,12 +43,10 @@
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 @can('delete-role')
-                                    @if( $role->id != 1 )
                                         <form method="post" id="my_form" class="menu-item px-3" action="{{route('admin.roles.destroy', $role->id)}}">
                                             @csrf @method('Delete')
                                             <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                         </form>
-                                    @endif
                                 @endcan
                                 <!--end::Menu item-->
                             </div>
