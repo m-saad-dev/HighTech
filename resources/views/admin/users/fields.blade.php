@@ -53,7 +53,7 @@
             @if($errors->first('role'))
                 <small class="text-danger">{{$errors->first('role')}}</small>
             @endif
-            @if(isset($user) && $user->hasRole('Super Admin') && auth()->user()->hasRole('Super Admin') || ! $user->hasRole('Super Admin'))
+            @if(isset($user) && ($user->hasRole('Super Admin') && auth()->user()->hasRole('Super Admin') || ! $user->hasRole('Super Admin')))
                     <select name="role" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="{{trans('common.select')}}" class="form-select form-select-solid form-select-lg fw-semibold">
                         @foreach((app()->getLocale() == 'en' ? $allRoles->pluck('name', 'name')->toArray() : $allRoles->pluck('name_ar', 'name')->toArray()) as $id => $role)
                             <option value="{{$id}}" @if(isset($user) && $user->hasRole($role)) selected @endif>{{$role}}</option>
