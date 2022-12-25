@@ -31,6 +31,7 @@ class CreateServiceRequest extends FormRequest
      */
     public function rules()
     {
+        dd($this->all());
         $rules = RuleFactory::make([
                 'translations.%title%' => 'required|string',
                 'translations.%sub_title%' => 'required|string',

@@ -57,6 +57,12 @@ class OrderController extends Controller
         $item = checkLocale('ar') ? "المستخدم" : "The Order";
         try {
             $order = $this->model->create($request->validated());
+            if ($order){
+                $data = [
+                    'order_id' => $order->id,
+                ];
+                event(new OrderNotification($data));
+            }
             return redirect()->route('admin.orders.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.orders.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
