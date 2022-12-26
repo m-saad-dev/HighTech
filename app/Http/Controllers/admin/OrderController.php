@@ -20,7 +20,7 @@ class OrderController extends Controller
     public function __construct(Order $model)
     {
         $this->middleware("permission:list-orders", ['only' => ['index']]);
-        $this->middleware("permission:create-order", ['only' => ['create', 'store']]);
+        $this->middleware("permission:create-order", ['only' => ['create']]);
         $this->middleware("permission:edit-order", ['only' => ['edit', 'update']]);
         $this->middleware("permission:delete-order", ['only' => ['destroy']]);
         $this->model = $model;
@@ -62,11 +62,15 @@ class OrderController extends Controller
         try {
             $order = $this->model->create($request->validated());
             if ($order){
-                $users = User::all();
+                $users = User::permission('user-notifications')->get();
                 $data = [
-                    'order_id' => $order->id,
+                    'id' => $order->id,
+                    'name' => $order->name,
+                    'business_type' => $order->business_type,
+                    'phone_number' => $order->phone_number,
+                    'service_title' => $order->serviceTitle,
                 ];
-                Notification::send($users, new OrderNotification($data));
+                Notification::send($users, new OrderNotification($order));
 
                 event(new OrderNotify($data));
             }

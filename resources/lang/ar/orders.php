@@ -15,4 +15,7 @@ return [
     'createOrder' => 'طلب خدمة جديد',
     'editOrder' => 'تعديل طلب خدمة',
     'deleteOrder' => 'حذف طلب خدمة',
+    'recentOrders' => 'الطلبات الحديثة',
+    'oldOrders' => 'الطلبات القديمة',
+    'service' => 'الخدمة',
 ];

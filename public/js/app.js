@@ -22889,12 +22889,20 @@ __webpack_require__.r(__webpack_exports__);
   name: "NotificationsComponent",
   data: function data() {
     return {
-      title: 'How To Install Vue 3 in Laravel 8 From Scratch'
+      recent_orders: []
     };
   },
+  props: ['nameTranslation', 'phoneNumberTranslation', 'businessTypeTranslation', 'serviceTranslation'],
   mounted: function mounted() {
+    var _this = this;
     window.Echo.channel('OrderNotificationsChannel').listen('OrderNotification', function (event) {
-      console.log(event);
+      _this.recent_orders.push({
+        id: event.recent_order.id,
+        name: event.recent_order.name,
+        business_type: event.recent_order.business_type,
+        phone_number: event.recent_order.phone_number,
+        service_title: event.recent_order.service_title
+      });
     });
   }
 });
@@ -22914,8 +22922,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "scroll-y mh-325px my-2 px-4"
+};
+var _hoisted_2 = {
+  "class": "d-flex flex-stack py-4"
+};
+var _hoisted_3 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_4 = {
+  href: "javascript::void(0);",
+  "class": "text-gray-800 fw-bold"
+};
+var _hoisted_5 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_6 = {
+  href: "javascript::void(0);",
+  "class": "text-gray-800 text-hover-primary fw-bold"
+};
+var _hoisted_7 = {
+  "class": "col-2 align-items-center me-2"
+};
+var _hoisted_8 = {
+  href: "javascript::void(0);",
+  "class": "text-gray-800 text-hover-primary fw-bold"
+};
+var _hoisted_9 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_10 = {
+  href: "javascript::void(0);",
+  "class": "text-gray-800 text-hover-primary fw-bold"
+};
+var _hoisted_11 = {
+  "class": "d-flex flex-stack py-4"
+};
+var _hoisted_12 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_13 = {
+  href: "#",
+  "class": "text-gray-800 badge badge-light-success fw-semibold"
+};
+var _hoisted_14 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_15 = {
+  href: "#",
+  "class": "text-gray-800 text-hover-primary fw-semibold"
+};
+var _hoisted_16 = {
+  "class": "col-2 align-items-center me-2"
+};
+var _hoisted_17 = {
+  href: "#",
+  "class": "text-gray-800 text-hover-primary fw-semibold"
+};
+var _hoisted_18 = {
+  "class": "col-3 align-items-center me-2"
+};
+var _hoisted_19 = {
+  href: "#",
+  "class": "text-gray-800 text-hover-primary fw-semibold"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.title), 1 /* TEXT */);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Item"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.nameTranslation), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.phoneNumberTranslation), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.businessTypeTranslation), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.serviceTranslation), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Item"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Item"), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.recent_orders, function (order) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(order.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(order.business_type), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(order.phone_number), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(order.service_title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Section")]);
+  }), 256 /* UNKEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Item")]);
 }
 
 /***/ }),

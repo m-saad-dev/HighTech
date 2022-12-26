@@ -3,6 +3,18 @@
 namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Client;
+use App\Models\Customer;
+use App\Models\Order;
+use App\Models\Service;
+use App\Models\Setting;
+use App\Models\Staff;
+use App\Models\User;
+use App\Notifications\OrderNotification;
+use App\Events\OrderNotification as OrderNotify;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class HomeController extends Controller
 {
@@ -22,6 +34,60 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('website.home');
+        $aboutUsElement = Setting::where('key', 'about_us')->first();
+        $aboutUs = json_decode($aboutUsElement->value, true);
+        $linksElement = Setting::where('key', 'links')->first();
+        $links = json_decode($linksElement->value, true);
+        $services = Service::limit(5)->get();
+        $articles = Article::limit(5)->get();
+        $clients = Client::get();
+        $customers = Customer::get();
+        $staff = Staff::get();
+
+        return view('website.home')->with([
+            'aboutUs' => $aboutUs,
+            'links' => $links,
+            'services' => $services,
+            'articles' => $articles,
+            'clients' => $clients,
+            'customers' => $customers,
+            'staff' => $staff,
+        ]);
+    }
+
+    public function services(Service $service){
+        return view('website.services')->with([
+            'service' => $service,
+        ]);
+    }
+
+    public function orderStore(Request $request){
+        $item = 'المستخدم';
+        try {
+            $validated = $request->validate([
+                'name' => 'required|string',
+                'business_type' => 'required|string',
+                'phone_number' => 'required|string',
+                'service_id' => 'required|int',
+            ]);
+
+            $order = Order::create($validated);
+            if ($order){
+                $users = User::permission('user-notifications')->get();
+                $data = [
+                    'id' => $order->id,
+                    'name' => $order->name,
+                    'business_type' => $order->business_type,
+                    'phone_number' => $order->phone_number,
+                    'service_title' => $order->serviceTitle,
+                ];
+                Notification::send($users, new OrderNotification($order));
+
+                event(new OrderNotify($data));
+            }
+            return redirect()->back()->with('success', __('messages.created', ['item' => $item]));
+        } catch (\Exception $e) {
+            return redirect()->back()->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
     }
 }

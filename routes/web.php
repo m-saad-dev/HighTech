@@ -38,6 +38,8 @@ Route::middleware('locale')->prefix('website')->get('language/{locale}', functio
 
 Route::as('website.')->group(function () {
     Route::get('/', [\App\Http\Controllers\website\HomeController::class, 'index'])->name('home');
+    Route::get('/services/{service}', [\App\Http\Controllers\website\HomeController::class, 'services'])->name('home');
+    Route::post('/orders/store', [\App\Http\Controllers\website\HomeController::class, 'orderStore'])->name('orders.store');
 });
 
 Route::prefix('admin')->get('language/{locale}', function ($locale) {

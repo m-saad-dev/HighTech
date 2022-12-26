@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\Order;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -39,7 +40,8 @@ class OrderNotification implements ShouldBroadcast
     public function broadcastWith()
     {
         return [
-            'data' => $this->data,
+            'recent_order' => $this->data,
+//            'old_orders' => Order::whereNotIn('id', [$this->data['id']])->get()->toArray(),
         ];
     }
 }
