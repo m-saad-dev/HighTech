@@ -22938,13 +22938,11 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bun
 
 var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   data: function data() {
-    return {
-      message: 'Hello Vue!'
-    };
+    return {};
   }
 });
 app.component('NotificationsComponent', (__webpack_require__(/*! ./components/NotificationsComponent.vue */ "./resources/js/components/NotificationsComponent.vue")["default"]));
-app.mount('#kt_app_root');
+app.mount('#notifications');
 
 /***/ }),
 
@@ -22986,7 +22984,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   wsHost: window.location.hostname,
   wsPort: 6001,
   forceTLS: false,
-  disableStats: true
+  disableStats: true,
+  enabledTransports: ['ws', 'wss']
 });
 
 /***/ }),

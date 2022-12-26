@@ -10,12 +10,11 @@ window.Vue = require('vue');
 
           data() {
               return {
-                  message: 'Hello Vue!'
               }
           }
       });
 
 app.component('NotificationsComponent', require('./components/NotificationsComponent.vue').default)
-app.mount('#kt_app_root');
+app.mount('#notifications');
 
 

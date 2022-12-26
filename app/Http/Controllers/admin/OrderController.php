@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Events\OrderNotification as OrderNotify;
 use App\Facades\MediaHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
 use App\Models\Order;
+use App\Models\User;
+use App\Notifications\OrderNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use function PHPUnit\Framework\throwException;
 
 class OrderController extends Controller
@@ -58,10 +62,13 @@ class OrderController extends Controller
         try {
             $order = $this->model->create($request->validated());
             if ($order){
+                $users = User::all();
                 $data = [
                     'order_id' => $order->id,
                 ];
-                event(new OrderNotification($data));
+                Notification::send($users, new OrderNotification($data));
+
+                event(new OrderNotify($data));
             }
             return redirect()->route('admin.orders.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
