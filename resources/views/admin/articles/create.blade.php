@@ -4,12 +4,12 @@
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
             trans('articles.articles') => route('admin.articles.index'),
-            trans('articles.createService') => null,
+            trans('articles.createArticle') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('articles.createService')
+    @lang('articles.createArticle')
 @stop
 @section('content')
     <div class="card mb-5 mb-xl-10">

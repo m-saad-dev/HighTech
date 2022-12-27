@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\ArticleController;
 use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\NotificationController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\SettingController;
@@ -37,6 +38,10 @@ Route::middleware('locale')->prefix('website')->get('language/{locale}', functio
 
 Route::as('website.')->group(function () {
     Route::get('/', [\App\Http\Controllers\website\HomeController::class, 'index'])->name('home');
+    Route::get('/services/{service}', [\App\Http\Controllers\website\HomeController::class, 'service'])->name('services');
+    Route::get('/articles/{article}', [\App\Http\Controllers\website\HomeController::class, 'article'])->name('articles.show');
+    Route::get('/staff', [\App\Http\Controllers\website\HomeController::class, 'staff'])->name('staff');
+    Route::post('/orders/store', [\App\Http\Controllers\website\HomeController::class, 'orderStore'])->name('orders.store');
 });
 
 Route::prefix('admin')->get('language/{locale}', function ($locale) {
@@ -61,4 +66,5 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/orders', OrderController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
+        Route::get('/notifications/send', [NotificationController::class, 'send'])->name('notifications.send');
 });

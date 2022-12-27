@@ -15,7 +15,7 @@ class CreateOrderRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user() ? true : false;
+        return true;
     }
 
     protected function prepareForValidation()

@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Events\OrderNotification as OrderNotify;
 use App\Facades\MediaHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
 use App\Models\Order;
+use App\Models\User;
+use App\Notifications\OrderNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use function PHPUnit\Framework\throwException;
 
 class OrderController extends Controller
@@ -16,7 +20,7 @@ class OrderController extends Controller
     public function __construct(Order $model)
     {
         $this->middleware("permission:list-orders", ['only' => ['index']]);
-        $this->middleware("permission:create-order", ['only' => ['create', 'store']]);
+        $this->middleware("permission:create-order", ['only' => ['create']]);
         $this->middleware("permission:edit-order", ['only' => ['edit', 'update']]);
         $this->middleware("permission:delete-order", ['only' => ['destroy']]);
         $this->model = $model;
@@ -57,6 +61,19 @@ class OrderController extends Controller
         $item = checkLocale('ar') ? "المستخدم" : "The Order";
         try {
             $order = $this->model->create($request->validated());
+            if ($order){
+                $users = User::permission('user-notifications')->get();
+                $data = [
+                    'id' => $order->id,
+                    'name' => $order->name,
+                    'business_type' => $order->business_type,
+                    'phone_number' => $order->phone_number,
+                    'service_title' => $order->serviceTitle,
+                ];
+                Notification::send($users, new OrderNotification($order));
+
+                event(new OrderNotify($data));
+            }
             return redirect()->route('admin.orders.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.orders.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));

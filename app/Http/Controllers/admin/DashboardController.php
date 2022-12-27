@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,7 +24,10 @@ class DashboardController extends Controller
      */
     public function dashboard(): \Illuminate\Contracts\Support\Renderable
     {
-        return view('admin.dashboard');
+        $oldOrders = Order::orderByDesc('created_at')->paginate(10);
+        return view('admin.dashboard')->with([
+            'oldOrders' => $oldOrders,
+        ]);
     }
 
 }

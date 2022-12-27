@@ -1,0 +1,45 @@
+﻿.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+#imagemodal button.close {
+    border: 0;
+    background:transparent;
+}
+
+span.sr-only {
+    color: #fff !important;
+    font-size: 43px;
+}
+
+#imagemodal button.close span {  color:#fff !important;
+    font-size: 43px;}
+#imagemodal button.close {
+    position: absolute;
+}
+#imagemodal .modal-content {
+
+    border: 0;}
+#imagemodal .modal-body {
+    position: relative;
+    flex: 0;
+    padding: 0;
+}
+
+@media (min-width:700px){
+#imagemodal .modal-dialog {
+    max-width: 700px;
+    margin: 1.75rem auto;
+}}
+a.pop {
+    cursor: pointer;
+}
+#imagemodal.modal {
+    position: fixed;
+    top: 30%;

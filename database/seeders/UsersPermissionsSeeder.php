@@ -66,6 +66,14 @@ class UsersPermissionsSeeder extends Seeder
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
+            [
+                "name" => "user-notifications",
+                "display_name" => "Receive Notifications",
+                "ar_display_name" => "استقبال الاشعارات",
+                "permission_group" => "users",
+                "guard_name" => "web",
+                "created_at" => Carbon::now()->toDateTimeString(),
+            ],
         ]);
 
     }

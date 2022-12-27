@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('business_type');
             $table->string('phone_number')->unique();
             $table->bigInteger('service_id')->unsigned();
-            $table->bigInteger('created_by')->unsigned();
+            $table->bigInteger('created_by')->nullable()->unsigned();
             $table->bigInteger('updated_by')->nullable()->unsigned();
             $table->timestamps();
             $table->foreign('service_id')->references('id')->on('services');

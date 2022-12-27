@@ -22,7 +22,9 @@ class Order extends Model
         'updated_by',
     ];
 
-
+    protected $casts = [
+        'service_id' => 'int',
+    ];
     /**
      * The rules of create users fields.
      *
@@ -61,5 +63,10 @@ class Order extends Model
     public function service()
     {
         return $this->belongsTo(Service::class, 'service_id');
+    }
+
+    public function getServiceTitleAttribute($attribute)
+    {
+        return Service::where('id', $this->service_id)->first()->title;
     }
 }

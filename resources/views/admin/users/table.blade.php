@@ -22,7 +22,7 @@
         <tbody class="fw-6 fw-semibold text-gray-600" style="max-width: inherit !important;">
         @foreach($users as $user)
             <tr>
-                <td class="min-w-50% max-w-100%" st>
+                <td class="min-w-50% max-w-100%">
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>

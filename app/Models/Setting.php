@@ -54,7 +54,8 @@ class Setting extends Model implements HasMedia
         $this->addMediaCollection('logo');
     }
 
-    public function getTitleAttribute(){
+    public function getTitleAttribute()
+    {
         return json_decode($this->value, true)['title'][app()->getLocale()];
     }
     public function getTitleTranslations($locale)
