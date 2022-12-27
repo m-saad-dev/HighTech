@@ -25,9 +25,9 @@
                 <!--begin::Col-->
                 <div class="col-lg-8">
                     <!--begin::Image input-->
-                    <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{isset($service) && $service->getFirstMedia('avatars') ? $service->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}')">
+                    <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{isset($service) && $service->getFirstMedia('icon') ? $service->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}}')">
                         <!--begin::Preview existing avatar-->
-                        <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($service) && $service->getFirstMedia('avatars') ? $service->getFirstMedia('avatars')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
+                        <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($service) && $service->getFirstMedia('icon') ? $service->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/avatars/300-1.jpg')}})"></div>
                         <!--end::Preview existing avatar-->
                     </div>
                     <!--end::Image input-->

@@ -103,7 +103,7 @@
 
 [dir='rtl'] .slick-next:before {
     content: '';
-    background: url(../img/left.png) right no-repeat !important;
+    background: url(../assets/img/left.png) right no-repeat !important;
     padding: 15px;
 }
 

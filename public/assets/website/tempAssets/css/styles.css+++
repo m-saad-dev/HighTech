@@ -4898,7 +4898,7 @@ textarea.form-control-lg {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     background-color: transparent;
     padding: 18px;
-    background: url(../img/mob/Groupa.png) right no-repeat !important;
+    background: url(../assets/img/mob/Groupa.png) right no-repeat !important;
 }
 
 .navbar-light .navbar-text {
@@ -12043,7 +12043,7 @@ hr.divider-light {
 
         #mainNav .navbar-nav .nav-item .nav-link.active {
             color: #31C0FF !important;
-            background: url(../img/play.png) right no-repeat !important;
+            background: url(../assets/img/play.png) right no-repeat !important;
         }
 
 @media (min-width: 992px) {
@@ -12090,11 +12090,11 @@ hr.divider-light {
 
             #mainNav.topdisk .navbar-nav .nav-item .nav-link {
                 color: #ffffff;
-                font-size: 25px;
+                font-size: 26px;
                 font-family: DIN Next LT Arabic;
                 margin-top: 20%;
                 text-align: right;
-                background: url("../img/Ellipse.png") right 15px;
+                background: url("../assets/img/Ellipse.png") right 15px;
                 background-repeat: no-repeat;
                 padding-right:30px;
             }
@@ -12107,7 +12107,7 @@ hr.divider-light {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: url("../img/bg-masthead.png");
+    background: url("../assets/img/bg-masthead.png");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -12212,7 +12212,7 @@ span.col-lg-12.new {
 
 .nextlink {
     color: #31C0FF !important;
-    background: url(../img/angle-right-1.png) right no-repeat !important;
+    background: url(../assets/img/angle-right-1.png) right no-repeat !important;
     padding: 35px;
     margin-top: 5%;
     display: inline-block;
@@ -12385,7 +12385,7 @@ button#submitButton {
     }
 
 #mainNav.topdisk .navbar-nav .nav-item {
-    border-right: 2px solid #30c0ff;
+    border-right: 2px solid #fff;
     display: flow-root;
 }
 
@@ -12402,7 +12402,7 @@ button#submitButton {
 
 .secback {
     --bs-bg-opacity: 1;
-    background: url(../img/blue.png);
+    background: url(../assets/img/blue.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -12585,7 +12585,7 @@ a img:hover {
 
         #mainNav .navbar-nav .nav-item .nav-link.active {
             color: #0a1e45 !important;
-            background: url(../img/play.png) right no-repeat !important;
+            background: url(../assets/img/play.png) right no-repeat !important;
         }
 
     .slick-slider {
@@ -12741,7 +12741,7 @@ button#submitButton:hover, button.serv:hover {
     margin: 0 auto;
     position: absolute;
     right: 50%;
-    margin-top: 8%;
+    margin-top: 166px;
 }
 
 @media (max-width: 768px) {
@@ -12856,7 +12856,7 @@ header.masthead {
 
 .inpage .col.first {
     font-size: 33px;
-    color: #30c0ff;
+    color: #FFFFFF;
     font-family: 'Ultra';
     text-align: right;
     line-height: 49px;
@@ -12869,7 +12869,7 @@ header.masthead {
 }
 
 .inpage .details span {
-    color: #071735;
+    color: #fff;
     text-align: right;
 }
 
@@ -12920,7 +12920,7 @@ header.masthead {
 }
 
 body.inpage {
-    /* background: url(../img/inner.png) #D4D4D4; */
+    /* background: url(../assets/img/inner.png) #D4D4D4; */
     /* background-size: 100% 100%; */
     overflow: auto;
 }
@@ -13037,35 +13037,35 @@ a.back {
 }
 
 .grap1 {
-    background: url(../img/grap1.png) right no-repeat !important;
+    background: url(../assets/img/grap1.png) right no-repeat !important;
     display: block;
     width: 56px;
     height: 56px;
 }
 
 .grap2 {
-    background: url(../img/grap2.png) right no-repeat !important;
+    background: url(../assets/img/grap2.png) right no-repeat !important;
     display: block;
     width: 58px;
     height: 58px;
 }
 
 .grap3 {
-    background: url(../img/grap3.png) right no-repeat !important;
+    background: url(../assets/img/grap3.png) right no-repeat !important;
     display: block;
     width: 58px;
     height: 58px;
 }
 
 .grap4 {
-    background: url(../img/grap4.png) right no-repeat !important;
+    background: url(../assets/img/grap4.png) right no-repeat !important;
     display: block;
     width: 56px;
     height: 56px;
 }
 
 .grap5 {
-    background: url(../img/grap5.png) right no-repeat !important;
+    background: url(../assets/img/grap5.png) right no-repeat !important;
     display: block;
     width: 56px;
     height: 56px;
@@ -13073,23 +13073,23 @@ a.back {
 
 @media (min-width: 768px) {
     .blocksevleft:hover .grap1 {
-        background: url(../img/grap1h.png) right no-repeat !important;
+        background: url(../assets/img/grap1h.png) right no-repeat !important;
     }
 
     .blocksev:hover .grap2 {
-        background: url(../img/grap2h.png) right no-repeat !important;
+        background: url(../assets/img/grap2h.png) right no-repeat !important;
     }
 
     .blocksevleft:hover .grap3 {
-        background: url(../img/grap3h.png) right no-repeat !important;
+        background: url(../assets/img/grap3h.png) right no-repeat !important;
     }
 
     .blocksev:hover .grap4 {
-        background: url(../img/grap4h.png) right no-repeat !important;
+        background: url(../assets/img/grap4h.png) right no-repeat !important;
     }
 
     .blocksevleft:hover .grap5 {
-        background: url(../img/grap5h.png) right no-repeat !important;
+        background: url(../assets/img/grap5h.png) right no-repeat !important;
     }
 }
 
@@ -13183,7 +13183,7 @@ span.work {
 
 .single-item2 {
     width: 402px;
-    height: 185px;
+    /* height: 207px; */
     /* UI Properties */
     background: #FFFFFF;
     border-radius: 23px;
@@ -13199,7 +13199,7 @@ span.work {
         float: right;
         width: 100%;
         color: #06132F;
-        height: 91px;
+        height: 148px;
         padding-bottom: 25px;
     }
 
@@ -13275,7 +13275,7 @@ span.work {
 /* ----------------------------------------------
  * Generated by Animista on 2022-8-5 23:46:30
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
+ * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
@@ -13318,7 +13318,7 @@ span.work {
 /* ----------------------------------------------
  * Generated by Animista on 2022-8-5 23:49:47
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
+ * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
@@ -13483,7 +13483,7 @@ span.work {
     background-position: center !important;
     width: 100%;
     padding: 0px;
-    background: url(../img/inner.png) #fff;
+    background: url(../assets/img/inner.png) #D4D4D4;
     background-size: 100% 100%;
     overflow: auto;
     padding-bottom: 200px;
@@ -13504,7 +13504,7 @@ span.work {
     left: 0px;
     height: 100vh;
     overflow: hidden;
-    background: url(../img/blue.png);
+    background: url(../assets/img/blue.png);
 }
 
 #first .justify-content-center {
@@ -13538,7 +13538,7 @@ section .justify-content-center {
 }
 
 section .row.gx-4.gx-lg-5 .text-center {
-    display:block;
+    display: table-cell;
     vertical-align: middle;
     text-align: center;
     width: 816px !important;
@@ -13655,7 +13655,7 @@ div#fv-dots {
         }
 
     .grap1 {
-        background: url(../img/mob/grap1m.png) right no-repeat !important;
+        background: url(../assets/img/mob/grap1m.png) right no-repeat !important;
         display: block;
         width: 40px;
         height: 38px;
@@ -13664,7 +13664,7 @@ div#fv-dots {
     }
 
     .grap2 {
-        background: url(../img/mob/grap2m.png) right no-repeat !important;
+        background: url(../assets/img/mob/grap2m.png) right no-repeat !important;
         display: block;
         width: 40px;
         height: 38px;
@@ -13672,7 +13672,7 @@ div#fv-dots {
     }
 
     .grap3 {
-        background: url(../img/mob/grap3m.png) right no-repeat !important;
+        background: url(../assets/img/mob/grap3m.png) right no-repeat !important;
         display: block;
         width: 40px;
         height: 40px;
@@ -13681,14 +13681,14 @@ div#fv-dots {
     }
 
     .grap4 {
-        background: url(../img/mob/grap4m.png) right no-repeat !important;
+        background: url(../assets/img/mob/grap4m.png) right no-repeat !important;
         display: block;
         width: 40px;
         height: 40px;
     }
 
     .grap5 {
-        background: url(../img/mob/grap5m.png) right no-repeat !important;
+        background: url(../assets/img/mob/grap5m.png) right no-repeat !important;
         display: block;
         width: 40px;
         height: 40px;
@@ -13696,7 +13696,7 @@ div#fv-dots {
     }
 
     .nextlink {
-        background: url(../img/mob/Group77.png) right no-repeat !important;
+        background: url(../assets/img/mob/Group77.png) right no-repeat !important;
     }
 
     .page-section {
@@ -13732,13 +13732,13 @@ div#fv-dots {
 
     .slick-next:before {
         content: '';
-        background: url(../img/mob/right.png) right no-repeat !important;
+        background: url(../assets/img/mob/right.png) right no-repeat !important;
         padding: 15px;
     }
 
     .slick-prev:before {
         content: '';
-        background: url(../img/mob/left.png) right no-repeat !important;
+        background: url(../assets/img/mob/left.png) right no-repeat !important;
         padding: 15px;
     }
 
@@ -13782,15 +13782,4 @@ div#fv-dots {
     text-align: center !important;
 }
 
-.row.mdwna.inneermad {
-    border: 1px solid #30c0ff !important;
-}.row.mdwna.inneermad {
-    margin-bottom: 30px;
-}
-.in .col.proj {
-    height: auto;
-}
-body.inpage {
-    background: url(../img/inner.png) #D4D4D4;
-    background-size: 100% 100%;
-}
+

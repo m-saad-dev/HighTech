@@ -29,7 +29,7 @@
                                     <div class="col-lg-3 icon">
                                         <a href="#" class="{{"grap".$loop->iteration}}"></a>
                                     </div>
-                                    <div class="moredata"><a href="tat.html">المزيد عن الخدمة</a></div>
+                                    <div class="moredata"><a href="{{route('website.services', ['service' => $service->id])}}">المزيد عن الخدمة</a></div>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                         <div class="form-floating mb-3">
                             <select name="service_id" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="{{trans('common.select')}}" class="form-control">
                                 @foreach($services as $id => $service)
-                                    <option value="{{$id}}" @if(isset($order) && $order->service_id == $id) selected @endif>{{$service->translate('ar')->title}}</option>
+                                    <option value="{{$service->id}}" @if(isset($serviceId) && $serviceId == $service->id) selected @endif>{{$service->translate('ar')->title}}</option>
                                 @endforeach
                             </select>
                             <label for="message">نوع الخدمة</label>
@@ -159,10 +159,10 @@
                         @foreach($articles as $article)
                             <div>
                                 <div class="row mdwna">
-                                    <div class="col-lg-6 imgtop"><img class="img-fluid" src="{{$article->getFirstMedia('avatars') ? $article->getFirstMedia('avatars')->getFullUrl() : asset('assets/website/img/Rectangle.png')}}" alt="المدونة"></div>
+                                    <div class="col-lg-6 imgtop"><img class="img-fluid" src="{{$article->getFirstMedia('icon') ? $article->getFirstMedia('icon')->getFullUrl() : asset('assets/website/img/Rectangle.png')}}" alt="المدونة"></div>
                                     <div class="col-lg-6">
                                         <div class="col  proj">{{ $article->translate('ar')->content }} </div>
-                                        <div class="col secondr"><a href="inner.html">المزيد</a></div>
+                                        <div class="col secondr"><a href="{{route('website.articles.show', ['article' => $article])}}">المزيد</a></div>
                                     </div>
                                 </div>
                             </div>

@@ -32,7 +32,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $aboutUsElement = Setting::where('key', 'about_us')->first();
         $aboutUs = json_decode($aboutUsElement->value, true);
@@ -43,7 +43,7 @@ class HomeController extends Controller
         $clients = Client::get();
         $customers = Customer::get();
         $staff = Staff::get();
-
+        $serviceId = $request->service_id;
         return view('website.home')->with([
             'aboutUs' => $aboutUs,
             'links' => $links,
@@ -52,12 +52,26 @@ class HomeController extends Controller
             'clients' => $clients,
             'customers' => $customers,
             'staff' => $staff,
+            'serviceId' => $serviceId,
         ]);
     }
 
-    public function services(Service $service){
+    public function service(Service $service){
         return view('website.services')->with([
             'service' => $service,
+        ]);
+    }
+
+    public function staff(){
+        $staff = Staff::all();
+        return view('website.staff')->with([
+            'staff' => $staff,
+        ]);
+    }
+
+    public function article(Article $article){
+        return view('website.article_show')->with([
+            'article' => $article,
         ]);
     }
 

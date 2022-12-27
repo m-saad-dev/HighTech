@@ -13483,7 +13483,7 @@ span.work {
     background-position: center !important;
     width: 100%;
     padding: 0px;
-    background: url(../img/inner.png) #fff;
+    /* background: url(../img/inner.png) #D4D4D4; */
     background-size: 100% 100%;
     overflow: auto;
     padding-bottom: 200px;
@@ -13782,15 +13782,4 @@ div#fv-dots {
     text-align: center !important;
 }
 
-.row.mdwna.inneermad {
-    border: 1px solid #30c0ff !important;
-}.row.mdwna.inneermad {
-    margin-bottom: 30px;
-}
-.in .col.proj {
-    height: auto;
-}
-body.inpage {
-    background: url(../img/inner.png) #D4D4D4;
-    background-size: 100% 100%;
-}
+
