@@ -19,12 +19,12 @@ class SettingsTableSeeder extends Seeder
                 'key' => 'about_us',
                 'value' => json_encode([
                         'title' => [
-                            'en' => 'Brief About Us',
-                            'ar' => 'نبذة مختصرة عنا',
+                            'en' => 'Start with Us',
+                            'ar' => 'إبدأ معنا',
                         ],
                         'content' => [
-                            'en' => 'Brief About Us Brief About Us Brief About Us Brief About Us Brief About Us Brief About Us ',
-                            'ar' => 'نبذة مختصرة عنا نبذة مختصرة عنا نبذة مختصرة عنا نبذة مختصرة عنا نبذة مختصرة عنا نبذة مختصرة عنا ',
+                            'en' => 'and create your successful store ',
+                            'ar' => 'واصنع متجراً ناجحاً ',
                         ],
                     ]),
             ],
