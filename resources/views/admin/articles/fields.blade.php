@@ -152,7 +152,7 @@
         <div class="col-lg-8 editor-container">
             <textarea id="second_editor" name="translations[ar][content]"
                       class="form-control form-control-lg form-control-solid kt_docs_quill_basic summernote"
-                      kt-data="{{ isset($article) ? $article->translate('ar')->content : (old('translations.ar.sub_title') ?? '') }}">
+                      kt-data="{{ isset($article) ? $article->translate('ar')->content : (old('translations.ar.content') ?? '') }}">
             </textarea>
             @error('translations.ar.content')
             <span class="alert-danger" role="alert"> {{ $message }} </span>

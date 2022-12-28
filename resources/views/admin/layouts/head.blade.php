@@ -1,7 +1,7 @@
 <head><base href="../"/>
     <title>{{env('APP_NAME'). ' - '}}@yield('title')</title>
     @include('admin.layouts.meta')
-    <link rel="shortcut icon" href="{{asset('assets/admin/media/logos/favicon.ico')}}" />
+    <link type=“image/x-icon” rel="shortcut icon" title="{{$logoTitle['ar']}}" src="{{$logoLink ?? asset('assets/admin/media/logos/favicon.ico')}}" />
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="{{asset('assets/admin/css/familyInterGoogleFont.css')}}" />
     <!--end::Fonts-->

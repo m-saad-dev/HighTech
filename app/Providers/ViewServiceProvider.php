@@ -20,7 +20,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['admin.layouts.logo', 'website.layouts.app', 'website.external_layouts.app'], function ($view) {
+        View::composer(['admin.layouts.app', 'website.layouts.app', 'website.external_layouts.app'], function ($view) {
             $logo = Setting::where('key', 'logo')->first();
             $logoTitle = json_decode($logo->value, true)['title'];
             $logoLink = $logo->getFirstMedia('image') ? $logo->getFirstMedia('image')->getFullUrl() : null;
