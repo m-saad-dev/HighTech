@@ -159,6 +159,8 @@ return [
     */
 
     'attributes' => [
+        "name" => trans('fields.name'),
+        "business_type" => trans('fields.business_type'),
         'translations.en.name' => 'Name' . trans('common.inEn'),
         'translations.en.position' => 'Position' . trans('common.inEn'),
         'translations.en.review' => 'Review' . trans('common.inEn'),

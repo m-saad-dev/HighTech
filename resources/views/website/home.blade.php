@@ -135,6 +135,7 @@
                     <div class="titel taqam">طاقم العمل</div>
                     <div class="member carousel">
                         @foreach($staff as $member)
+                            {{dd($member->translate('ar')->position)}}
                             <div class="buttomimg">
                                 <img src="{{$member->getFirstMedia('avatars') ? $member->getFirstMedia('avatars')->getFullUrl() : asset('assets/website/img/boy.png')}}" alt="">
                                 <span class="tiname">{{$member->translate('ar')->name}}</span>
@@ -143,7 +144,7 @@
                         @endforeach
                     </div>
                     <div class="col-lg-12 align-self-baseline">
-                        <a class="btn nav-link nextserv " href="#se">المزيد</a>
+                        <a class="btn nav-link nextserv " href="{{route('website.staff')}}">المزيد</a>
                     </div>
 
                 </div>

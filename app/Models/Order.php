@@ -31,8 +31,8 @@ class Order extends Model
      * @var array<string, string>
      */
     static public $createRules = [
-        'name' => 'required|string',
-        'business_type' => 'required|string',
+        'name' => 'required|string|max:255',
+        'business_type' => 'required|string|max:255',
         'phone_number' => 'required|string',
         'service_id' => 'required|int',
         'created_by' => 'required|int',
@@ -43,8 +43,8 @@ class Order extends Model
      * @var array<string, string>
      */
     static public $editRules = [
-        'name' => 'required|string',
-        'business_type' => 'required|string',
+        'name' => 'required|string|max:255',
+        'business_type' => 'required|string|max:255',
         'phone_number' => 'required|string',
         'service_id' => 'required|ing',
         'updated_by' => 'required|int',

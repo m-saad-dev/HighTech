@@ -32,8 +32,8 @@ class CreateCustomerRequest extends FormRequest
     public function rules()
     {
         $rules = RuleFactory::make([
-                'translations.%name%' => 'required|string',
-                'translations.%company_name%' => 'required|string',
+                'translations.%name%' => 'required|string|max:255',
+                'translations.%company_name%' => 'required|string|max:255',
                 'translations.%review%' => 'required|string',
             ]) + Staff::$createRules;
         return  $rules;
