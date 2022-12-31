@@ -34,7 +34,7 @@ class UpdateServiceRequest extends FormRequest
         $rules = RuleFactory::make([
                 'translations.%title%' => 'required|string|max:255',
                 'translations.%sub_title%' => 'required|string|max:255',
-                'translations.%description%' => 'required|string|min:3|max:1000',
+                'translations.%description%' => 'required|string|min:3|max:2500t',
             ]) + Service::$editRules;
         return $rules;
     }
