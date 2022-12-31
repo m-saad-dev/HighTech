@@ -54,7 +54,7 @@ class ServiceController extends Controller
     public function store(CreateServiceRequest $request)
     {
         $item = checkLocale('ar') ? "رأي العميل" : "The Customer Review";
-//        try {
+        try {
             if($request->has('translations'))
                 $request->replace($request->except('translations') + $request->translations);
             $service = $this->model->create($request->all());
@@ -68,9 +68,9 @@ class ServiceController extends Controller
             }
 
             return redirect()->route('admin.services.index')->with('success', __('messages.created', ['item' => $item]));
-//        } catch (\Exception $e) {
-//            return redirect()->route('admin.services.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-//        }
+        } catch (\Exception $e) {
+            return redirect()->route('admin.services.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
     }
 
     /**

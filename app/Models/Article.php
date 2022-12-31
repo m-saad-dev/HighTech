@@ -31,6 +31,8 @@ class Article extends Model implements HasMedia, TranslatableContract
      * @var array<string, string>
      */
     static public $createRules = [
+        'icon' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+        'mediafile.*.images' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
         'created_by' => 'required|int',
     ];
     /**
@@ -39,6 +41,8 @@ class Article extends Model implements HasMedia, TranslatableContract
      * @var array<string, string>
      */
     static public $editRules = [
+        'icon' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+        'mediafile.*.images' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
         'updated_by' => 'required|int',
     ];
 

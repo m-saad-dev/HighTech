@@ -3,7 +3,7 @@
         <!--begin::Input group-->
         <div class="col-8 mb-6">
             <!--begin::Col-->
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <!--begin::Image input-->
                 <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
                     <!--begin::Preview existing avatar-->
@@ -13,7 +13,7 @@
                     <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                         <i class="bi bi-pencil-fill fs-7"></i>
                         <!--begin::Inputs-->
-                        <input type="file" name="mediafile[{{$index??''}}][images]" accept=".png, .jpg, .jpeg" />
+                        <input type="file" name="mediafile[{{$index??''}}][images]" accept=".JPG, .PNG, .GIF, .WEBP, .JPEG, .jpg, .png, .gif, .webp, .jpeg, .svg" />
 {{--                                    <input type="hidden" name="images_remove" />--}}
                         <!--end::Inputs-->
                     </label>
@@ -34,7 +34,8 @@
                 </div>
                 <!--end::Image input-->
                 <!--begin::Hint-->
-                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                <div class="form-text">Allowed file types: jpg, png, gif, webp, jpeg, svg.</div>
+                <div class="form-text">Allowed file size: 2048(MB).</div>
                 <!--end::Hint-->
             </div>
             <!--end::Col-->
