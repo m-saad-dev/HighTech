@@ -41,6 +41,7 @@ Route::as('website.')->group(function () {
     Route::get('/services/{service}', [\App\Http\Controllers\website\HomeController::class, 'service'])->name('services');
     Route::get('/articles/{article}', [\App\Http\Controllers\website\HomeController::class, 'article'])->name('articles.show');
     Route::get('/blog', [\App\Http\Controllers\website\HomeController::class, 'blog'])->name('blog');
+    Route::get('/clients', [\App\Http\Controllers\website\HomeController::class, 'clients'])->name('clients');
     Route::get('/staff', [\App\Http\Controllers\website\HomeController::class, 'staff'])->name('staff');
     Route::post('/orders/store', [\App\Http\Controllers\website\HomeController::class, 'orderStore'])->name('orders.store');
 });
