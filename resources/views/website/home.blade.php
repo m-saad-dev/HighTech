@@ -169,6 +169,9 @@
                             </div>
                         @endforeach
                     </div>
+                    <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextserv mdall" href="{{route('website.blog')}}">المزيد</a>
+                    </div>
                 </div>
             </div>
         </div>
