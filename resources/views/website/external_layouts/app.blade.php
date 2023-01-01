@@ -20,6 +20,7 @@
                     <div class="">
                         <div>
                             <div class="row">
+
                                 @yield('content')
                             </div>
                         </div>

@@ -34,7 +34,7 @@ class CreateArticleRequest extends FormRequest
         $rules = RuleFactory::make([
                 'translations.%title%' => 'required|string|max:255',
                 'translations.%sub_title%' => 'required|string|max:255',
-                'translations.%content%' => 'required|string|min:3|max:2500',
+                'translations.%content%' => 'required|string|min:3|max:18780',
             ]) + Article::$createRules;
         return $rules;
     }

@@ -7,12 +7,12 @@
         </div>
         <div class="collapse navbar-collapse fixed-top" id="navbarResponsive">
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link cat1 active " href="{{route('website.home').'#first'}}">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link cat2" href="{{route('website.home').'#sec'}}">خدماتنا</a></li>
+                <li class="nav-item"><a class="nav-link cat1" href="{{route('website.home').'#first'}}">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link cat2 @if(request()->route()->getName() == 'website.services') active @endif" href="{{route('website.home').'#sec'}}">خدماتنا</a></li>
                 <li class="nav-item"><a class="nav-link cat3" href="{{route('website.home').'#th'}}">عملائنا</a></li>
                 <li class="nav-item"><a class="nav-link cat4" href="{{route('website.home').'#fu'}}">طلب خدمة</a></li>
-                <li class="nav-item"><a class="nav-link cat4" href="{{route('website.home').'#fi'}}">طاقم العمل</a></li>
-                <li class="nav-item"><a class="nav-link cat5" href="{{route('website.home').'#se'}}">مدونة هاى تك</a></li>
+                <li class="nav-item"><a class="nav-link cat4 @if(request()->route()->getName() == 'website.staff') active @endif" href="{{route('website.home').'#fi'}}">طاقم العمل</a></li>
+                <li class="nav-item"><a class="nav-link cat5 @if(request()->route()->getName() == 'articles.show') active @endif" href="{{route('website.home').'#se'}}">مدونة هاى تك</a></li>
                 <li class="nav-item"><a class="nav-link cat6" href="{{route('website.home').'#sev'}}">تواصل معنا</a></li>
             </ul>
         </div>

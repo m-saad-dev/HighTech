@@ -6,6 +6,7 @@ use App\Models\Service;
 use Astrotomic\Translatable\Validation\RuleFactory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class UpdateServiceRequest extends FormRequest
 {
@@ -34,7 +35,7 @@ class UpdateServiceRequest extends FormRequest
         $rules = RuleFactory::make([
                 'translations.%title%' => 'required|string|max:255',
                 'translations.%sub_title%' => 'required|string|max:255',
-                'translations.%description%' => 'required|string|min:3|max:2500t',
+                'translations.%description%' => 'required|string|min:3|max:18780',
             ]) + Service::$editRules;
         return $rules;
     }

@@ -55,6 +55,11 @@ function activeGuard($guard = null)
     return 'web';
 }
 
+function checkWebsiteActiveRouteName(string $routeNames, string $key)
+{
+//    if ($key)
+    dd($routeNames, request()->route()->uri());
+}
 function checkActiveRouteName(array $routeNames, string $key = null, string $value = null)
 {
     if (in_array(request()->route()->getName(), $routeNames)){
