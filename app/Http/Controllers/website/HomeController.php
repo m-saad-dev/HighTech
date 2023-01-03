@@ -77,7 +77,7 @@ class HomeController extends Controller
     }
 
     public function clients(){
-        $clients = Article::all();
+        $clients = Client::all();
         return view('website.clients')->with([
             'clients' => $clients,
         ]);
