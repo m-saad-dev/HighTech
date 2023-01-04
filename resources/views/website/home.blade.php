@@ -48,6 +48,9 @@
                         <div class="in"><img src="{{$client->getFirstMedia('avatars') ? $client->getFirstMedia('avatars')->getFullUrl() : asset("assets/website/img/logoside.png")}}" alt="{{$client->name}}"></div>
                         @endforeach
                     </div>
+                    <div class="col-lg-12 align-self-baseline amala">
+                        <a class="btn nav-link nextserv mdall" href="{{route('website.clients')}}">المزيد</a>
+                    </div>
                     <div class="titel titelara">آراء العملاء</div>
                     <div class="single-item2 md">
                         @foreach($customers as $customer)

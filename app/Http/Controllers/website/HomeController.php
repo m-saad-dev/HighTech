@@ -76,6 +76,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function clients(){
+        $clients = Article::all();
+        return view('website.clients')->with([
+            'clients' => $clients,
+        ]);
+    }
+
     public function article(Article $article){
         return view('website.article_show')->with([
             'article' => $article,
