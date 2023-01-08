@@ -24,4 +24,5 @@ return [
     'services' => 'services',
     'articles' => 'Articles',
     'orders' => 'Orders',
+    'blog' => 'HighTech Blog',
 ];
