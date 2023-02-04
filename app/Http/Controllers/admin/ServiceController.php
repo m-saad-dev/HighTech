@@ -60,6 +60,7 @@ class ServiceController extends Controller
             $service = $this->model->create($request->all());
             if ($request->has('icon')){
                 $service->clearMediaCollection('icon');
+                dd($request->all(), $service);
                 MediaHelper::uploadMedia($request, $service);
             }
             if ($request->has('mediafile')){

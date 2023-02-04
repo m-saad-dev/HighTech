@@ -160,8 +160,8 @@ return [
     */
 
     'attributes' => [
-        "name" => trans('fields.name'),
-        "business_type" => trans('fields.business_type'),
+       "name" => trans('fields.name'),
+       "business_type" => trans('fields.business_type'),
         'translations.en.name' => trans('fields.name') . trans('common.inEn'),
         'translations.en.position' => trans('fields.position') . trans('common.inEn'),
         'translations.en.review' => trans('fields.review') . trans('common.inEn'),

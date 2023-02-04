@@ -230,3 +230,7 @@ setTimeout(function () {
     $('.masthead').fadeOut('slow');
 }, 1000);
 
+$(function() {
+setTimeout(function() { $(".logo img").addclass("newlogo"); }, 5000)
+
+})

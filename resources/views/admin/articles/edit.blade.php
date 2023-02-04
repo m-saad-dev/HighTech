@@ -4,12 +4,12 @@
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [
             trans('menu.articles') => route('admin.articles.index'),
-            trans('articles.editService') => null,
+            trans('articles.editArticle') => null,
         ],
     ])
 @stop
 @section('page_title')
-    @lang('articles.editService')
+    @lang('articles.editArticle')
 @stop
 @section('actions')
     <a href="{{url()->previous()}}" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">@lang('common.back')</a>
