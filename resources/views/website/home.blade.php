@@ -1,5 +1,5 @@
 @extends('website.layouts.app')
-@section("title", trans("menu.dashboard"))
+@section("title", trans("menu.home"))
 @section('content')
 <div class="secback">
     <section class="page-section bg-primary" id="first">
@@ -33,7 +33,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-12 align-self-baseline">
+                     
+                    </div>
+                
                     @endforeach
+                    <a class="btn nav-link nextlink" href="#th"></a>
                 </div>
             </div>
         </div>
@@ -63,6 +68,10 @@
                                 </div>
                             </div>
                         @endforeach
+                    
+                    </div>
+                    <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextlink" href="#fu"></a>
                     </div>
                 </div>
             </div>
@@ -77,30 +86,30 @@
                         @csrf
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input name="name" class="form-control " id="name" type="text" placeholder="اسم العميل" data-sb-validations="required" data-sb-can-submit="no">
-                            <label for="name">اسم العميل</label>
+                            <input name="name" class="form-control " id="name" type="text" placeholder="اسم العميل" required data-sb-validations="required" data-sb-can-submit="no">
+                            <label for="name" id="lab1">اسم العميل</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">*</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input name="business_type" class="form-control" id="nshat" type="text" placeholder="نشاط العمل" data-sb-validations="required,email" data-sb-can-submit="no">
-                            <label for="nshat">نشاط العمل</label>
+                            <input name="business_type" class="form-control" id="nshat" type="text" placeholder="نشاط العمل" required data-sb-validations="required,email" data-sb-can-submit="no">
+                            <label for="nshat" id="lab2">نشاط العمل</label>
 
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input name="phone_number" class="form-control" id="phone" type="tel" placeholder="رقم الجوال" data-sb-validations="required" data-sb-can-submit="no">
-                            <label for="phone">رقم الجوال</label>
+                            <input name="phone_number" class="form-control" id="phone" type="tel" placeholder="رقم الجوال" required data-sb-validations="required" data-sb-can-submit="no">
+                            <label for="phone" id="lab3">رقم الجوال</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">*</div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <select name="service_id" aria-label="{{trans('common.select')}}" data-control="select2" data-placeholder="{{trans('common.select')}}" class="form-control">
+                            <select name="service_id" aria-label="{{trans('common.select')}}" data-control="select2" required data-placeholder="{{trans('common.select')}}" class="form-control">
                                 @foreach($services as $id => $service)
                                     <option value="{{$service->id}}" @if(isset($serviceId) && $serviceId == $service->id) selected @endif>{{$service->translate('ar')->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="message">نوع الخدمة</label>
+                            <label for="message" id="lab4">نوع الخدمة</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">*</div>
                         </div>
                         <!-- Submit success message-->
@@ -123,9 +132,9 @@
                         <!-- Submit Button-->
                         <div class="d-grid"><button class="btn btn-primary btn-xl " id="submitButton" type="submit">إرسال</button></div>
                     </form>
-                    <!--<div class="col-lg-12 align-self-baseline">
-                        <a class="btn nav-link nextlink" href="#fi"></a>
-                    </div>-->
+                   <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextlink" href="#se"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,6 +160,9 @@
                     </div>
 
                 </div>
+                <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextlink" href="#se"></a>
+                    </div>
             </div>
         </div>
     </section>
@@ -163,10 +175,14 @@
                         @foreach($articles as $article)
                             <div>
                                 <div class="row mdwna">
-                                    <div class="col-lg-6 imgtop"><img class="img-fluid" src="{{$article->getFirstMedia('icon') ? $article->getFirstMedia('icon')->getFullUrl() : asset('assets/website/img/Rectangle.png')}}" alt="المدونة"></div>
+                                    <div class="col-lg-6 imgtop">
+                                    <img class="img-fluid" src="{{$article->getFirstMedia('icon') ? $article->getFirstMedia('icon')->getFullUrl() : asset('assets/website/img/Rectangle.png')}}" alt="المدونة">
+                                                                            <div class="col secondr disk"><a href="{{route('website.articles.show', ['article' => $article])}}">أكمل القراءة</a></div>
+                                    </div>
                                     <div class="col-lg-6">
-                                        <div class="col  proj">{{ $article->translate('ar')->content }} </div>
-                                        <div class="col secondr"><a href="{{route('website.articles.show', ['article' => $article])}}">المزيد</a></div>
+                                        <div class="col  proj">{!! $article->translate('ar')->title !!} </div>
+                                        <div class="col  proj">{!! $article->translate('ar')->sub_title !!} </div>
+                                        <div class="col secondr mob "><a href="https://hightechsa.net/articles/2" tabindex="0">أكمل القراءة</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -176,6 +192,9 @@
                         <a class="btn nav-link nextserv mdall" href="{{route('website.blog')}}">المزيد</a>
                     </div>
                 </div>
+                <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextlink" href="#sev"></a>
+                    </div>
             </div>
         </div>
     </section>
@@ -199,6 +218,10 @@
                             @endforeach
                         </ul>
                     </div>
+                    <div class="col-lg-12 align-self-baseline">
+                        <a class="btn nav-link nextlink lastico" href="#first"></a>
+                    </div>
+                    <DIV class="col-lg-12 copyright">جميع الحقوق محفوظة لمؤسسة التقنية العالية للتسويق الالكترونى (Hightech)</div>
                 </div>
             </div>
         </div>

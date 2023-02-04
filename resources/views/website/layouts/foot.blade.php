@@ -1,3 +1,5 @@
+
+
 <!--begin::Javascript-->
         <script src="{{asset('assets/website/js/jquery-3.6.0.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('assets/website/js/slick.min.js')}}"></script>

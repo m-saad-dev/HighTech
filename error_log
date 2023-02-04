@@ -1,0 +1,8 @@
+[04-Jan-2023 14:51:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 20480 bytes) in /home/hightechsa/public_html/vendor/react/promise-timer/src/functions.php on line 178
+[04-Jan-2023 14:51:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/hightechsa/public_html/vendor/symfony/error-handler/Error/FatalError.php on line 1
+[04-Jan-2023 20:33:48 UTC] PHP Warning:  Undefined variable $path in php shell code on line 1
+[04-Jan-2023 20:35:26 UTC] PHP Parse error:  syntax error, unexpected token ";" in Command line code on line 1
+[04-Jan-2023 22:26:08 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 20480 bytes) in /home/hightechsa/public_html/vendor/react/promise/src/Promise.php on line 115
+[04-Jan-2023 22:26:08 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/hightechsa/public_html/vendor/symfony/error-handler/Error/FatalError.php on line 1
+[10-Jan-2023 00:47:15 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2621440 bytes) in /home/hightechsa/public_html/vendor/composer/autoload_classmap.php on line 4448
+[10-Jan-2023 00:47:15 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 716800 bytes) in /home/hightechsa/public_html/vendor/nunomaduro/collision/src/Highlighter.php on line 138

@@ -1,0 +1,761 @@
+[04-Jan-2023 11:41:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'intl.so' (tried: /opt/cpanel/ea-php81/root/usr/lib64/php/modules/intl.so (libicuuc.so.69: cannot map zero-fill pages: Cannot allocate memory), /opt/cpanel/ea-php81/root/usr/lib64/php/modules/intl.so.so (/opt/cpanel/ea-php81/root/usr/lib64/php/modules/intl.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[04-Jan-2023 11:42:04 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'curl.so' (tried: /opt/cpanel/ea-php81/root/usr/lib64/php/modules/curl.so (libgssapi_krb5.so.2: failed to map segment from shared object: Cannot allocate memory), /opt/cpanel/ea-php81/root/usr/lib64/php/modules/curl.so.so (/opt/cpanel/ea-php81/root/usr/lib64/php/modules/curl.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[04-Jan-2023 11:42:03 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'gd.so' (tried: /opt/cpanel/ea-php81/root/usr/lib64/php/modules/gd.so (/opt/cpanel/ea-php81/root/usr/lib64/php/modules/gd.so: cannot map zero-fill pages: Cannot allocate memory), /opt/cpanel/ea-php81/root/usr/lib64/php/modules/gd.so.so (/opt/cpanel/ea-php81/root/usr/lib64/php/modules/gd.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/var-dumper/Resources/functions/dump.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/var-dumper/Resources/functions/dump.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('667aeda72477189...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/var-dumper/Resources/functions/dump.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/var-dumper/Resources/functions/dump.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('667aeda72477189...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:43:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Warning:  require(/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php): Failed to open stream: No such file or directory in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 13:44:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hightechsa/public_html/vendor/composer/../symfony/polyfill-php81/bootstrap.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/hightechsa/public_html/vendor/composer/autoload_real.php:41
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/composer/autoload_real.php(45): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::{closure}('23c18046f52bef3...', '/home/hightechs...')
+#1 /home/hightechsa/public_html/vendor/autoload.php(25): ComposerAutoloaderInite32b94d8e5c338bf5c7d2a9bc48ab2fb::getLoader()
+#2 /home/hightechsa/public_html/public/index.php(34): require('/home/hightechs...')
+#3 {main}
+  thrown in /home/hightechsa/public_html/vendor/composer/autoload_real.php on line 41
+[04-Jan-2023 21:46:14 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "translator" does not exist in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#8 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#26 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [translator] does not exist. in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#7 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#24 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#25 {main}
+
+Next Illuminate\View\ViewException: Target class [translator] does not exist. (View: /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/500.blade.php) in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(60): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\Contracts\Container\BindingResolutionException), 0)
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#14 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#15 {main}
+  thrown in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[04-Jan-2023 21:46:14 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "translator" does not exist in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#8 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#26 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [translator] does not exist. in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#7 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#24 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#25 {main}
+
+Next Illuminate\View\ViewException: Target class [translator] does not exist. (View: /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/500.blade.php) in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(60): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\Contracts\Container\BindingResolutionException), 0)
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Illuminate\View\ViewException))
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Illuminate\View\ViewException))
+#14 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Illuminate\View\ViewException))
+#15 {main}
+  thrown in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[04-Jan-2023 21:46:14 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "translator" does not exist in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#8 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#25 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#26 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#27 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [translator] does not exist. in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#7 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#26 {main}
+
+Next Illuminate\View\ViewException: Target class [translator] does not exist. (View: /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/500.blade.php) in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(60): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\Contracts\Container\BindingResolutionException), 0)
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#16 {main}
+  thrown in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[04-Jan-2023 21:46:14 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "translator" does not exist in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#8 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#25 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#26 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#27 {main}
+
+Next Illuminate\Contracts\Container\BindingResolutionException: Target class [translator] does not exist. in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('translator')
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(851): Illuminate\Container\Container->resolve('translator', Array, true)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('translator', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(836): Illuminate\Container\Container->make('translator', Array)
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Foundation\Application->make('translator', Array)
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(835): app('translator')
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(870): trans('Server Error', Array, NULL)
+#7 /home/hightechsa/public_html/storage/framework/views/e5f0cc5633549b21ad5cc4cd4035e7896b912691.php(1): __('Server Error')
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/hightechs...')
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/hightechs...', Array)
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#15 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#16 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#17 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#18 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#19 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#20 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#21 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#22 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#23 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#24 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#25 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#26 {main}
+
+Next Illuminate\View\ViewException: Target class [translator] does not exist. (View: /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/500.blade.php) in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:879
+Stack trace:
+#0 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(60): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Illuminate\Contracts\Container\BindingResolutionException), 0)
+#1 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/hightechs...', Array)
+#2 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(139): Illuminate\View\Engines\CompilerEngine->get('/home/hightechs...', Array)
+#3 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(122): Illuminate\View\View->getContents()
+#4 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\View\View->renderContents()
+#5 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(69): Illuminate\View\View->render()
+#6 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(55): Illuminate\Http\Response->__construct(Object(Illuminate\View\View), 500, Array)
+#8 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php(85): Illuminate\Routing\ResponseFactory->make(Object(Illuminate\View\View), 500, Array)
+#9 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(585): Illuminate\Routing\ResponseFactory->view('errors::500', Array, 500, Array)
+#10 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(490): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#11 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(356): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#12 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(196): Illuminate\Foundation\Exceptions\Handler->render(Object(Illuminate\Http\Request), Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#13 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(173): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#14 /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(209): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException(Object(Symfony\Component\ErrorHandler\Error\FatalError))
+#15 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#16 {main}
+  thrown in /home/hightechsa/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
