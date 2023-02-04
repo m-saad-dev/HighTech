@@ -69,6 +69,19 @@ class HomeController extends Controller
         ]);
     }
 
+    public function blog(){
+        $blog = Article::orderByDesc('created_at')->limit(10)->get();
+        return view('website.blog')->with([
+            'blog' => $blog,
+        ]);
+    }
+    public function clients(){
+        $clients = Client::all();
+        return view('website.clients')->with([
+            'clients' => $clients,
+        ]);
+    }
+
     public function article(Article $article){
         return view('website.article_show')->with([
             'article' => $article,

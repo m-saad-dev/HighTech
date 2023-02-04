@@ -4,9 +4,9 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <div class="rightico">
-            <div class="col first">تطوير واجهات </div>
+            <div class="col first"> طاقم</div>
 
-            <div class="col second">المتاجر الالكترونية</div>
+            <div class="col second"> العمل</div>
         </div>
         <div class="ico">
         <img class="img-fluid" src="assets/img/edit-altin.png" alt="setting">
@@ -22,5 +22,7 @@
                 </div>
             @endforeach
         </div>
+        <DIV class="col-lg-12 copyright">جميع الحقوق محفوظة لمؤسسة التقنية العالية للتسويق الرقمى</div>
+
     </div>
 @endsection

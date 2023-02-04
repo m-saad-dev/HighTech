@@ -12,7 +12,7 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
+    
     'accepted' => 'The :attribute must be accepted.',
     'accepted_if' => 'The :attribute must be accepted when :other is :value.',
     'active_url' => 'The :attribute is not a valid URL.',
@@ -159,6 +159,8 @@ return [
     */
 
     'attributes' => [
+        "name" => trans('fields.name'),
+        "business_type" => trans('fields.business_type'),
         'translations.en.name' => 'Name' . trans('common.inEn'),
         'translations.en.position' => 'Position' . trans('common.inEn'),
         'translations.en.review' => 'Review' . trans('common.inEn'),

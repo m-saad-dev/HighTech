@@ -29,7 +29,7 @@ class Client extends Model implements HasMedia
      * @var array<string, string>
      */
     static public $createRules = [
-        'name' => 'required|string',
+        'name' => 'required|string|max:255',
         'created_by' => 'required|int',
     ];
     /**
@@ -38,7 +38,7 @@ class Client extends Model implements HasMedia
      * @var array<string, string>
      */
     static public $editRules = [
-        'name' => 'sometimes|string',
+        'name' => 'sometimes|string|max:255',
         'updated_by' => 'required|int',
     ];
 

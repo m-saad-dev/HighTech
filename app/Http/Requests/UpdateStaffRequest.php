@@ -32,8 +32,8 @@ class UpdateStaffRequest extends FormRequest
     public function rules()
     {
         $rules = RuleFactory::make([
-                'translations.%name%' => 'required|string',
-                'translations.%position%' => 'required|string',
+                'translations.%name%' => 'required|string|max:100',
+                'translations.%position%' => 'required|string|max:100',
             ]) + Staff::$editRules;
         return  $rules;
     }

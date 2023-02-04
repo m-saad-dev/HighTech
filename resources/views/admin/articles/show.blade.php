@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section("title", trans("menu.article"))
+@section("title", trans("menu.articles"))
 @section('breadcrumb')
     @include('admin.layouts.breadcrumb_segmants', [
         'menu'      => [

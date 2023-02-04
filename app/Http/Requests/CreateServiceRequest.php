@@ -32,9 +32,9 @@ class CreateServiceRequest extends FormRequest
     public function rules()
     {
         $rules = RuleFactory::make([
-                'translations.%title%' => 'required|string',
-                'translations.%sub_title%' => 'required|string',
-                'translations.%description%' => 'required|string',
+                'translations.%title%' => 'required|string|max:255',
+                'translations.%sub_title%' => 'required|string|max:255',
+                'translations.%description%' => 'required|string|min:3|max:20000',
             ]) + Service::$createRules;
         return $rules;
     }

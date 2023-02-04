@@ -34,7 +34,8 @@
                 </div>
                 <!--end::Image input-->
                 <!--begin::Hint-->
-                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                <div class="form-text">Allowed file types: jpg, png, gif, webp, jpeg, svg.</div>
+                <div class="form-text">Allowed file size: 2(MB).</div>
                 <!--end::Hint-->
             </div>
             <!--end::Col-->

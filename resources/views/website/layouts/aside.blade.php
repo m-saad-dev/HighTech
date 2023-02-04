@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light py-3 topdisk navbar-shrink" id="mainNav">
     <div class="container px-4 px-lg-5">
         <div class="mobile">
-            <a class="navbar-brand fixed-top logo" href="#first"><img class="img-fluid" src="{{asset('assets/website/img/logo2.png')}}" alt="{{$logoTitle['ar']}}"></a>
+            <a class="navbar-brand fixed-top logo" href="{{route('website.home').'#first'}}"><img class="img-fluid" src="{{asset('assets/website/img/logo2.png')}}" alt="{{$logoTitle['ar']}}"></a>
             <button class="navbar-toggler navbar-toggler-right fixed-top" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         </div>
         <div class="collapse navbar-collapse fixed-top" id="navbarResponsive">

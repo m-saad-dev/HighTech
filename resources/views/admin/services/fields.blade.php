@@ -20,7 +20,7 @@
                 <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                     <i class="bi bi-pencil-fill fs-7"></i>
                     <!--begin::Inputs-->
-                    <input type="file" name="icon" accept=".png, .jpg, .jpeg" />
+                    <input type="file" name="icon" accept=".jpg, .png, .gif, .webp, .jpeg, .svg"/>
                     <input type="hidden" name="icon_remove" />
                     <!--end::Inputs-->
                 </label>
@@ -41,8 +41,12 @@
             </div>
             <!--end::Image input-->
             <!--begin::Hint-->
-            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+            <div class="form-text">Allowed file types: jpg, png, gif, webp, jpeg, svg.</div>
+            <div class="form-text">Allowed file size: 2(MB).</div>
             <!--end::Hint-->
+            @error('icon')
+            <span class="alert-danger" role="alert"> {{ $message }} </span>
+            @enderror
         </div>
         <!--end::Col-->
     </div>
@@ -161,8 +165,8 @@
                              'image' => $image,
                          ])
                     @endforeach
-                @elseif(isset($article) && $article->getMedia('images')->isEmpty())
-                    @include('admin.includes.images_repeater', $article)
+                @elseif(isset($service) && $service->getMedia('images')->isEmpty())
+                    @include('admin.includes.images_repeater')
                 @else
                     @include('admin.includes.images_repeater')
                 @endif
