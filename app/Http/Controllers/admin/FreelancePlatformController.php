@@ -56,10 +56,10 @@ class FreelancePlatformController extends Controller
         $item = checkLocale('ar') ? "المنصة" : "The Platform";
         try {
             $platform = $this->model->create($request->validated());
-//            if ($request->has('avatar')){
-//                $platform->clearMediaCollection('avatars');
-//                MediaHelper::uploadMedia($request, $platform);
-//            }
+            if ($request->has('icon')){
+                $platform->clearMediaCollection('icons');
+                MediaHelper::uploadMedia($request, $platform);
+            }
             return redirect()->route('admin.freelancers-platforms.index')->with('success', __('messages.created', ['item'
             => 
                     $item]));
@@ -108,12 +108,12 @@ class FreelancePlatformController extends Controller
         $item = checkLocale('ar') ? "المنصة" : "The Platform";
         try {
             $freelancers_platform->update($request->validated());
-//            if ($request->has('avatar')){
-//                $freelancers_platform->clearMediaCollection('avatars');
-//                MediaHelper::uploadMedia($request, $freelancers_platform);
-//            } else if ($request->avatar_remove) {
-//                $freelancers_platform->clearMediaCollection('avatars');
-//            }
+            if ($request->has('icon')){
+                $freelancers_platform->clearMediaCollection('icons');
+                MediaHelper::uploadMedia($request, $freelancers_platform);
+            } else if ($request->icon_remove) {
+                $freelancers_platform->clearMediaCollection('icons');
+            }
             return redirect()->route('admin.freelancers-platforms.index')->with('success', __('messages.updated',['item'
             => $item]));
         } catch (\Exception $e) {
