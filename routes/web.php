@@ -4,6 +4,8 @@ use App\Http\Controllers\admin\ArticleController;
 use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\FreelancePlatformController;
+use App\Http\Controllers\admin\FreelancerController;
 use App\Http\Controllers\admin\NotificationController;
 use App\Http\Controllers\admin\OrderController;
 use App\Http\Controllers\admin\ServiceController;
@@ -66,6 +68,8 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/clients', ClientController::class);
         Route::resource('/customers', CustomerController::class);
         Route::resource('/orders', OrderController::class);
+        Route::resource('/freelancers', FreelancerController::class);
+        Route::resource('/freelancers-platforms', FreelancePlatformController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');
         Route::put('/settings/{key}', [SettingController::class, 'update'])->name('settings.update');
         Route::get('/notifications/send', [NotificationController::class, 'send'])->name('notifications.send');

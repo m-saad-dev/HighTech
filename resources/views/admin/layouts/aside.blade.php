@@ -451,6 +451,61 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
+        @canany(['list-freelancer-platforms', 'list-freelancers'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin
+            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create','admin.freelancers.edit'])) here hover show @endif">
+                <!--begin:Menu link-->
+                <span class="menu-link">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                        <i class="fa-solid fa-fingerprint fs-4"></i>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">@lang('menu.freelancing')</span>
+                    <span class="menu-arrow"></span>
+                </span>
+                <!--end:Menu link-->
+                <!--begin:Menu sub-->
+                @canany(['list-freelancer-platforms'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link @if(checkActiveRouteName(['admin.freelancers-platforms.index','admin
+                            .freelancers-platforms.create','admin.freelancers-platforms.edit'])) active @endif" 
+                               href="{{route('admin.freelancers-platforms.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('freelancers_platforms.allFreelancersPlatforms')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                @canany(['list-freelancers'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link @if(checkActiveRouteName(['admin.freelancers.index','admin                            .freelancers.create','admin.freelancers.edit'])) active 
+                            @endif" href="{{route('admin.freelancers.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('freelancers.allFreelancers')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                <!--end:Menu sub-->
+            </div>
+        @endcanany
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
         @canany(['about-us-setting', 'logo-setting', 'links-setting'])
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.settings', 'admin.settings'], 'key', request('key'))) here hover show @endif">
                 <!--begin:Menu link-->
