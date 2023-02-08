@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
-class FreelancerPlatformsPermissionsSeeder extends Seeder
+class FreelanceContractsPermissionsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,16 +16,16 @@ class FreelancerPlatformsPermissionsSeeder extends Seeder
     {
         \DB::table('permissions')->insert([
             [
-                "name" => "list-freelancer-platforms",
-                "display_name" => "List Freelancers Platforms",
-                "ar_display_name" => "عرض منصات المستقلين",
+                "name" => "list-freelance-contract",
+                "display_name" => "List Freelance Contacts",
+                "ar_display_name" => "عرض عقود العقد مستقلين",
                 "permission_group" => "freelancing",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 //            [
-//                "name" => "force-list-freelancer-platformss",
-//                "display_name" => "Force List Freelancer Platform",
+//                "name" => "force-list-freelancings",
+//                "display_name" => "Force List Freelance Contract",
 //                "ar_display_name" => "عرض كافة طاقم العمل بالنظام",
 //                "permission_group" => "freelancings",
 //                "guard_name" => "web",
@@ -33,27 +33,27 @@ class FreelancerPlatformsPermissionsSeeder extends Seeder
 //            ],
 
             [
-                "name" => "create-freelancer-platform",
-                "display_name" => "Create Freelancer Platform",
-                "ar_display_name" => "انشاء منصة مستقل جديدة",
+                "name" => "create-freelance-contract",
+                "display_name" => "Create Freelance Contract",
+                "ar_display_name" => "انشاء عقد مستقلين جديد",
                 "permission_group" => "freelancing",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 
             [
-                "name" => "edit-freelancer-platform",
-                "display_name" => "Edit Freelancer Platform",
-                "ar_display_name" => "تعديل منصة مستقل",
+                "name" => "edit-freelance-contract",
+                "display_name" => "Edit Freelance Contract",
+                "ar_display_name" => "تعديل عقد مستقلين",
                 "permission_group" => "freelancing",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),
             ],
 
             [
-                "name" => "delete-freelancer-platform",
-                "display_name" => "Delete Freelancer Platform",
-                "ar_display_name" => "حذف منصة مستقل",
+                "name" => "delete-freelance-contract",
+                "display_name" => "Delete Freelance Contract",
+                "ar_display_name" => "حذف عقد مستقلين",
                 "permission_group" => "freelancing",
                 "guard_name" => "web",
                 "created_at" => Carbon::now()->toDateTimeString(),

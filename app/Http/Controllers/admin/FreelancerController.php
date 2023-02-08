@@ -56,10 +56,6 @@ class FreelancerController extends Controller
         $item = checkLocale('ar') ? "المستقل" : "The Freelancer";
         try {
             $freelancer = $this->model->create($request->validated());
-            if ($request->has('avatar')){
-                $freelancer->clearMediaCollection('avatars');
-                MediaHelper::uploadMedia($request, $freelancer);
-            }
             return redirect()->route('admin.freelancers.index')->with('success', __('messages.created', ['item' => 
                     $item]));
         } catch (\Exception $e) {
@@ -107,17 +103,10 @@ class FreelancerController extends Controller
         $item = checkLocale('ar') ? "المستقل" : "The Freelancer";
         try {
             $freelancer->update($request->validated());
-            if ($request->has('avatar')){
-                $freelancer->clearMediaCollection('avatars');
-                MediaHelper::uploadMedia($request, $freelancer);
-            } else if ($request->avatar_remove) {
-                $freelancer->clearMediaCollection('avatars');
-            }
             return redirect()->route('admin.freelancers.index')->with('success', __('messages.updated',['item' => 
                     $item]));
         } catch (\Exception $e) {
-            return redirect()->route('admin.freelancers.edit', $freelancer->id)->with('issue_message', trans('common.issue_message', 
-                    ['item' => $item]));
+            return redirect()->route('admin.freelancers.edit', $freelancer->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 

@@ -23,6 +23,7 @@ return [
     'freelancing' => 'Freelancing',
     'freelancers' => 'Freelancers',
     'freelancersPlatforms' => 'Freelancers Platforms',
+    'freelanceContracts' => 'Freelance Contracts',
     'customerReviews' => 'Customer Reviews',
     'services' => 'services',
     'articles' => 'Articles',

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Freelancer;
+use App\Models\FreelancerPlatform;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\User;
@@ -36,6 +38,10 @@ class ViewServiceProvider extends ServiceProvider
         View::composer(['admin.orders.fields'], function ($view) {
             $allServices = Service::all();
             $view->with('services', $allServices);
+        });
+        View::composer(['admin.freelance_contracts.fields'], function ($view) {
+            $platforms = FreelancerPlatform::all();
+            $view->with('platforms', $platforms);
         });
         View::composer(['admin.users.fields'], function ($view) {
             $allRoles = Role::all();

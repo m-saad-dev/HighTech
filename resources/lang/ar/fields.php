@@ -29,4 +29,5 @@ return [
 	'images' 		=> 'الصور',
 	'service'	    => 'الخدمة',
 	'business_type'	=> 'نشاط العمل',
+	'platform'	=> 'منصة',
 ];

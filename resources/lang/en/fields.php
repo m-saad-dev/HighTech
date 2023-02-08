@@ -29,4 +29,5 @@ return [
 	'images' 		=> 'Images',
 	'service'	    => 'Service',
 	'business_type'	=> 'Business Type',
+	'platform'	=> 'Platform',
 ];

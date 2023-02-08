@@ -22,10 +22,7 @@
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.freelancers.show', $freelancer->id)}}" class="badge badge-light-primary 
-                    fs-7 
-                    fw-bold 
-                    text-decoration-none">{{$freelancer->name}}</a>
+                    <a href="{{route('admin.freelancers.show', $freelancer->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$freelancer->name}}</a>
                 </td>
                 <td>
                     <a href="javascript::void(0);" class="text-hover-primary 

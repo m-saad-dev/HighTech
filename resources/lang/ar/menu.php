@@ -21,6 +21,7 @@ return [
     'settings' => 'إعدادات الموقع',
     'clients' => 'عملائنا',
     'freelancing' => 'العمل الحر',
+    'freelanceContracts' => 'عقد العمل الحر',
     'freelancers' => 'المستقلين',
     'freelancersPlatforms' => 'منصات المستقلين',
     'services' => 'خدماتنا',

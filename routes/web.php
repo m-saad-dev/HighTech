@@ -68,6 +68,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/clients', ClientController::class);
         Route::resource('/customers', CustomerController::class);
         Route::resource('/orders', OrderController::class);
+        Route::resource('/freelance-contracts', \App\Http\Controllers\admin\FreelanceContractController::class);
         Route::resource('/freelancers', FreelancerController::class);
         Route::resource('/freelancers-platforms', FreelancePlatformController::class);
         Route::get('/settings/{key}', [SettingController::class, 'edit'])->name('settings');

@@ -6,9 +6,10 @@
         <tr>
             <th class="min-w-50% max-w-100%">#</th>
             <th class="min-w-100px">@lang('fields.name')</th>
+            <th class="min-w-100px">@lang('fields.platform')</th>
             <th class="min-w-150px">@lang('common.creator')</th>
             <th class="min-w-150px">@lang('common.updater')</th>
-            @canany(['edit-freelancer', 'delete-freelancer'])
+            @canany(['edit-freelance-contract', 'delete-freelance-contract'])
                 <th class="min-w-150px">@lang('common.actions')</th>
             @endcanany
         </tr>
@@ -16,22 +17,25 @@
         <!--end::Thead-->
         <!--begin::Tbody-->
         <tbody class="fw-6 fw-semibold text-gray-600" style="max-width: inherit !important;">
-        @foreach($platforms as $platform)
+        @foreach($contracts as $contract)
             <tr>
                 <td class="min-w-50% max-w-100%">
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.freelancers-platforms.show', $platform->id)}}" class="badge 
-                    badge-light-primary fs-7 fw-bold text-decoration-none">{{$platform->name}}</a>
+                    <a href="{{route('admin.freelance-contracts.show', $contract->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$contract->name}}</a>
+                </td>
+                <td>
+                    <p class="badge badge-light-primary fs-7 fw-bold 
+                    text-decoration-none">{{$contract->platform->name}}</p>
                 </td>
                 <td>
                     <a href="javascript::void(0);" class="text-hover-primary 
-                    text-gray-600">{{$platform->creator?->name}}</a>
+                    text-gray-600">{{$contract->creator?->name}}</a>
                 </td>
                 <td>
                     <a href="javascript::void(0);" class="text-hover-primary 
-                    text-gray-600">{{$platform->updater?->name}}</a>
+                    text-gray-600">{{$contract->updater?->name}}</a>
                 </td>
                 @canany(['edit-freelancer', 'delete-freelancer'])
                         <td class="text-start">
@@ -48,20 +52,21 @@
 
                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4 justify-content-center align-center" data-kt-menu="true">
                                 <!--begin::Menu item-->
-                                @can('edit-freelancer')
+                                @can('edit-freelance-contract')
                                     <div class="menu-item px-3">
-                                        <a href="{{route('admin.freelancers-platforms.edit', $platform->id)}}" 
-                                           class="menu-link 
+                                        <a href="{{route('admin.freelance-contracts.edit', $contract->id)}}" 
+                                            class="menu-link 
                                         px-3">@lang('common.edit')</a>
                                     </div>
                                 @endcan
                                 <!--end::Menu item-->
                                 <!--begin::Menu item-->
-                                @can('delete-freelancer')
+                                @can('delete-freelance-contract')
                                         <form method="post" id="my_form" class="menu-item px-3" action="{{route
-                                        ('admin.freelancers-platforms.destroy', $platform->id)}}">
+                                        ('admin.freelance-contracts.destroy', $contract->id)}}">
                                             @csrf @method('Delete')
-                                            <a role="button" href="javascript::void();" onclick="this.closest('form').submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
+                                            <a role="button" href="javascript::void();" onclick="this.closest('form')
+                                            .submit()" methods='DELETE' class="menu-link px-3" data-kt-ecommerce-product-filter="delete_row">@lang('common.delete')</a>
                                         </form>
                                 @endcan
                                 <!--end::Menu item-->

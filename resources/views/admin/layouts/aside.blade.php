@@ -453,7 +453,7 @@
         <!--begin:Menu item-->
         @canany(['list-freelancer-platforms', 'list-freelancers'])
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin
-            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create','admin.freelancers.edit'])) here hover show @endif">
+            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create','admin.freelancers.edit','admin.freelance-contracts.index','admin.freelancers.create','admin.freelance-contracts.edit'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -495,6 +495,23 @@
                                     <span class="bullet bullet-dot"></span>
                                 </span>
                                 <span class="menu-title">@lang('freelancers.allFreelancers')</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <!--end:Menu item-->
+                    </div>
+                @endcanany
+                @canany(['list-freelance-contracts'])
+                    <div class="menu-sub menu-sub-accordion">
+                        <!--begin:Menu item-->
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link @if(checkActiveRouteName(['admin.freelance-contracts.index','admin.freelancers.create','admin.freelance-contracts.edit'])) active 
+                            @endif" href="{{route('admin.freelance-contracts.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">@lang('freelance_contracts.allFreelanceContracts')</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
