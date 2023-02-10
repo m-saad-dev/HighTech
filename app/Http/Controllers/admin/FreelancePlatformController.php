@@ -61,12 +61,9 @@ class FreelancePlatformController extends Controller
                 MediaHelper::uploadMedia($request, $platform);
             }
             return redirect()->route('admin.freelancers-platforms.index')->with('success', __('messages.created', ['item'
-            => 
-                    $item]));
-        } catch (\Exception $e) {
-            return redirect()->route('admin.freelancers-platforms.create')->with('issue_message', trans('common.issue_message', 
-                    ['item' 
             => $item]));
+        } catch (\Exception $e) {
+            return redirect()->route('admin.freelancers-platforms.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
         }
     }
 

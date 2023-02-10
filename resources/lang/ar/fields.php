@@ -26,6 +26,7 @@ return [
 	'content' 		=> 'المحتوى',
 	'icon' 		    => 'الأيقونة',
 	'image' 		=> 'الصورة',
+	'logo' 		    => 'الشعار',
 	'images' 		=> 'الصور',
 	'service'	    => 'الخدمة',
 	'business_type'	=> 'نشاط العمل',

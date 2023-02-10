@@ -56,6 +56,10 @@ class FreelanceContractController extends Controller
         $item = checkLocale('ar') ? "عقد العمل الحر" : "The FreelanceContract";
         try {
             $freelance_contract = $this->model->create($request->validated());
+            if ($request->has('logo')){
+                $freelance_contract->clearMediaCollection('logo');
+                MediaHelper::uploadMedia($request, $freelance_contract);
+            }
             return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.created', ['item' => $item]));
         } catch (\Exception $e) {
             return redirect()->route('admin.freelance-contracts.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
@@ -100,6 +104,10 @@ class FreelanceContractController extends Controller
         $item = checkLocale('ar') ? "عقد العمل الحر" : "The Freelance Contract";
         try {
             $freelance_contract->update($request->validated());
+            if ($request->has('logo')){
+                $freelance_contract->clearMediaCollection('logo');
+                MediaHelper::uploadMedia($request, $freelance_contract);
+            }
             return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.updated',['item'
             => $item]));
         } catch (\Exception $e) {

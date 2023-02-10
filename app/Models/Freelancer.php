@@ -26,7 +26,7 @@ class Freelancer extends Model
      * @var array<string, string>
      */
     static public $createRules = [
-        'name' => 'required|string|max:255',
+        'freelancers.*.name' => 'required|string|max:255',
         'created_by' => 'required|int',
     ];
     /**

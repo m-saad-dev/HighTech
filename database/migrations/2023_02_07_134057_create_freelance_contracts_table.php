@@ -15,7 +15,7 @@ class CreateFreelanceContractsTable extends Migration
     {
         Schema::create('freelance_contracts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('company_name');
             $table->unsignedBigInteger('platform_id');
             $table->bigInteger('created_by')->unsigned();
             $table->bigInteger('updated_by')->nullable()->unsigned();

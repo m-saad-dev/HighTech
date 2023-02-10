@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class FreelanceContract extends Model 
+class FreelanceContract extends Model implements HasMedia
 {
+    use InteractsWithMedia;
 
     protected $table = 'freelance_contracts';
     /**
@@ -14,7 +17,7 @@ class FreelanceContract extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'company_name',
         'platform_id',
         'created_by',
         'updated_by',
@@ -27,9 +30,10 @@ class FreelanceContract extends Model
      * @var array<string, string>
      */
     static public $createRules = [
-        'name' => 'required|string|max:255',
-        'platform_id' => 'required|int',
-        'created_by' => 'required|int',
+            'company_name' => 'required|string|max:255',
+            'logo' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+            'platform_id' => 'required|int',
+            'created_by' => 'required|int',
     ];
     /**
      * The rules of edit users fields.
@@ -37,11 +41,17 @@ class FreelanceContract extends Model
      * @var array<string, string>
      */
     static public $editRules = [
-        'name' => 'sometimes|string|max:255',
-        'platform_id' => 'required|int',
-        'updated_by' => 'required|int',
+            'company_name' => 'sometimes|string|max:255',
+            'logo' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+            'platform_id' => 'required|int',
+            'updated_by' => 'required|int',
     ];
-    
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('logo');
+    }
+
     public function creator()
     {
         return $this->belongsTo(User::class, 'created_by');

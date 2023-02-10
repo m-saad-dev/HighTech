@@ -12,7 +12,7 @@ return [
     */
 
     'allFreelancers' => 'Our Freelancers',
-    'createFreelancer' => 'New Freelancer',
+    'createFreelancer' => 'New Freelancers',
     'editFreelancer' => 'Edit Freelancer',
     'deleteFreelancer' => 'Delete Freelancer',
 ];

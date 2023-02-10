@@ -12,7 +12,7 @@ return [
     */
 
     'allFreelancers' => 'كافة المستقلين',
-    'createFreelancer' => 'مستقل جديد',
+    'createFreelancer' => 'إنشاء مستقلين جديد',
     'editFreelancer' => 'تعديل مستقل',
     'deleteFreelancer' => 'حذف مستقل',
 ];

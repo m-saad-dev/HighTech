@@ -453,7 +453,8 @@
         <!--begin:Menu item-->
         @canany(['list-freelancer-platforms', 'list-freelancers'])
             <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin
-            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create','admin.freelancers.edit','admin.freelance-contracts.index','admin.freelancers.create','admin.freelance-contracts.edit'])) here hover show @endif">
+            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create',
+            'admin.freelancers.edit','admin.freelancers.create','admin.freelancers.index','admin.freelance-contracts.index','admin.freelance-contracts.create','admin.freelance-contracts.edit'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                     <span class="menu-icon">
@@ -489,7 +490,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link @if(checkActiveRouteName(['admin.freelancers.index','admin                            .freelancers.create','admin.freelancers.edit'])) active 
+                            <a class="menu-link @if(checkActiveRouteName(['admin.freelancers.index','admin.freelancers.create','admin.freelancers.edit'])) active 
                             @endif" href="{{route('admin.freelancers.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
@@ -506,7 +507,7 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link @if(checkActiveRouteName(['admin.freelance-contracts.index','admin.freelancers.create','admin.freelance-contracts.edit'])) active 
+                            <a class="menu-link @if(checkActiveRouteName(['admin.freelance-contracts.index','admin.freelance-contracts.create','admin.freelance-contracts.edit'])) active 
                             @endif" href="{{route('admin.freelance-contracts.index')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>

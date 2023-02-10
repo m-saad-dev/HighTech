@@ -3,12 +3,57 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.name')</label>
+        <label class="col-lg-4 col-form-label fw-semibold fs-6">@lang('fields.logo')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
-            <input type="text" name="name" class="form-control form-control-lg form-control-solid" placeholder="@lang            ('fields.name')" value="{{isset($contract) ? $contract->name : (old('name') ?? '')}}"/>
-            @error('name')
+            <!--begin::Image input-->
+            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
+                <!--begin::Preview existing avatar-->
+                <div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($contract) && 
+                $contract->getFirstMedia('logo') ? $contract->getFirstMedia('logo')->getFullUrl() : asset
+                ('assets/admin/media/svg/avatars/blank.svg')}})"></div>
+                <!--end::Preview existing avatar-->
+                <!--begin::Label-->
+                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change logo">
+                    <i class="bi bi-pencil-fill fs-7"></i>
+                    <!--begin::Inputs-->
+                    <input type="file" name="logo" accept=".png, .jpg, .jpeg"/>
+                    <input type="hidden" name="logo_remove"/>
+                    <!--end::Inputs-->
+                </label>
+                <!--end::Label-->
+                <!--begin::Cancel-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                    <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Cancel-->
+                <!--begin::Remove-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                    title="Remove avatar">
+                    <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Remove-->
+            </div>
+            <!--end::Image input-->
+            <!--begin::Hint-->
+            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+            <!--end::Hint-->
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Input group-->
+    <!--begin::Input group-->
+    <div class="row mb-6">
+        <!--begin::Label-->
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.companyName')</label>
+        <!--end::Label-->
+        <!--begin::Col-->
+        <div class="col-lg-8">
+            <input type="text" name="company_name" class="form-control form-control-lg form-control-solid" placeholder="@lang('fields.companyName')" value="{{isset($contract) ? $contract->company_name : (old('company_name')?? '')}}"/>
+            @error('company_name')
             <span class="alert-danger" role="alert"> {{ $message }} </span>
             @enderror
         </div>
@@ -18,15 +63,17 @@
     <!--begin::Input group-->
     <div class="row mb-6">
         <!--begin::Label-->
-        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.service')</label>
+        <label class="col-lg-4 col-form-label required fw-semibold fs-6">@lang('fields.platform')</label>
         <!--end::Label-->
         <!--begin::Col-->
         <div class="col-lg-8">
             <select name="platform_id" aria-label="{{trans('common.select')}}" data-control="select2"
                 data-placeholder="{{trans('common.select')}}" class="form-select form-select-solid form-select-lg fw-semibold">
-                @foreach($platforms->pluck('name', 'id')->toArray() as $id => $platform)
-                    <option value="{{$id}}" @if(isset($contract) && $contract->platform_id == $id) selected
-                        @endif>{{$platform}}</option>
+                @foreach($platforms as $platform)
+                    <option style="background-image:url({{isset($platform) && $platform->getFirstMedia('icon') ? 
+                    $platform->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}});" value="{{$platform->id}}" @if(isset($contract) && 
+                    $contract->platform_id == $platform->id) selected
+                        @endif>{{$platform->name}}</option>
                 @endforeach
             </select>
         </div>

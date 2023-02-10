@@ -19,7 +19,7 @@
         <!--begin::Form-->
         <form class="form" action="{{route('admin.freelancers.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            @include('admin.freelancers.fields')
+            @include('admin.freelancers.create_fields')
             <!--begin::Actions-->
             <div class="card-footer d-flex justify-content-end py-6 px-9">
                 <button type="reset" class="btn btn-light btn-active-light-primary me-2">@lang('common.cancel')</button>

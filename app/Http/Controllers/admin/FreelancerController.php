@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Facades\MediaHelper;
 use Illuminate\Http\Request;
 use App\Models\Freelancer;
+use Illuminate\Support\Facades\DB;
 
 class FreelancerController extends Controller
 {
@@ -55,7 +56,9 @@ class FreelancerController extends Controller
     {
         $item = checkLocale('ar') ? "المستقل" : "The Freelancer";
         try {
-            $freelancer = $this->model->create($request->validated());
+            foreach ($request->validated()['freelancers'] as $freelancer){
+                $item = $this->model->create($freelancer + $request->only('created_by'));
+            }
             return redirect()->route('admin.freelancers.index')->with('success', __('messages.created', ['item' => 
                     $item]));
         } catch (\Exception $e) {
