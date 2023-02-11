@@ -23,7 +23,8 @@
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.freelance-contracts.show', $contract->id)}}" class="badge badge-light-primary fs-7 fw-bold text-decoration-none">{{$contract->name}}</a>
+                    <a href="{{route('admin.freelance-contracts.show', $contract->id)}}" class="badge 
+                    badge-light-primary fs-7 fw-bold text-decoration-none">{{$contract->company_name}}</a>
                 </td>
                 <td>
                     <p class="badge badge-light-primary fs-7 fw-bold 

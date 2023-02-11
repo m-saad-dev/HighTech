@@ -50,6 +50,7 @@ class FreelanceContract extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('logo');
+        $this->addMediaCollection('info');
     }
 
     public function creator()

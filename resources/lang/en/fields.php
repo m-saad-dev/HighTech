@@ -27,6 +27,7 @@ return [
 	'icon' 		    => 'Icon',
 	'image' 		=> 'Image',
 	'logo' 		    => 'Logo',
+	'info' 		    => 'Company Info',
 	'images' 		=> 'Images',
 	'service'	    => 'Service',
 	'business_type'	=> 'Business Type',

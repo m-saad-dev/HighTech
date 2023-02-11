@@ -104,9 +104,19 @@ class FreelanceContractController extends Controller
         $item = checkLocale('ar') ? "عقد العمل الحر" : "The Freelance Contract";
         try {
             $freelance_contract->update($request->validated());
-            if ($request->has('logo')){
-                $freelance_contract->clearMediaCollection('logo');
-                MediaHelper::uploadMedia($request, $freelance_contract);
+            if ($request->has('image')){
+                if (key_exists('logo', $request->image)){
+                    $freelance_contract->clearMediaCollection('logo');
+//            dd(1, (new Request(['logo' => $request->image['logo']]))->all(), ['logo' => $request->image['logo']]);
+                    MediaHelper::uploadMedia(new Request(['logo' => $request->image['logo']]), $freelance_contract);
+                }
+                if (key_exists('info', $request->image)){
+//            dd((new Request(['logo' => $request->image['info']]))->all(), (new Request(['logo' => 
+//                    $request->image['info']]))
+//                    ->all(), ['logo' => $request->image['info']]);
+                    $freelance_contract->clearMediaCollection('info');
+                    MediaHelper::uploadMedia(new Request(['image' => $request->image['info']]), $freelance_contract);
+                }
             }
             return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.updated',['item'
             => $item]));
