@@ -34,4 +34,13 @@ class UpdateFreelanceContractRequest extends FormRequest
         $staff = FreelanceContract::$editRules;
         return $staff;
     }
+    
+    public function messages()
+    {
+        return [
+                'freelancers.*.freelancer_id.required' => 'This field is required.',
+                'freelancers.*.fees.required' => 'This field is required.',
+                'freelancers.*.fees.required' => 'This field is numeric.'
+        ];
+    }
 }

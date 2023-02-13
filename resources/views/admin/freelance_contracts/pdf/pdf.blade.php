@@ -29,12 +29,12 @@
 
                                     <div class="col-lg-12 TOTEL">
                                         <div class="RIGHT col-lg-4">
-                                            <img class="img-fluid" src="{{isset($freelanceContract) && 
-                                            $freelanceContract->getFirstMedia('logo') ? $freelanceContract->getFirstMedia('logo')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}}" alt="الشعار" style="MAX-HEIGHT: 132PX;">
+                                            <img class="img-fluid" src="{{$freelanceContract->getFirstMedia('info')
+                                            ->getFullUrl()}}" alt="الشعار" style="MAX-HEIGHT: 132PX;">
                                         </div>
                                         <div class="CENTER col-lg-4">
-                                            <img class="img-fluid" src="{{$freelanceContract->getFirstMedia('image')->getFullUrl()}}" alt="الشعار"
-                                                style="MAX-HEIGHT: 132PX;">
+                                            <img class="img-fluid" src="{{$freelanceContract->getFirstMedia('logo')
+                                            ->getFullUrl()}}" alt="بيانات الشركة" style="MAX-HEIGHT: 132PX;">
                                         </div>
                                         <div class="LEFT col-lg-4"></div>
                                     </div>
@@ -46,9 +46,7 @@
                                     <div class="col-lg-12 ">
                                         <div class="SADA">
                                             إلى السادة : {{$freelanceContract->company_name}} (
-                                            <img class="img-fluid" src="{{$freelanceContract->platform->getFirstMedia('icon')->getFullUrl()}}" alt="الشعار"
-                                                style="MAX-HEIGHT: 132PX;">
-
+                                            <img class="img-fluid" src="{{$freelanceContract->platform->getFirstMedia('icon')->getFullUrl()}}" alt="الشعار" style="MAX-HEIGHT: 35PX;">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 repat">
@@ -56,12 +54,11 @@
                                             <tbody>
                                             @foreach($freelanceContract->freelancers as $freelancer)
                                                 <tr class="col-lg-12 TOTELn">
-                                                    <td class="RIGHT col-lg-4">1</td>
+                                                    <td class="RIGHT col-lg-4">{{$loop->iteration}}</td>
                                                     <td class="CENTER col-lg-4">{{$freelancer->name}}</td>
                                                     <td class="LEFT col-lg-4">{{$freelancer->pivot->fees}}</td>
                                                 </tr>
                                             @endforeach
-
                                             </tbody>
                                         </table>
                                     </div>

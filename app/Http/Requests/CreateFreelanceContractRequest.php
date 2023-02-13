@@ -33,4 +33,13 @@ class CreateFreelanceContractRequest extends FormRequest
     {
         return FreelanceContract::$createRules;
     }
+    
+    public function messages()
+    {
+        return [
+           'freelancers.*.freelancer_id.required' => 'This field is required.',  
+           'freelancers.*.fees.required' => 'This field is required.',     
+           'freelancers.*.fees.required' => 'This field is numeric.'     
+        ]; 
+    }
 }

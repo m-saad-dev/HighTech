@@ -23,7 +23,7 @@
                     <span class="badge badge-light-success">{{$loop->iteration}}</span>
                 </td>
                 <td>
-                    <a href="{{route('admin.freelance-contracts.show', $contract->id)}}" class="badge 
+                    <a href="javascript::void(0);" class="badge 
                     badge-light-primary fs-7 fw-bold text-decoration-none">{{$contract->company_name}}</a>
                 </td>
                 <td>
@@ -52,11 +52,19 @@
                         </a>
 
                         <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4 justify-content-center align-center" data-kt-menu="true">
+                                <!--begin::Menu item-->
+                                @can('edit-freelance-contract')
+                                    <div class="menu-item px-3">
+                                        <a href="{{route('admin.freelance-contracts.edit', $contract->id)}}" 
+                                            class="menu-link 
+                                        px-3">@lang('common.edit')</a>
+                                    </div>
+                                @endcan
+                                <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-3">
                                 <a href="{{route('admin.freelanceContract.printPdf', $contract->id)}}"
-                                    class="menu-link 
-                                        px-3">@lang('common.print')</a>
+                                    class="menu-link px-3" target="_blank">@lang('common.print')</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->

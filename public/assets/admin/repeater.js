@@ -1,7 +1,7 @@
 repeater = $('#kt_docs_repeater_basic').repeater({
     initEmpty: false,
     defaultValues: {
-        'text-input': 'foo'
+        'text-input': ''
     },
 
     show: function () {

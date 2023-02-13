@@ -18,7 +18,7 @@ use Spatie\MediaLibrary\Models\Media;
  */
 class MediaHelper
 {
-    static $types = ["videos", "images", "logo", "documents", "avatar", "gallery"]; //we don't use this variable in this model
+    static $types = ["videos", "images", "logo", "info", "documents", "avatar", "gallery"]; //we don't use this variable in this model
 
     static $multiFilesType = ["videos", "images", "documents", "gallery"];
 
@@ -53,6 +53,9 @@ class MediaHelper
             $error = self::attachLogoAvatarAndOtherSame($request->avatar, $item, 'avatars');
         }
         // add image
+        if ($request->info && $request->info !== 'undefined') {
+            $error = self::attachLogoAvatarAndOtherSame($request->info, $item, 'info');
+        }
         if ($request->image && $request->image !== 'undefined') {
             $error = self::attachLogoAvatarAndOtherSame($request->image, $item, 'image');
         }
@@ -134,6 +137,7 @@ class MediaHelper
             'logo' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'images' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'image' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
+            'info' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'icon' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg', 'svg'],
             'gallery' => ['JPG', 'PNG', 'GIF', 'WEBP', 'JPEG', 'jpg', 'png', 'gif', 'webp', 'jpeg'],
             'videos' => ['WEBM', 'MPG', 'MP2', 'MPEG', 'MPE', 'MPV', 'OGG', 'MP4', 'M4P', 'M4V', 'AVI', 'WMV', 'MOV', 'QT'

@@ -54,26 +54,29 @@ class FreelanceContractController extends Controller
     public function store(CreateFreelanceContractRequest $request)
     {
         $item = checkLocale('ar') ? "عقد العمل الحر" : "The FreelanceContract";
-//        try {
+        try {
             $freelance_contract = $this->model->create($request->validated());
             if ($request->has('image')){
                 if (key_exists('logo', $request->image)){
                     MediaHelper::uploadMedia(new Request(['logo' => $request->image['logo']]), $freelance_contract);
                 }
                 if (key_exists('info', $request->image)){
-                    MediaHelper::uploadMedia(new Request(['image' => $request->image['info']]), $freelance_contract);
+                    MediaHelper::uploadMedia(new Request(['info' => $request->image['info']]), $freelance_contract);
                 }
             }
             if ($request->has(['freelancers'])){
-                $freelancers = array_map(function ($freelancer){
-                    return $freelancer + ['order' => 1];
-                },$request->freelancers);
+                $order=0;
+                $freelancers = [];
+                foreach ($request->freelancers as $freelancer){
+                    $order++;
+                    $freelancers []= array_merge($freelancer + ['order' => $order]);
+                }
                 $freelance_contract->freelancers()->sync($freelancers);
             }
             return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.created', ['item' => $item]));
-//        } catch (\Exception $e) {
-//            return redirect()->route('admin.freelance-contracts.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
-//        }
+        } catch (\Exception $e) {
+            return redirect()->route('admin.freelance-contracts.create')->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
     }
 
     /**
@@ -94,13 +97,13 @@ class FreelanceContractController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-//    public function edit(FreelanceContract $freelance_contract)
-//    {
-//        return view('admin.freelance_contracts.edit')->with([
-//            'contract' => $freelance_contract,
-//        ]);
-//
-//    }
+    public function edit(FreelanceContract $freelance_contract)
+    {
+        return view('admin.freelance_contracts.edit')->with([
+            'contract' => $freelance_contract,
+        ]);
+
+    }
 
     /**
      * Update the specified resource in storage.
@@ -109,27 +112,41 @@ class FreelanceContractController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-//    public function update(UpdateFreelanceContractRequest $request, FreelanceContract $freelance_contract)
-//    {
-//        $item = checkLocale('ar') ? "عقد العمل الحر" : "The Freelance Contract";
-//        try {
-//            $freelance_contract->update($request->validated());
-//            if ($request->has('image')){
-//                if (key_exists('logo', $request->image)){
-//                    $freelance_contract->clearMediaCollection('logo');
-//                    MediaHelper::uploadMedia(new Request(['logo' => $request->image['logo']]), $freelance_contract);
-//                }
-//                if (key_exists('info', $request->image)){
-//                    $freelance_contract->clearMediaCollection('info');
-//                    MediaHelper::uploadMedia(new Request(['image' => $request->image['info']]), $freelance_contract);
-//                }
-//            }
-//            return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.updated',['item'
-//            => $item]));
-//        } catch (\Exception $e) {
-//            return redirect()->route('admin.freelance-contracts.edit', $freelance_contract->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
-//        }
-//    }
+    public function update(UpdateFreelanceContractRequest $request, FreelanceContract $freelance_contract)
+    {
+        $item = checkLocale('ar') ? "عقد العمل الحر" : "The Freelance Contract";
+        try {
+            $freelance_contract->update($request->validated());
+            if ($request->has('image')){
+                if (key_exists('logo', $request->image)){
+                    $freelance_contract->clearMediaCollection('logo');
+                    MediaHelper::uploadMedia(new Request(['logo' => $request->image['logo']]), $freelance_contract);
+                }
+                if (key_exists('info', $request->image)){
+                    $freelance_contract->clearMediaCollection('info');
+                    MediaHelper::uploadMedia(new Request(['info' => $request->image['info']]), $freelance_contract);
+                }
+            }
+
+            if ($request->has(['freelancers'])){
+                $freelance_contract->freelancers()->sync([]);
+                $order=0;
+                $freelancers = [];
+                foreach ($request->freelancers as $freelancer){
+                    $order++;
+                    $freelancers []= array_merge($freelancer + ['order' => $order]);
+                }
+                $freelance_contract->freelancers()->sync($freelancers);
+            } else {
+                $freelance_contract->freelancers()->sync([]);
+            }
+
+            return redirect()->route('admin.freelance-contracts.index')->with('success', __('messages.updated',['item'
+            => $item]));
+        } catch (\Exception $e) {
+            return redirect()->route('admin.freelance-contracts.edit', $freelance_contract->id)->with('issue_message', trans('common.issue_message', ['item' => $item]));
+        }
+    }
 
     /**
      * Remove the specified resource from storage.

@@ -56,7 +56,7 @@
 			<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/admin/media/svg/avatars/blank.svg')}}}')">
 				<!--begin::Preview existing avatar-->
 				<div class="image-input-wrapper w-125px h-125px" style="background-image: url({{isset($contract) && 
-                $contract->getFirstMedia('image') ? $contract->getFirstMedia('image')->getFullUrl() : asset
+                $contract->getFirstMedia('info') ? $contract->getFirstMedia('info')->getFullUrl() : asset
                 ('assets/admin/media/svg/avatars/blank.svg')}})"></div>
 				<!--end::Preview existing avatar-->
 				<!--begin::Label-->
@@ -125,19 +125,34 @@
 	<div class="separator border-secondary my-10"></div>
 	<h3 class="text-center fw-semibold fs-6 mb-10">{{__('menu.freelancers')}}</h3>
 	<!--begin::Repeater-->
-	@if(isset($contract) && ! $contract->freelancers->isEmpty())
-		<!--begin::Form group-->
-		@foreach($contract->freelancers as $contractFreelancer)
-			@include('admin.freelance_contracts.contract_freelancers', [
-                 'contract' => $contract,
-                 'contractFreelancer' => $contractFreelancer,
-             ])
-		@endforeach
-	@elseif(isset($contract) && $contract->freelancers->isEmpty())
-		@include('admin.freelance_contracts.contract_freelancers', $contract)
-	@else
-		@include('admin.freelance_contracts.contract_freelancers')
-	@endif
+	<div class="row" id="kt_docs_repeater_basic">
+
+
+		<div class="row" id="sortable" data-repeater-list="freelancers">
+
+			@if(isset($contract) && ! $contract->freelancers->isEmpty())
+				<!--begin::Form group-->
+				@foreach($contract->freelancers as $contractFreelancer)
+					@include('admin.freelance_contracts.contract_freelancers', [
+                         'contract' => $contract,
+                         'contractFreelancer' => $contractFreelancer,
+                     ])
+				@endforeach
+			@elseif(isset($contract) && $contract->freelancers->isEmpty())
+				@include('admin.freelance_contracts.contract_freelancers', $contract)
+			@else
+				@include('admin.freelance_contracts.contract_freelancers')
+			@endif
+		</div>
+		<div class="form-group">
+			<div class="row justify-content-center m-5">
+				<a href="javascript:;" data-repeater-create class="col-4 btn btn-light-primary">
+					<i class="la la-plus fs-3"></i>Add
+				</a>
+			</div>
+		</div>
+	</div>
+
 </div>
 <!--end::Card body-->
 @push('js')
@@ -167,4 +182,7 @@
 	</script>
 	<script src="{{asset('assets/admin/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
 	<script src="{{asset('assets/admin/repeater.js')}}"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="{{asset('assets/admin/draggable.js')}}"></script>
+
 @endpush

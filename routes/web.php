@@ -69,7 +69,7 @@ Route::prefix('admin')->as('admin.')->middleware(['auth', 'web'])->group(functio
         Route::resource('/customers', CustomerController::class);
         Route::resource('/orders', OrderController::class);
         Route::resource('/freelance-contracts', \App\Http\Controllers\admin\FreelanceContractController::class)
-                ->except(['edit', 'update']);
+                ->except(['show']);
         Route::get('/freelance-contracts/pdf/{freelanceContract}',[ \App\Http\Controllers\admin\FreelanceContractController::class, 'printPdf'])->name('freelanceContract.printPdf');
         Route::resource('/freelancers', FreelancerController::class);
         Route::resource('/freelancers-platforms', FreelancePlatformController::class);

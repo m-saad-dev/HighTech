@@ -31,7 +31,7 @@ class FreelanceContract extends Model implements HasMedia
      */
     static public $createRules = [
             'company_name' => 'required|string|max:255',
-            'freelancers.*.freelancer_id' => 'required|string|max:255',
+            'freelancers.*.freelancer_id' => 'required|integer',
             'freelancers.*.fees' => 'required|numeric',
             'image.*' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
             'platform_id' => 'required|int',
@@ -43,19 +43,13 @@ class FreelanceContract extends Model implements HasMedia
      * @var array<string, string>
      */
     static public $editRules = [
-            'company_name' => 'sometimes|string|max:255',
-            'freelancers.*.freelancer_id' => 'string|max:255',
-            'freelancers.*.fees' => 'numeric',
-            'image.*' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+            'company_name' => 'required|string|max:255',
+            'freelancers.*.freelancer_id' => 'required|integer',
+            'freelancers.*.fees' => 'required|numeric',
+            'image.*' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
             'platform_id' => 'required|int',
             'updated_by' => 'required|int',
     ];
-
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('logo');
-        $this->addMediaCollection('info');
-    }
 
     public function creator()
     {
