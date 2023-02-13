@@ -1,0 +1,249 @@
+﻿@media screen, print {
+    @font-face {
+        font-family: 'GE Thameen';
+        src: url('../../admin/css/GEThameen-DemiBold.woff2') format('woff2'), url('../../admin/css/GEThameen-DemiBold.woff') format('woff'), url('../../admin/css/GEThameen-DemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DIN Next LT Arabic';
+        src: url('../../admin/css/DINNextLTArabic-Medium.woff2') format('woff2'), url('../../admin/css/DINNextLTArabic-Medium.woff') format('woff'), url('../../admin/css/DINNextLTArabic-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'PF Din Text Universal';
+        src: url('public/assets/website/css/PFDinTextUniversal.woff2') format('woff2'), url('public/assets/website/css/PFDinTextUniversal.woff') format('woff'), url('public/assets/website/css/PFDinTextUniversal.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    body.newinpage {
+        padding: 10px;
+        overflow: auto;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .col-lg-4 {
+        FLOAT: right;
+        /* text-align: center; */
+    }
+
+    .newpage .col-lg-12 {
+        FLOAT: right;
+    }
+
+    .RIGHT.col-lg-4 p:nth-child(1) {
+        color: #2f5c8b;
+        font-size: 30px !IMPORTANT;
+        margin-bottom: 0;
+        font-family: 'GE Thameen';
+    }
+
+    .RIGHT.col-lg-4 p:nth-child(2) {
+        color: #2c2c2c;
+        font-size: 30px !IMPORTANT;
+        margin-bottom: 0;
+        font-family: 'GE Thameen';
+    }
+
+    .RIGHT.col-lg-4 p:nth-child(3) {
+        color: #2f5c8b;
+        font-size: 30px !IMPORTANT;
+        margin-bottom: 0;
+        font-family: 'GE Thameen';
+    }
+
+    .center img.img-fluid {
+        max-height: 150px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .NASM {
+        background-color: #2f5c8b;
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 10px;
+        color: white;
+        text-align: center !important;
+        border-right: 30px solid #d5d5d5;
+        font-family: 'GE Thameen';
+        font-size: 30px;
+    }
+
+    .SADA {
+        text-align: center;
+        color: #1e1e1e;
+        font-family: 'GE Thameen';
+        font-size: 30px;
+    }
+
+    .TOTELn .CENTER.col-lg-4 {
+        background: url(../../admin/css/back.png) no-repeat right;
+        width:47%;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 25px;
+        font-family: 'PF Din Text Universal';
+        margin-top: 30px;
+        line-height: 53px;
+        margin-left: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    .TOTELn .left.col-lg-4 {
+        background: url(../../admin/css/back2.png) no-repeat right;
+        width: 30%;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 30px;
+        font-family: 'PF Din Text Universal';
+        margin-top: 30px;
+        text-align: center;
+        color: white;
+        line-height: 60px;
+    }
+
+    .TOTELn .right.col-lg-4 {
+        font-weight: bold;
+        background: transparent;
+        width: 10%;
+        height: 60px;
+        background-size: contain;
+        font-size: 30px;
+        font-family: 'PF Din Text Universal';
+        margin-top: 30px;
+        padding: 21px;
+        border: 3px solid #719ecd;
+        line-height: 60px;
+        text-align: center;
+        margin-left: 30px;
+        border-radius: 17px;
+        color: #727272;
+        font-family: 'PF Din Text Universal';
+        padding: 0;
+    }
+
+    .col-lg-12.TOTELn {
+        width: 54%;
+        margin: 0 auto;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .col-lg-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .container.px-4.px-lg-5 {
+        max-width: 1200px;
+        text-align: right;
+        margin: 0 auto;
+        display: block;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .whatsapp {
+        font-family: 'PF Din Text Universal';
+        max-width: 382px;
+        background: url(whats.png) no-repeat left;
+        text-align: center;
+        padding: 13px;
+        font-weight: bold;
+        display: flex;
+        margin: 0 auto;
+        background-size: contain;
+        margin-top: 30px !important;
+        position: relative;
+        top: 14px;
+        color: #719ecd;
+        font-size: 30px;
+        padding-left: 81px;
+    }
+}
+
+@media print {
+
+    .TOTELn .left.col-lg-4 {
+        background: url(../../admin/css/back2.png) no-repeat right;
+        
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 30px;
+        font-family: 'PF Din Text Universal';
+        margin-top: 30px;
+        text-align: center;
+        color: white;
+        line-height: 60px;
+    }
+
+    .TOTEL .RIGHT.col-lg-4 p {
+        font-size: 25px !IMPORTANT;
+    }
+
+    .center img.img-fluid {
+        max-height: 120px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .TOTELn .left.col-lg-4 {
+        background: url(../../admin/css/back2.png) no-repeat right;
+        width: 20%;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 30px;
+        font-family: 'PF Din Text Universal';
+        margin-top: 30px;
+        text-align: center;
+        color: white;
+        line-height: 60px;
+    }
+
+    .TOTEL .RIGHT.col-lg-4 p {
+        font-size: 18px !IMPORTANT;
+    }
+
+    .center img.img-fluid {
+        max-height: 100px !important;
+    }
+
+    .col-lg-12.TOTELn {
+        width: 100%;
+    }
+
+    .TOTELn .CENTER.col-lg-4 {
+        background: url(../../admin/css/back.png) no-repeat right;
+        width: 50%;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 25px;
+    }
+
+    .TOTELn .left.col-lg-4 {
+        font-size: 25px;
+    }
+
+    .NASM, .SADA {
+        font-size: 20px;
+    }
+}

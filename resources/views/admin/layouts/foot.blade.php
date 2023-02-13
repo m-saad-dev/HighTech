@@ -4,7 +4,7 @@
 <script src="{{asset('assets/admin/plugins/global/plugins.bundle.js')}}"></script>
 <script src="{{asset('assets/admin/js/scripts.bundle.js')}}"></script>
 @stack('js')
-<script src="{{asset('assets/jquery-3.6.3.min.js')}}"></script>
+{{--<script src="{{asset('assets/jquery-3.6.3.min.js')}}"></script>--}}
 
 <script>
     toastr.options = {

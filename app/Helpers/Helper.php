@@ -1,5 +1,13 @@
 <?php
 
+    use App\Helpers\PdfFacade;
+
+    function printPdf(string $view, array $data, string $fileName, $orientation = 'P'): void
+{
+    $pdf = new PdfFacade($view, $data, $fileName, $orientation);
+    $pdf->printPdf();
+}
+
 function serverName()
 {
     $sslOrNot = env('HTTPS');

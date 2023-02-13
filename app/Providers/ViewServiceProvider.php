@@ -41,7 +41,15 @@ class ViewServiceProvider extends ServiceProvider
         });
         View::composer(['admin.freelance_contracts.fields'], function ($view) {
             $platforms = FreelancerPlatform::all();
-            $view->with('platforms', $platforms);
+            $view->with([
+                    'platforms' => $platforms,
+            ]);
+        });
+        View::composer(['admin.freelance_contracts.contract_freelancers'], function ($view) {
+            $freelancers = Freelancer::all();
+            $view->with([
+                    'freelancers' => $freelancers,
+            ]);
         });
         View::composer(['admin.users.fields'], function ($view) {
             $allRoles = Role::all();

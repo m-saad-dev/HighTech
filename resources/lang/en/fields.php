@@ -32,4 +32,6 @@ return [
 	'service'	    => 'Service',
 	'business_type'	=> 'Business Type',
 	'platform'	=> 'Platform',
+	'freelancer'	=> 'Freelancer',
+	'fees'	=> 'Fees',
 ];

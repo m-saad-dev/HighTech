@@ -114,17 +114,30 @@
 		<div class="col-lg-8 border rounded">
 			<select name="platform_id" class="form-select form-select-transparent" data-placeholder="..."
 				id="kt_docs_select2_users">
-				id="kt_docs_select2_users">
 				@foreach($platforms as $platform)
-					<option value="{{$platform->id}}"  @if(isset($contract) && $contract->platform_id == $platform->id) 
-						selected 
-                        @endif data-kt-rich-content-subcontent="" data-kt-select2-user="{{isset($platform) && $platform->getFirstMedia('icon') ? $platform->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}}">{{$platform->name}}</option>
+					<option value="{{$platform->id}}"  @if(isset($contract) && $contract->platform_id == $platform->id) selected @endif data-kt-rich-content-subcontent="" data-kt-select2-user="{{isset($platform) && $platform->getFirstMedia('icon') ? $platform->getFirstMedia('icon')->getFullUrl() : asset('assets/admin/media/svg/avatars/blank.svg')}}">{{$platform->name}}
+					</option>
 				@endforeach
-
 			</select>
 		</div>
 	</div>
 	<!--end::Input group-->
+	<div class="separator border-secondary my-10"></div>
+	<h3 class="text-center fw-semibold fs-6 mb-10">{{__('menu.freelancers')}}</h3>
+	<!--begin::Repeater-->
+	@if(isset($contract) && ! $contract->freelancers->isEmpty())
+		<!--begin::Form group-->
+		@foreach($contract->freelancers as $contractFreelancer)
+			@include('admin.freelance_contracts.contract_freelancers', [
+                 'contract' => $contract,
+                 'contractFreelancer' => $contractFreelancer,
+             ])
+		@endforeach
+	@elseif(isset($contract) && $contract->freelancers->isEmpty())
+		@include('admin.freelance_contracts.contract_freelancers', $contract)
+	@else
+		@include('admin.freelance_contracts.contract_freelancers')
+	@endif
 </div>
 <!--end::Card body-->
 @push('js')
@@ -134,23 +147,24 @@
 			if ( !item.id ) {
 				return item.text;
 			}
-
 			var span = document.createElement('span');
 			var imgUrl = item.element.getAttribute('data-kt-select2-user');
 			var template = '';
-
 			template += '<img src="' + imgUrl + '" class="rounded-circle h-20px me-2" alt="image"/>';
 			template += item.text;
-
 			span.innerHTML = template;
-
 			return $(span);
 		}
 
 		// Init Select2 --- more info: https://select2.org/
-		$('#kt_docs_select2_users').select2({
-			templateSelection: optionFormat,
-			templateResult: optionFormat
+		$(document).ready(function () {
+
+			$('#kt_docs_select2_users').select2({
+				templateSelection: optionFormat,
+				templateResult: optionFormat
+			});
 		});
 	</script>
+	<script src="{{asset('assets/admin/plugins/custom/formrepeater/formrepeater.bundle.js')}}"></script>
+	<script src="{{asset('assets/admin/repeater.js')}}"></script>
 @endpush

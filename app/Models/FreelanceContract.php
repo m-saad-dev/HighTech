@@ -31,7 +31,9 @@ class FreelanceContract extends Model implements HasMedia
      */
     static public $createRules = [
             'company_name' => 'required|string|max:255',
-            'logo' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+            'freelancers.*.freelancer_id' => 'required|string|max:255',
+            'freelancers.*.fees' => 'required|numeric',
+            'image.*' => 'required|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
             'platform_id' => 'required|int',
             'created_by' => 'required|int',
     ];
@@ -42,7 +44,9 @@ class FreelanceContract extends Model implements HasMedia
      */
     static public $editRules = [
             'company_name' => 'sometimes|string|max:255',
-            'logo' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
+            'freelancers.*.freelancer_id' => 'string|max:255',
+            'freelancers.*.fees' => 'numeric',
+            'image.*' => 'nullable|image|mimes:JPG,PNG,GIF,WEBP,JPEG,jpg,png,gif,webp,jpeg,svg|max:2048',
             'platform_id' => 'required|int',
             'updated_by' => 'required|int',
     ];
@@ -66,5 +70,10 @@ class FreelanceContract extends Model implements HasMedia
     public function platform()
     {
         return $this->belongsTo(FreelancerPlatform::class, 'platform_id');
+    }
+    
+    public function freelancers()
+    {
+        return $this->belongsToMany(Freelancer::class, 'freelance_contract_freelancers', 'freelance_contract_id', 'freelancer_id')->withPivot(['freelance_contract_id', 'freelancer_id', 'order', 'fees']);
     }
 }

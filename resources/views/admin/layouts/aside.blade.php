@@ -451,10 +451,8 @@
         @endcanany
         <!--end:Menu item-->
         <!--begin:Menu item-->
-        @canany(['list-freelancer-platforms', 'list-freelancers'])
-            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin
-            .freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create',
-            'admin.freelancers.edit','admin.freelancers.create','admin.freelancers.index','admin.freelance-contracts.index','admin.freelance-contracts.create','admin.freelance-contracts.edit'])) here hover show @endif">
+        @canany(['list-freelancer-platforms', 'list-freelancers', 'list-freelance-contract'])
+            <div data-kt-menu-trigger="click" class="menu-item here menu-accordion @if(checkActiveRouteName(['admin.freelancers-platforms.index','admin.freelancers-platforms.edit','admin.freelancers-platforms.create','admin.freelancers.edit','admin.freelancers.create','admin.freelancers.index','admin.freelance-contracts.index','admin.freelance-contracts.create','admin.freelance-contracts.edit'])) here hover show @endif">
                 <!--begin:Menu link-->
                 <span class="menu-link">
                     <span class="menu-icon">

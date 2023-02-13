@@ -8,6 +8,7 @@
         "php": "^7.3|^8.1",
         "astrotomic/laravel-translatable": "^11.11",
         "beyondcode/laravel-websockets": "^1.13",
+        "carlos-meneses/laravel-mpdf": "^2.1",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",

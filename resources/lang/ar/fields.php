@@ -32,4 +32,6 @@ return [
 	'service'	    => 'الخدمة',
 	'business_type'	=> 'نشاط العمل',
 	'platform'	=> 'منصة',
+	'freelancer'	=> 'مستقل',
+	'fees'	=> 'المستحقات',
 ];
